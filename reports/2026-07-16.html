@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4060 연구소 데일리 리포트 — 2026년 7월 16일</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic',sans-serif; background:#f6f4ef; color:#292524; line-height:1.6; }
+  .wrap { max-width:1080px; margin:0 auto; padding:32px 20px 64px; }
+  header { background:#fff; border-radius:16px; padding:36px 40px; margin-bottom:24px; border-top:6px solid #c2410c; }
+  .badge { display:inline-block; background:#c2410c; color:#fff; font-size:12px; font-weight:700; padding:4px 12px; border-radius:999px; letter-spacing:.5px; margin-bottom:12px; }
+  h1 { font-size:26px; font-weight:800; margin-bottom:8px; }
+  .sub { color:#78716c; font-size:14px; }
+  .kpi-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px; margin-bottom:24px; }
+  .kpi { background:#fff; border-radius:14px; padding:22px 24px; }
+  .kpi .label { font-size:13px; color:#78716c; margin-bottom:6px; }
+  .kpi .value { font-size:30px; font-weight:800; color:#c2410c; }
+  .kpi.teal .value { color:#0f766e; }
+  .kpi .src { font-size:11px; color:#a8a29e; margin-top:8px; }
+  .charts { display:grid; grid-template-columns:1fr 1.3fr; gap:16px; margin-bottom:24px; }
+  .card { background:#fff; border-radius:14px; padding:24px; }
+  .card h2 { font-size:16px; font-weight:700; margin-bottom:4px; }
+  .card .note { font-size:12px; color:#a8a29e; margin-bottom:14px; }
+  .chart-box { position:relative; height:280px; }
+  .insights { background:#fff; border-radius:14px; padding:28px 32px; margin-bottom:24px; }
+  .insights h2 { font-size:18px; font-weight:800; margin-bottom:16px; }
+  .insight { padding:14px 0; border-bottom:1px solid #f0ece4; }
+  .insight:last-child { border-bottom:none; }
+  .insight .t { font-weight:700; color:#0f766e; margin-bottom:2px; }
+  .insight .s { font-size:12px; color:#a8a29e; }
+  .news-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:24px; }
+  .news { background:#fff; border-radius:14px; padding:22px 24px; }
+  .news .date { display:inline-block; background:#0f766e; color:#fff; font-size:11px; font-weight:700; padding:2px 10px; border-radius:999px; margin-bottom:8px; }
+  .news .media { font-size:12px; color:#78716c; margin-left:8px; }
+  .news h3 { font-size:15px; font-weight:700; margin-bottom:8px; }
+  .news h3 a { color:#292524; text-decoration:none; }
+  .news h3 a:hover { color:#c2410c; }
+  .news p { font-size:13px; color:#57534e; }
+  .tags { margin-bottom:24px; }
+  .tag { display:inline-block; background:#fff; color:#c2410c; font-size:13px; font-weight:600; padding:6px 14px; border-radius:999px; margin:0 6px 8px 0; border:1px solid #e7e0d4; }
+  footer { text-align:center; font-size:12px; color:#a8a29e; padding-top:12px; }
+  @media (max-width:760px){ .charts,.news-grid { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <span class="badge">4060 연구소 · DAILY REPORT</span>
+  <h1>4060 여성, '검증된 선택'과 '새벽 골든타임'이 지갑을 연다</h1>
+  <p class="sub">2026년 7월 16일 (목) 발행 · 4060 여성(주부) 소비·커뮤니티 트렌드 데일리 브리핑</p>
+</header>
+
+<div class="kpi-grid">
+  <div class="kpi">
+    <div class="label">60~64세 온라인 소비 증가율 (2019 대비, 서울)</div>
+    <div class="value">+141.7%</div>
+    <div class="src">서울시50플러스재단 / 이투데이 · 2026-05-07</div>
+  </div>
+  <div class="kpi teal">
+    <div class="label">새벽 5~7시 홈쇼핑 구매 중 60대 이상 비중</div>
+    <div class="value">80%+</div>
+    <div class="src">롯데홈쇼핑(주문량 +106%) / 이투데이 · 2026-05-07</div>
+  </div>
+  <div class="kpi">
+    <div class="label">4060 타깃 '영스타일' 누적 거래액 (2019~)</div>
+    <div class="value">9,000억원</div>
+    <div class="src">롯데홈쇼핑 / 프라임경제 · 2026-04-21</div>
+  </div>
+  <div class="kpi teal">
+    <div class="label">연 수익 1억 초과 60대 이상 유튜버 (2023 귀속)</div>
+    <div class="value">79명</div>
+    <div class="src">국세청(전체 495명) / 한국시니어신문 · 2026-04-13</div>
+  </div>
+</div>
+
+<div class="charts">
+  <div class="card">
+    <h2>오늘의 뉴스 테마 비중</h2>
+    <p class="note">※ 수집 기사 기반 편집팀 추정치</p>
+    <div class="chart-box"><canvas id="donut"></canvas></div>
+  </div>
+  <div class="card">
+    <h2>50대 이상 결제금액 상위 리테일 브랜드 (쿠팡=100)</h2>
+    <p class="note">실측: 와이즈앱·리테일, 2025년 하반기 카드 결제 데이터 / 한국섬유신문 · 2026-03-05</p>
+    <div class="chart-box"><canvas id="bar"></canvas></div>
+  </div>
+</div>
+
+<div class="insights">
+  <h2>핵심 인사이트</h2>
+  <div class="insight">
+    <div class="t">1. '누가 추천하느냐'가 곧 구매 결정 — 신뢰 기반 큐레이션</div>
+    <div>4060 여성은 가성비보다 '실패 없는 선택'을 중시한다. 장기 활동 쇼호스트의 실사용 경험 전달이 신뢰를 만들고, 조선미녀 선크림은 방송 25분 만에 4,000세트 완판됐다. → 4060 대상 커머스는 가격 소구보다 검증된 추천자·후기 설계가 우선.</div>
+    <div class="s">프라임경제 · 2026-04-21</div>
+  </div>
+  <div class="insight">
+    <div class="t">2. '시니어 골든타임'은 새벽 5~7시</div>
+    <div>롯데홈쇼핑은 생방송 시작을 오전 5시로 앞당겼다. 이 시간대 구매 고객의 80% 이상이 60대 이상, 주문량은 106% 급증. → 콘텐츠·라이브·푸시 발송 시간대를 이른 아침으로 재설계할 가치가 있다.</div>
+    <div class="s">이투데이 · 2026-05-07</div>
+  </div>
+  <div class="insight">
+    <div class="t">3. 저가로 검증 후 본품 구매 — '리트머스 소비'</div>
+    <div>다이소 60대 화장품 구매액이 163.2% 증가. 저가 체험 후 본품으로 넘어가는 패턴이 확산 중이며, 한국콜마 크림은 홈쇼핑에서 주문액 12억원 완판. → 체험용 소용량·저가 라인이 4060 신규 고객 유입 관문.</div>
+    <div class="s">이투데이 · 2026-05-08</div>
+  </div>
+  <div class="insight">
+    <div class="t">4. 4060은 '락인(Lock-in)' 세대 — 첫 경험 선점이 10년 고객을 만든다</div>
+    <div>영올드는 인터페이스가 익숙해지면 플랫폼을 갈아타지 않는다. 쿠팡이 50대 이상 결제 1위(2위 네이버페이의 2배 이상). → 지금 온라인에 정착하는 4060의 '첫 경험'을 잡는 서비스가 장기 승자.</div>
+    <div class="s">이투데이 · 2026-05-08 / 한국섬유신문 · 2026-03-05</div>
+  </div>
+  <div class="insight">
+    <div class="t">5. 소비자에서 생산자로 — 시니어 크리에이터 시장 개화</div>
+    <div>60대 이상 유튜버는 495명으로 2019년(26명) 대비 약 19배, 총수입은 18억→329억원. 4060 여성의 경험 자체가 콘텐츠 자산이 되는 시대. → 시니어 크리에이터 협업·양성 프로그램은 커뮤니티 마케팅의 새 축.</div>
+    <div class="s">한국시니어신문 · 2026-04-13</div>
+  </div>
+</div>
+
+<div class="news-grid">
+  <div class="news">
+    <span class="date">2026-05-08</span><span class="media">이투데이</span>
+    <h3><a href="https://www.etoday.co.kr/news/view/2581646" target="_blank">'더 오래 살 건데, 나를 위한 소비 안 아끼죠'⋯유통가 큰손 된 '영올드' 파워</a></h3>
+    <p>60대 온라인 소비 5년 새 141.7% 급증. 저가 검증 후 본품 구매하는 '리트머스 소비'와 강력한 락인 효과가 특징. CJ온스타일에선 젝시믹스 50대 매출이 30대를 역전.</p>
+  </div>
+  <div class="news">
+    <span class="date">2026-05-07</span><span class="media">이투데이</span>
+    <h3><a href="https://www.etoday.co.kr/news/view/2582078" target="_blank">"포기할 수 없는 5060"…'시니어 맞춤형 공략' 바쁜 TV홈쇼핑</a></h3>
+    <p>롯데홈쇼핑 새벽 5시 방송 확대, NS홈쇼핑 AI·금융 결합 서비스, GS샵은 고객 70%가 40대 이상 여성인 점을 활용한 4060 밀착 마케팅 전개.</p>
+  </div>
+  <div class="news">
+    <span class="date">2026-04-21</span><span class="media">프라임경제</span>
+    <h3><a href="https://www.newsprime.co.kr/news/article/?no=730933" target="_blank">"검증된 선택이 중요" 4060 여성 붙잡은 홈쇼핑의 힘</a></h3>
+    <p>롯데홈쇼핑 '영스타일' 누적 주문 800만 세트·거래액 9,000억원. 실시간 채팅 상담과 '영스 패밀리' 커뮤니티 전략으로 재구매율 상승.</p>
+  </div>
+  <div class="news">
+    <span class="date">2026-04-13</span><span class="media">한국시니어신문</span>
+    <h3><a href="https://www.kseniornews.com/news/articleView.html?idxno=26666" target="_blank">시니어 유튜브 시장 급성장···1억 초과 수익자만 79명 등장</a></h3>
+    <p>60대 이상 유튜버 495명, 총수입 329억원(2023 귀속 국세청 자료). 시청자였던 시니어가 제작자로 이동, 경험이 현금흐름이 되는 시장.</p>
+  </div>
+  <div class="news">
+    <span class="date">2026-03-05</span><span class="media">한국섬유신문</span>
+    <h3><a href="https://www.ktnews.com/news/articleView.html?idxno=144504" target="_blank">은퇴세대 아닌 '소비 큰 손'…액티브 시니어가 가장 많이 쓰는 앱은?</a></h3>
+    <p>와이즈앱·리테일 분석, 50대 이상 결제 1위는 쿠팡(월 결제 6,000만회). 대형 쇼핑뿐 아니라 편의점 등 생활 밀착 소비까지 모바일 전환 가속.</p>
+  </div>
+</div>
+
+<div class="tags">
+  <span class="tag">#4060여성</span><span class="tag">#액티브시니어</span><span class="tag">#영올드</span><span class="tag">#시니어골든타임</span><span class="tag">#리트머스소비</span><span class="tag">#락인효과</span><span class="tag">#시니어크리에이터</span><span class="tag">#홈쇼핑</span>
+</div>
+
+<footer>
+  4060 연구소 데일리 리포트 · 2026-07-16 · KPI·막대차트는 원문 기사에서 확인된 실측 수치, 도넛차트는 편집팀 추정치입니다.<br>
+  모든 링크는 발행일이 직접 확인된 기사만 수록했습니다.
+</footer>
+
+</div>
+<script>
+const donut = new Chart(document.getElementById('donut'), {
+  type:'doughnut',
+  data:{
+    labels:['이커머스·모바일 쇼핑','TV홈쇼핑 전략','뷰티·셀프케어','콘텐츠·크리에이터'],
+    datasets:[{ data:[35,30,20,15], backgroundColor:['#c2410c','#0f766e','#e8965a','#5eaaa0'], borderWidth:2, borderColor:'#fff' }]
+  },
+  options:{ maintainAspectRatio:false, plugins:{ legend:{ position:'bottom', labels:{ font:{size:12} } } } }
+});
+const bar = new Chart(document.getElementById('bar'), {
+  type:'bar',
+  data:{
+    labels:['쿠팡','네이버·네이버페이','농협하나로마트','이마트','롯데백화점','코스트코'],
+    datasets:[{ label:'결제금액 지수 (쿠팡=100)', data:[100,49.2,34.3,25.9,23.9,21.7], backgroundColor:['#c2410c','#0f766e','#e8965a','#5eaaa0','#d4b896','#a8a29e'], borderRadius:6 }]
+  },
+  options:{ maintainAspectRatio:false, plugins:{ legend:{ display:false } }, scales:{ y:{ beginAtZero:true, max:110 } } }
+});
+</script>
+</body>
+</html>
