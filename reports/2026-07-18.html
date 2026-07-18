@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4060 연구소 데일리 리포트 — 2026년 7월 18일</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root { --accent: #c2410c; --teal: #0f766e; --bg: #f6f4ef; --ink: #1f2937; --muted: #6b7280; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--ink); font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; line-height: 1.65; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 32px 20px 60px; }
+  header { text-align: center; padding: 36px 0 24px; }
+  .lab-badge { display: inline-block; background: var(--accent); color: #fff; font-size: 13px; font-weight: 700; letter-spacing: 2px; padding: 5px 14px; border-radius: 999px; margin-bottom: 14px; }
+  h1 { font-size: 30px; font-weight: 800; letter-spacing: -0.5px; }
+  .date-line { color: var(--muted); margin-top: 8px; font-size: 15px; }
+  .notice { background: #fff7ed; border: 1px solid #fed7aa; border-radius: 12px; padding: 14px 18px; font-size: 13.5px; color: #9a3412; margin: 18px 0 30px; }
+  .section-title { font-size: 20px; font-weight: 800; margin: 42px 0 16px; display: flex; align-items: center; gap: 10px; }
+  .section-title::before { content: ""; display: inline-block; width: 6px; height: 22px; background: var(--accent); border-radius: 3px; }
+  .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; }
+  .kpi-card { background: #fff; border-radius: 16px; padding: 22px 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+  .kpi-value { font-size: 26px; font-weight: 800; color: var(--accent); letter-spacing: -0.5px; }
+  .kpi-label { font-size: 14px; font-weight: 600; margin-top: 6px; }
+  .kpi-src { font-size: 12px; color: var(--muted); margin-top: 10px; }
+  .badge { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 999px; margin-right: 4px; vertical-align: middle; }
+  .badge-press { background: #eef2ff; color: #4338ca; }
+  .badge-primary { background: #ecfdf5; color: #047857; }
+  .charts { display: grid; grid-template-columns: 1fr 1.3fr; gap: 16px; }
+  @media (max-width: 760px) { .charts { grid-template-columns: 1fr; } }
+  .chart-card { background: #fff; border-radius: 16px; padding: 22px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+  .chart-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+  .chart-note { font-size: 12px; color: var(--muted); margin-bottom: 12px; }
+  .chart-box { position: relative; height: 280px; }
+  .insight { background: #fff; border-radius: 16px; padding: 22px 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); margin-bottom: 14px; }
+  .insight h3 { font-size: 16px; font-weight: 800; margin-bottom: 8px; }
+  .insight p { font-size: 14.5px; color: #374151; }
+  .insight .implication { margin-top: 10px; font-size: 14.5px; font-weight: 700; color: var(--teal); }
+  .insight .src { margin-top: 10px; font-size: 12.5px; color: var(--muted); }
+  .insight .src a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  .news-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 700px) { .news-grid { grid-template-columns: 1fr; } }
+  .news-card { background: #fff; border-radius: 16px; padding: 20px 22px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+  .news-date { display: inline-block; background: var(--teal); color: #fff; font-size: 11.5px; font-weight: 700; padding: 3px 10px; border-radius: 999px; margin-bottom: 10px; }
+  .news-card h3 { font-size: 15.5px; font-weight: 700; margin-bottom: 8px; }
+  .news-card h3 a { color: var(--ink); text-decoration: none; }
+  .news-card h3 a:hover { color: var(--accent); }
+  .news-card p { font-size: 13.5px; color: #4b5563; }
+  .news-src { margin-top: 10px; font-size: 12px; color: var(--muted); }
+  .hashtags { margin-top: 36px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .hashtags span { background: #fff; border: 1px solid #e5e7eb; border-radius: 999px; padding: 6px 14px; font-size: 13px; color: var(--teal); font-weight: 600; }
+  footer { margin-top: 48px; padding-top: 22px; border-top: 1px solid #e5e7eb; font-size: 12.5px; color: var(--muted); }
+  footer p { margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="lab-badge">4060 LAB DAILY</div>
+  <h1>4060 연구소 데일리 리포트</h1>
+  <div class="date-line">2026년 7월 18일 (토) · 4060 여성·시니어 특정 데이터만 게재합니다</div>
+</header>
+
+<div class="notice">
+  ⚠️ 오늘 기준 최근 1~3일 내 발행된 4060 특정 신규 소스는 확인되지 않았습니다. 본 리포트는 발행일이 직접 검증된 최근 4개월 이내의 4060/시니어 특정 소스 4건만으로 구성했으며, 일반(전 연령) 통계로 빈칸을 채우지 않았습니다.
+</div>
+
+<div class="section-title">핵심 KPI</div>
+<div class="kpi-grid">
+  <div class="kpi-card">
+    <div class="kpi-value">9,000억원</div>
+    <div class="kpi-label">롯데홈쇼핑 '영스타일' 누적 거래액 — 주고객 4060 여성 (2019 론칭 후, 누적 주문 800만 세트)</div>
+    <div class="kpi-src"><span class="badge badge-press">언론 보도</span>프라임경제 · 2026.04.21</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-value">42%</div>
+    <div class="kpi-label">50대 사용자 비중 1위 앱 '현대홈쇼핑' — 50대 상위 5개가 전부 홈쇼핑 앱 (와이즈앱, 2026년 2월 기준)</div>
+    <div class="kpi-src"><span class="badge badge-press">언론 보도</span>디지털투데이 · 2026.03.31</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-value">28.5일</div>
+    <div class="kpi-label">5060의 캐시워크 월평균 접속일 — 2030 대비 약 33% 높음 (2025.9~2026.4, 50대 이상 점유율 4위 38.6%)</div>
+    <div class="kpi-src"><span class="badge badge-press">언론 보도</span>이투데이 · 2026.06.01</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-value">79명</div>
+    <div class="kpi-label">연 수입 1억원 초과 60대 이상 유튜버 — 60대+ 유튜버 495명, 총수입 329억원 (국세청 2023 귀속)</div>
+    <div class="kpi-src"><span class="badge badge-press">언론 보도</span>한국시니어신문 · 2026.04.13</div>
+  </div>
+</div>
+
+<div class="section-title">차트</div>
+<div class="charts">
+  <div class="chart-card">
+    <h3>오늘 수집 소식 테마 비중</h3>
+    <div class="chart-note">※ 추정치 — 오늘 검증된 소스 4건의 주제 분포 기준</div>
+    <div class="chart-box"><canvas id="donutChart"></canvas></div>
+  </div>
+  <div class="chart-card">
+    <h3>50대 사용자 비중 상위 앱 (%)</h3>
+    <div class="chart-note">실측 — 와이즈앱·리테일, 2026년 2월 기준 (디지털투데이 2026.03.31 보도)</div>
+    <div class="chart-box"><canvas id="barChart"></canvas></div>
+  </div>
+</div>
+
+<div class="section-title">핵심 인사이트</div>
+
+<div class="insight">
+  <h3>① TV홈쇼핑 패션 방송의 성장 축은 '신뢰 큐레이션'을 원하는 4060 여성</h3>
+  <p>롯데홈쇼핑 집계(2019 론칭~2026.4) 기준 4060 여성이 주고객인 '영스타일'은 누적 주문 800만 세트, 거래액 9,000억원을 기록. 이들은 가격보다 '누가 추천하느냐'를 구매 결정 기준으로 삼으며, K뷰티 '조선미녀' 선크림은 방송 25분 만에 4,000세트 완판됐다.</p>
+  <div class="implication">→ 시사점: 4060 여성 대상 커머스는 최저가 소구 대신 오래 검증된 추천인(쇼호스트·전문가) 중심의 큐레이션 콘텐츠로 설계해야 한다.</div>
+  <div class="src">프라임경제 · 2026.04.21 · <a href="https://www.newsprime.co.kr/news/article/?no=730933" target="_blank">원문 보기 →</a></div>
+</div>
+
+<div class="insight">
+  <h3>② 50대의 모바일 쇼핑은 '홈쇼핑 앱 + 연령특화 패션앱(퀸잇)'으로 이원화</h3>
+  <p>와이즈앱·리테일의 2026년 2월 연령별 앱 사용자 비율 조사에서 50대 사용자 비중 상위는 현대홈쇼핑(42%)·홈앤쇼핑(39.4%)·GS숍(36.3%)·CJ온스타일(35.5%)·롯데홈쇼핑(35.2%) 등 홈쇼핑 앱이 싹쓸이했고, 4050 특화 패션앱 퀸잇(37.8%)도 상위권에 올랐다.</p>
+  <div class="implication">→ 시사점: 50대 여성 타깃 입점·광고는 종합 오픈마켓보다 홈쇼핑 모바일앱과 연령 특화 버티컬 앱을 우선 채널로 잡아야 한다.</div>
+  <div class="src">디지털투데이 · 2026.03.31 (원데이터: 와이즈앱·리테일) · <a href="https://www.digitaltoday.co.kr/news/articleView.html?idxno=650099" target="_blank">원문 보기 →</a></div>
+</div>
+
+<div class="insight">
+  <h3>③ 5060의 건강관리 앱 이용은 '리워드+또래 커뮤니티'가 잠금장치 — 캐시워크 50대+ 점유율 4위</h3>
+  <p>넛지헬스케어 발표(와이즈앱 '2025 하반기 액티브 시니어 트렌드' 인용)에 따르면 캐시워크는 50대 이상 앱 사용자 점유율 38.6%로 4위(건강관리 앱 중 유일한 상위 15위권). 2025.9~2026.4 자사 집계에서 5060 월평균 접속일은 28.5일로 2030보다 약 33% 높고, 앱 내 메신저 '캐시톡'의 5060 이용자는 2030 대비 약 159% 많았다.</p>
+  <div class="implication">→ 시사점: 4060 여성 대상 앱·서비스는 걷기 리워드처럼 '매일 열 이유'와 또래 소통 기능을 결합해야 세대 최고 수준의 리텐션을 얻는다.</div>
+  <div class="src">이투데이 · 2026.06.01 · <a href="https://www.etoday.co.kr/news/view/2589404" target="_blank">원문 보기 →</a></div>
+</div>
+
+<div class="insight">
+  <h3>④ 유튜브에서 60대 이상은 이제 시청자가 아니라 수익을 내는 제작자 집단</h3>
+  <p>국세청 2023년 귀속 종합소득세 신고 자료(박성훈 의원실) 기준 60대 이상 유튜버는 495명으로 2019년(26명)의 약 19배, 총수입은 18억→329억원으로 늘었고 연 1억원 초과 수익자만 79명이다.</p>
+  <div class="implication">→ 시사점: 4060 여성 커뮤니티 전략에 '시니어 크리에이터 발굴·협업' 트랙을 넣으면 콘텐츠 공급자와 또래 팬덤을 동시에 확보할 수 있다.</div>
+  <div class="src">한국시니어신문 · 2026.04.13 (원데이터: 국세청) · <a href="https://www.kseniornews.com/news/articleView.html?idxno=26666" target="_blank">원문 보기 →</a></div>
+</div>
+
+<div class="insight">
+  <h3>⑤ 60대의 모바일은 쇼핑이 아니라 '생활 실용' 중심 — 50대와 뚜렷이 갈리는 사용 패턴</h3>
+  <p>같은 와이즈앱 2026년 2월 조사에서 60대 이상 사용자 비중 상위 앱은 똑똑계산기(27.8%)·원기날씨(23.8%)·고용24(22.3%)·다음 메일(21.5%) 등 계산·날씨·공공서비스 실용 앱이었다. 50대(홈쇼핑 중심)와 60대(생활 실용 중심)는 같은 '시니어'로 묶기 어렵다.</p>
+  <div class="implication">→ 시사점: 60대 여성 타깃 마케팅은 쇼핑앱 내부 노출보다 날씨·생활 실용 앱과 검색 문맥에 배치하고, 메시지도 50대와 분리 설계해야 한다.</div>
+  <div class="src">디지털투데이 · 2026.03.31 (원데이터: 와이즈앱·리테일) · <a href="https://www.digitaltoday.co.kr/news/articleView.html?idxno=650099" target="_blank">원문 보기 →</a></div>
+</div>
+
+<div class="section-title">주요 소식</div>
+<div class="news-grid">
+  <div class="news-card">
+    <span class="news-date">2026.04.21</span>
+    <h3><a href="https://www.newsprime.co.kr/news/article/?no=730933" target="_blank">"검증된 선택이 중요" 4060 여성 붙잡은 홈쇼핑의 힘</a></h3>
+    <p>롯데홈쇼핑 '영스타일'이 4060 여성을 주고객으로 누적 800만 세트·9,000억원 거래를 달성. 신뢰 기반 큐레이션·실시간 소통·팬덤('영스 패밀리') 전략이 핵심.</p>
+    <div class="news-src"><span class="badge badge-press">언론 보도</span>프라임경제</div>
+  </div>
+  <div class="news-card">
+    <span class="news-date">2026.03.31</span>
+    <h3><a href="https://www.digitaltoday.co.kr/news/articleView.html?idxno=650099" target="_blank">와이즈앱, 세대별 앱 사용 분석…50대 홈쇼핑 비중 높아</a></h3>
+    <p>2026년 2월 기준 50대는 홈쇼핑 앱 5종과 퀸잇, 60대는 계산기·날씨·고용24 등 실용 앱이 사용자 비중 상위. 50대와 60대의 모바일 사용 패턴이 뚜렷이 갈림.</p>
+    <div class="news-src"><span class="badge badge-press">언론 보도</span>디지털투데이 (원데이터: 와이즈앱·리테일)</div>
+  </div>
+  <div class="news-card">
+    <span class="news-date">2026.06.01</span>
+    <h3><a href="https://www.etoday.co.kr/news/view/2589404" target="_blank">캐시워크, 5060 '액티브 시니어' 사로잡았다…앱 점유율 4위</a></h3>
+    <p>50대 이상 점유율 38.6%로 카카오톡·유튜브·네이버와 나란히 상위권. 5060 월평균 접속 28.5일, 메신저 '캐시톡' 이용은 2030보다 159% 많아 소통 공간으로 정착.</p>
+    <div class="news-src"><span class="badge badge-press">언론 보도</span>이투데이</div>
+  </div>
+  <div class="news-card">
+    <span class="news-date">2026.04.13</span>
+    <h3><a href="https://www.kseniornews.com/news/articleView.html?idxno=26666" target="_blank">시니어 유튜브 시장 급성장…1억 초과 수익자만 79명</a></h3>
+    <p>60대 이상 유튜버 495명(2019년의 19배), 총수입 329억원. 시니어가 시청자에서 제작자·판매자로 이동 중이며, 관건은 장비가 아닌 '경험 기반 신뢰 콘텐츠'.</p>
+    <div class="news-src"><span class="badge badge-press">언론 보도</span>한국시니어신문 (원데이터: 국세청)</div>
+  </div>
+</div>
+
+<div class="hashtags">
+  <span>#4060여성</span><span>#액티브시니어</span><span>#홈쇼핑</span><span>#신뢰큐레이션</span><span>#퀸잇</span><span>#캐시워크</span><span>#시니어크리에이터</span><span>#연령특화앱</span>
+</div>
+
+<footer>
+  <p><b>출처 배지 안내</b> — <span class="badge badge-primary">1차 데이터</span> 협회·리서치사·정부 발간물을 직접 확인한 수치 / <span class="badge badge-press">언론 보도</span> 기사를 통해 간접 확인한 수치 (오늘은 원보고서 직접 확인이 어려워 전건 언론 보도 배지). 원데이터 출처(와이즈앱·리테일, 국세청)는 각 항목에 병기.</p>
+  <p><b>추정/실측 구분</b> — 도넛 차트(테마 비중)는 추정치, 막대 차트(50대 앱 사용자 비중)와 모든 KPI는 원문 본문에서 직접 확인한 실측 수치입니다.</p>
+  <p>본 리포트는 4060(50~70) 여성·시니어에 특정된 수치·내용만 게재하며, 전 연령 일반 통계는 게재하지 않습니다.</p>
+  <p>4060 연구소 · 매일 아침 자동 발행 · 2026-07-18</p>
+</footer>
+
+</div>
+
+<script>
+const donut = new Chart(document.getElementById('donutChart'), {
+  type: 'doughnut',
+  data: {
+    labels: ['홈쇼핑·커머스', '모바일 앱 사용', '크리에이터 경제', '생활·실용 디지털'],
+    datasets: [{
+      data: [35, 30, 20, 15],
+      backgroundColor: ['#c2410c', '#0f766e', '#f59e0b', '#94a3b8'],
+      borderColor: '#ffffff',
+      borderWidth: 2
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: { legend: { position: 'bottom', labels: { font: { size: 12 }, padding: 14 } } }
+  }
+});
+const bar = new Chart(document.getElementById('barChart'), {
+  type: 'bar',
+  data: {
+    labels: ['현대홈쇼핑', '홈앤쇼핑', '퀸잇', 'GS숍', 'CJ온스타일', '롯데홈쇼핑'],
+    datasets: [{
+      label: '50대 사용자 비중 (%)',
+      data: [42, 39.4, 37.8, 36.3, 35.5, 35.2],
+      backgroundColor: ['#c2410c', '#c2410c', '#0f766e', '#c2410c', '#c2410c', '#c2410c'],
+      borderRadius: 6
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    indexAxis: 'y',
+    scales: { x: { min: 30, max: 45, ticks: { font: { size: 11 } } }, y: { ticks: { font: { size: 12 } } } },
+    plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ctx.parsed.x + '%' } } }
+  }
+});
+</script>
+</body>
+</html>
