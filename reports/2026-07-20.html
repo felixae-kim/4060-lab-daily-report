@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4060 연구소 데일리 리포트 — 2026년 7월 20일</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#f6f4ef; font-family:'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif; color:#292524; line-height:1.65; }
+  .wrap { max-width:1080px; margin:0 auto; padding:32px 20px 60px; }
+  header.hero { background:#fff; border-radius:16px; padding:36px 40px; box-shadow:0 1px 3px rgba(0,0,0,.06); margin-bottom:24px; border-top:5px solid #c2410c; }
+  .hero .lab { font-size:13px; font-weight:700; color:#c2410c; letter-spacing:.14em; }
+  .hero h1 { font-size:28px; margin:8px 0 6px; }
+  .hero .date { color:#78716c; font-size:14px; }
+  .hero .oneline { margin-top:14px; font-size:16px; background:#fff7ed; border-left:4px solid #c2410c; padding:12px 16px; border-radius:0 8px 8px 0; }
+  .notice { font-size:13px; color:#78716c; background:#fff; border:1px dashed #d6d3d1; border-radius:10px; padding:10px 16px; margin-bottom:24px; }
+  h2.sec { font-size:19px; margin:36px 0 14px; padding-left:12px; border-left:5px solid #0f766e; }
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; }
+  .kpi { background:#fff; border-radius:14px; padding:20px 22px; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+  .kpi .num { font-size:30px; font-weight:800; color:#c2410c; }
+  .kpi .label { font-size:14px; font-weight:700; margin-top:4px; }
+  .kpi .src { font-size:12px; color:#78716c; margin-top:8px; }
+  .badge { display:inline-block; font-size:11px; font-weight:700; padding:2px 8px; border-radius:99px; vertical-align:middle; }
+  .b-primary { background:#0f766e; color:#fff; }
+  .b-press { background:#e7e5e4; color:#57534e; }
+  .charts { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .chartbox { background:#fff; border-radius:14px; padding:22px; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+  .chartbox h3 { font-size:15px; margin-bottom:4px; }
+  .chartbox .note { font-size:12px; color:#78716c; margin-bottom:12px; }
+  .chartbox canvas { max-height:280px; }
+  .insight { background:#fff; border-radius:14px; padding:20px 24px; box-shadow:0 1px 3px rgba(0,0,0,.06); margin-bottom:12px; }
+  .insight b.head { display:block; font-size:16px; margin-bottom:6px; }
+  .insight .evi { font-size:14px; color:#44403c; }
+  .insight .imp { margin-top:8px; font-size:14px; font-weight:700; color:#0f766e; }
+  .insight .src { font-size:12px; color:#78716c; margin-top:8px; }
+  .insight .src a { color:#c2410c; text-decoration:none; font-weight:700; }
+  .news { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .newscard { background:#fff; border-radius:14px; padding:18px 20px; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+  .newscard .meta { font-size:12px; color:#78716c; margin-bottom:6px; }
+  .newscard .datebadge { display:inline-block; background:#fff7ed; color:#c2410c; font-weight:700; font-size:11px; padding:2px 8px; border-radius:99px; margin-right:6px; }
+  .newscard h3 { font-size:15px; margin-bottom:6px; }
+  .newscard h3 a { color:#292524; text-decoration:none; }
+  .newscard h3 a:hover { color:#c2410c; }
+  .newscard p { font-size:13px; color:#57534e; }
+  .tags { margin:28px 0 8px; font-size:14px; color:#0f766e; font-weight:700; }
+  footer { margin-top:32px; font-size:12px; color:#78716c; background:#fff; border-radius:12px; padding:16px 20px; }
+  footer .bd { margin-top:6px; }
+  @media (max-width:760px){ .charts,.news{grid-template-columns:1fr;} .hero h1{font-size:22px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="lab">4060 LAB · DAILY REPORT</div>
+  <h1>4060 여성 소비·트렌드 데일리 리포트</h1>
+  <div class="date">2026년 7월 20일 (월) · 매일 아침 자동 발행</div>
+  <div class="oneline">오늘의 한 줄 — <b>50대 이상의 온라인 장바구니 1위는 쿠팡.</b> 4060 여성은 이미 홈쇼핑 시청자가 아니라 리뷰를 비교하고 직접 결정하는 '주체적 온라인 소비자'다.</div>
+</header>
+
+<div class="notice">ℹ️ 오늘(7/18~20) 기준 최근 1~3일 내 발행된 4060 특정 신규 소스는 확보되지 않아, 발행일이 직접 확인된 최근 1~7개월 내 4060/시니어 특정 소스 4건으로 구성했습니다. 전 연령 일반 통계는 게재하지 않습니다.</div>
+
+<h2 class="sec">핵심 KPI</h2>
+<div class="kpis">
+  <div class="kpi">
+    <div class="num">1위 쿠팡</div>
+    <div class="label">50대 이상 결제액 1위 리테일 — 네이버(49.2)의 2배 (쿠팡=100)</div>
+    <div class="src"><span class="badge b-press">언론 보도</span> 와이즈앱·리테일(2025 하반기 카드결제 추정) · 브라보마이라이프 2026-06-15</div>
+  </div>
+  <div class="kpi">
+    <div class="num">81.0%</div>
+    <div class="label">50대가 온라인 쇼핑 시 타인 도움 없이 직접 구매 결정하는 비율</div>
+    <div class="src"><span class="badge b-primary">1차 데이터</span> 오픈서베이 트렌드 리포트 2025-12-22</div>
+  </div>
+  <div class="kpi">
+    <div class="num">80%+</div>
+    <div class="label">TV홈쇼핑 새벽 5~7시 구매 고객 중 60대 이상 비중 (주문량 106%↑)</div>
+    <div class="src"><span class="badge b-press">언론 보도</span> 롯데홈쇼핑 하절기 데이터 · 이투데이 2026-05-07</div>
+  </div>
+  <div class="kpi">
+    <div class="num">38.2%</div>
+    <div class="label">액티브 시니어 이커머스 이용 중 50대 여성 비중 — 전 연령·성별 중 최고</div>
+    <div class="src"><span class="badge b-press">언론 보도</span> NH농협카드(2025.8 분석) · 허프포스트코리아 2026-05-07</div>
+  </div>
+</div>
+
+<h2 class="sec">차트</h2>
+<div class="charts">
+  <div class="chartbox">
+    <h3>오늘 소식 테마 비중 <span style="color:#c2410c;">(추정)</span></h3>
+    <div class="note">수집·검증된 4060 특정 소스 4건의 내용을 테마별로 분류한 편집상 추정치입니다.</div>
+    <canvas id="donut"></canvas>
+  </div>
+  <div class="chartbox">
+    <h3>50대 이상 결제추정금액 상위 리테일 (실측 기반 지수)</h3>
+    <div class="note">와이즈앱·리테일 카드결제 추정, 2025년 7~12월, 쿠팡=100 기준 상대지수 (출처: 브라보마이라이프 2026-06-15 인용)</div>
+    <canvas id="bar"></canvas>
+  </div>
+</div>
+
+<h2 class="sec">핵심 인사이트</h2>
+
+<div class="insight">
+  <b class="head">① 50대 이상 소비자의 온라인 결제 1위 채널은 백화점·마트가 아니라 쿠팡</b>
+  <div class="evi">와이즈앱·리테일이 2026년 3월 발표한 카드결제 추정 자료(2025년 7~12월 집계)에서 50대 이상이 가장 많은 금액을 결제한 리테일은 쿠팡이었고, 쿠팡을 100으로 볼 때 네이버 49.2, 농협하나로마트 34.3, 이마트 25.9, 롯데백화점 23.9에 그쳤다.</div>
+  <div class="imp">→ 시사점: 4060 여성 대상 상품은 홈쇼핑·오프라인 단독 전략을 버리고 쿠팡·네이버 입점과 리뷰 자산 확보를 기본 채널 전략으로 삼아야 한다.</div>
+  <div class="src"><span class="badge b-press">언론 보도</span> 브라보마이라이프 · 2026-06-15 · <a href="https://bravo.etoday.co.kr/view/atc_view/19401" target="_blank">원문 보기 →</a></div>
+</div>
+
+<div class="insight">
+  <b class="head">② 온라인 쇼핑에서 50대 여성은 '자녀가 대신 사주는 고객'이 아니라 직접 결정하는 주체적 소비자</b>
+  <div class="evi">오픈서베이 패널 조사(2025년) 기준 50대의 81.0%가 온라인 쇼핑 시 타인 도움 없이 직접 구매를 결정하고, 금융 업무 온라인 이용률 89.5%·식료품 온라인 구매율 74.5%로 20~40대와 큰 차이가 없다. 오픈서베이는 2026년부터 표준 조사 연령을 20~69세로 확장했다.</div>
+  <div class="imp">→ 시사점: 4060 여성에게는 '쉽게 설명해주는' 보조자 화법 대신, 본인을 의사결정자로 대우하는 직접 마케팅과 성인 대상 UX가 필요하다.</div>
+  <div class="src"><span class="badge b-primary">1차 데이터</span> 오픈서베이 블로그 · 2025-12-22 · <a href="https://blog.opensurvey.co.kr/news/trendreport-2026-trend-1/" target="_blank">원문 보기 →</a></div>
+</div>
+
+<div class="insight">
+  <b class="head">③ TV홈쇼핑의 시니어 골든타임은 새벽 5~7시 — 이 시간대 구매 80% 이상이 60대 이상</b>
+  <div class="evi">롯데홈쇼핑의 2025년 5~8월 하절기 데이터에서 오전 5~7시 구매 고객의 80% 이상이 60대 이상이었고 오전 5시 주문량은 직전 시간대 대비 106% 급증했다. 이에 롯데홈쇼핑·NS홈쇼핑 모두 생방송 시작을 오전 5시로 앞당기고 건강식품·침구를 집중 편성했다.</div>
+  <div class="imp">→ 시사점: 5070 여성 대상 방송·라이브커머스·앱 푸시는 저녁이 아니라 새벽~이른 아침 시간대 편성을 테스트할 가치가 있다.</div>
+  <div class="src"><span class="badge b-press">언론 보도</span> 이투데이 · 2026-05-07 · <a href="https://www.etoday.co.kr/news/view/2582078" target="_blank">원문 보기 →</a></div>
+</div>
+
+<div class="insight">
+  <b class="head">④ 홈쇼핑(GS샵) 고객의 70%가 40대 이상 여성 — '일상 고민 해결형' 협업이 새 공식</b>
+  <div class="evi">GS샵은 고객 비중의 70%가 40대 이상 여성인 점을 활용해 유한킴벌리 디펜드(요실금 케어)와 협업, 모바일 앱에서 4060 여성의 일상 고민을 해결해주는 캠페인을 진행하며 라이프스타일 관리 아이템을 제안하고 있다.</div>
+  <div class="imp">→ 시사점: 4060 여성의 신체 변화·생활 고민(요실금, 수면, 관절)을 숨기지 않고 정면으로 다루는 상품·콘텐츠가 홈쇼핑 협업의 기회 영역이다.</div>
+  <div class="src"><span class="badge b-press">언론 보도</span> 이투데이 · 2026-05-07 · <a href="https://www.etoday.co.kr/news/view/2582078" target="_blank">원문 보기 →</a></div>
+</div>
+
+<div class="insight">
+  <b class="head">⑤ 50대의 디지털 전환에서 마지막 남은 오프라인 영역은 헬스케어 — 병원 예약의 50.9%가 여전히 오프라인</b>
+  <div class="evi">오픈서베이 조사에서 50대가 온라인으로 처리하는 소비 생활 영역은 평균 4.7개(오프라인 1.7개)에 달하지만, 병원 예약만은 50.9%가 오프라인에 머물러 있다.</div>
+  <div class="imp">→ 시사점: 4060 여성 눈높이에 맞춘 병원 예약·건강관리 O2O 서비스는 아직 비어 있는 디지털 전환 기회다.</div>
+  <div class="src"><span class="badge b-primary">1차 데이터</span> 오픈서베이 블로그 · 2025-12-22 · <a href="https://blog.opensurvey.co.kr/news/trendreport-2026-trend-1/" target="_blank">원문 보기 →</a></div>
+</div>
+
+<h2 class="sec">주요 소식</h2>
+<div class="news">
+  <div class="newscard">
+    <div class="meta"><span class="datebadge">2026-06-15</span>브라보마이라이프 <span class="badge b-press">언론 보도</span></div>
+    <h3><a href="https://bravo.etoday.co.kr/view/atc_view/19401" target="_blank">TV홈쇼핑만 보던 시니어? 이제 링크로 산다</a></h3>
+    <p>50대 이상 결제 1위는 쿠팡(와이즈앱·리테일). CJ메조미디어 조사에서 50대 온라인쇼핑 주1회 이상 이용 49%, 월평균 지출 35만 원, 모바일 비중 73%. 카톡·밴드 링크와 SNS몰(11%)이 새 입구로 부상.</p>
+  </div>
+  <div class="newscard">
+    <div class="meta"><span class="datebadge">2026-05-07</span>이투데이 <span class="badge b-press">언론 보도</span></div>
+    <h3><a href="https://www.etoday.co.kr/news/view/2582078" target="_blank">"포기할 수 없는 5060"… 시니어 맞춤형 공략 바쁜 TV홈쇼핑</a></h3>
+    <p>롯데홈쇼핑 생방송 오전 5시로 앞당김(새벽 구매 80%+가 60대 이상), NS홈쇼핑 AI·금융 결합 시니어 케어, 현대홈쇼핑 3,000만 원대 여행상품, GS샵은 40대 이상 여성 70% 고객 기반 협업 확대.</p>
+  </div>
+  <div class="newscard">
+    <div class="meta"><span class="datebadge">2026-05-07</span>허프포스트코리아 <span class="badge b-press">언론 보도</span></div>
+    <h3><a href="https://www.huffingtonpost.kr/article/257045" target="_blank">오픈런 대신 이불 속 '새벽런', 유통가 시니어 골든타임 경쟁</a></h3>
+    <p>NH농협카드 분석: 액티브 시니어 이커머스 이용 1조 2천억 원·3,210만 건, 50대 여성 비중 38.2%로 최고. 더현대닷컴은 글자 30% 확대·오타 보정 등 시니어 친화 UX 경쟁.</p>
+  </div>
+  <div class="newscard">
+    <div class="meta"><span class="datebadge">2025-12-22</span>오픈서베이 블로그 <span class="badge b-primary">1차 데이터</span></div>
+    <h3><a href="https://blog.opensurvey.co.kr/news/trendreport-2026-trend-1/" target="_blank">2026년 트렌드 전망: 온라인 시장의 큰손 '액티브 시니어'</a></h3>
+    <p>50대 금융 온라인 이용 89.5%·식료품 온라인 구매 74.5%·직접 구매결정 81.0%. 리서치 표준 연령을 20~69세로 확장 — 시니어가 조사 대상의 '표준'이 됐다.</p>
+  </div>
+</div>
+
+<div class="tags">#4060여성 #액티브시니어 #쿠팡 #새벽골든타임 #주체적소비자 #홈쇼핑 #헬스케어O2O</div>
+
+<footer>
+  <b>데이터 구분 안내</b>
+  <div class="bd">· <span class="badge b-primary">1차 데이터</span> 협회·리서치사·정부 발간물을 직접 확인한 수치 &nbsp;|&nbsp; <span class="badge b-press">언론 보도</span> 기사를 통해 간접 확인한 수치</div>
+  <div class="bd">· 도넛 차트는 편집상 추정치이며, 막대 차트는 와이즈앱·리테일 카드결제 표본 추정(실측 기반)을 기사 인용으로 재구성한 것입니다. 실제 매출 전체와는 다를 수 있습니다.</div>
+  <div class="bd">· 본 리포트는 4060(50~70) 여성·시니어에 특정된 수치만 게재하며, 전 연령 합산 일반 통계는 게재하지 않습니다. 모든 출처는 발행일을 직접 확인했습니다.</div>
+  <div class="bd">· 4060 연구소 · 매일 아침 자동 발행 · 2026-07-20</div>
+</footer>
+
+</div>
+<script>
+new Chart(document.getElementById('donut'), {
+  type:'doughnut',
+  data:{
+    labels:['이커머스·플랫폼 이동','TV홈쇼핑·새벽 편성','주체적 디지털 소비','헬스케어·생활 케어'],
+    datasets:[{ data:[35,25,25,15], backgroundColor:['#c2410c','#0f766e','#f59e0b','#78716c'], borderWidth:2, borderColor:'#fff' }]
+  },
+  options:{ plugins:{ legend:{ position:'bottom', labels:{ font:{ size:12 } } } } }
+});
+new Chart(document.getElementById('bar'), {
+  type:'bar',
+  data:{
+    labels:['쿠팡','네이버·네이버페이','농협하나로마트','이마트','롯데백화점'],
+    datasets:[{ label:'결제추정금액 지수 (쿠팡=100)', data:[100,49.2,34.3,25.9,23.9], backgroundColor:['#c2410c','#0f766e','#0f766e','#0f766e','#0f766e'], borderRadius:6 }]
+  },
+  options:{ plugins:{ legend:{ display:false } }, scales:{ y:{ beginAtZero:true, max:110 } } }
+});
+</script>
+</body>
+</html>
