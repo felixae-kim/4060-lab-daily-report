@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4060 연구소 데일리 리포트 — 2026년 7월 21일</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root{--bg:#f6f4ef;--card:#ffffff;--ink:#1c1917;--sub:#57534e;--accent:#c2410c;--accent2:#0f766e;--line:#e7e5e4;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;}
+  .wrap{max-width:960px;margin:0 auto;padding:32px 20px 60px;}
+  header{margin-bottom:28px;}
+  .brand{font-size:13px;font-weight:700;color:var(--accent);letter-spacing:1px;margin-bottom:6px;}
+  h1{font-size:26px;font-weight:800;margin-bottom:6px;}
+  .date{font-size:14px;color:var(--sub);}
+  .notice{background:#fff7ed;border:1px solid #fed7aa;border-radius:10px;padding:10px 14px;font-size:12.5px;color:#9a3412;margin-top:14px;}
+  h2.sec{font-size:18px;font-weight:800;margin:34px 0 14px;padding-left:10px;border-left:4px solid var(--accent);}
+  .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;}
+  .kpi .num{font-size:26px;font-weight:800;color:var(--accent);margin-bottom:4px;}
+  .kpi .label{font-size:13.5px;font-weight:700;margin-bottom:8px;}
+  .kpi .src{font-size:11.5px;color:var(--sub);}
+  .badge{display:inline-block;font-size:10.5px;font-weight:700;padding:1px 7px;border-radius:20px;margin-right:4px;vertical-align:1px;}
+  .b-press{background:#eef2ff;color:#4338ca;}
+  .b-data{background:#ecfdf5;color:#047857;}
+  .charts{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .chart-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;}
+  .chart-card h3{font-size:14.5px;font-weight:700;margin-bottom:4px;}
+  .chart-card .cap{font-size:11.5px;color:var(--sub);margin-bottom:12px;}
+  .chart-box{position:relative;height:260px;}
+  @media(max-width:720px){.charts{grid-template-columns:1fr;}}
+  .insight{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:12px;}
+  .insight .head{font-size:15px;font-weight:800;margin-bottom:8px;}
+  .insight .body{font-size:13.5px;color:var(--sub);margin-bottom:8px;}
+  .insight .imp{font-size:13.5px;color:var(--accent2);font-weight:700;margin-bottom:8px;}
+  .insight .src{font-size:11.5px;color:var(--sub);}
+  .insight .src a{color:var(--accent);text-decoration:none;font-weight:700;}
+  .news-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  @media(max-width:720px){.news-grid{grid-template-columns:1fr;}}
+  .news{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;}
+  .news .meta{font-size:11px;color:var(--sub);margin-bottom:6px;}
+  .news .d-badge{display:inline-block;background:var(--accent2);color:#fff;font-size:10.5px;font-weight:700;padding:1px 8px;border-radius:20px;margin-right:6px;}
+  .news h3{font-size:14.5px;font-weight:700;margin-bottom:6px;}
+  .news p{font-size:12.5px;color:var(--sub);margin-bottom:8px;}
+  .news a{font-size:12px;color:var(--accent);text-decoration:none;font-weight:700;}
+  .tags{margin-top:30px;font-size:13px;color:var(--accent2);font-weight:700;line-height:2;}
+  footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);font-size:11.5px;color:var(--sub);}
+  footer li{margin-left:16px;margin-bottom:4px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="brand">4060 LAB · DAILY REPORT</div>
+  <h1>4060 여성 트렌드 데일리 리포트</h1>
+  <div class="date">2026년 7월 21일 (화) · 자동 발행</div>
+  <div class="notice">⚠️ 오늘 확보된 신규 소스 4건은 모두 이전 리포트와 중복되지 않는 새 출처입니다. 다만 최근 2주 이내 발행 소스 확보에는 실패했으며, 가장 최신 소스는 7월 6일 발행(동아일보)입니다.</div>
+</header>
+
+<h2 class="sec">핵심 KPI</h2>
+<div class="kpi-grid">
+  <div class="kpi">
+    <div class="num">90.8%</div>
+    <div class="label">50대 앱테크 이용률 — 전 연령 1위</div>
+    <div class="src"><span class="badge b-press">언론 보도</span>컨슈머인사이트 조사 · 동아일보 2026-07-06</div>
+  </div>
+  <div class="kpi">
+    <div class="num">10,498P</div>
+    <div class="label">60대 월평균 앱테크 적립 포인트 — 전 연령 1위</div>
+    <div class="src"><span class="badge b-press">언론 보도</span>한국소비자원(2024.7 조사) · 동아일보 2026-07-06</div>
+  </div>
+  <div class="kpi">
+    <div class="num">+47%</div>
+    <div class="label">퀸잇 연간 구매 고객 수 증가율 (거래액 +24%, MAU +41%)</div>
+    <div class="src"><span class="badge b-press">언론 보도</span>라포랩스 발표 · 데일리한국 2026-06-08</div>
+  </div>
+  <div class="kpi">
+    <div class="num">2만→11만</div>
+    <div class="label">5060 소셜 플랫폼 '시놀' 가입자 (2023→2026, 약 5.5배)</div>
+    <div class="src"><span class="badge b-press">언론 보도</span>시놀 · 한국경제 2026-05-10</div>
+  </div>
+</div>
+
+<h2 class="sec">차트</h2>
+<div class="charts">
+  <div class="chart-card">
+    <h3>오늘의 소식 테마 비중 <span style="color:var(--accent);font-size:11px;">(추정)</span></h3>
+    <div class="cap">오늘 수집·검증된 소스의 주제 분포를 편집자가 추정한 값입니다.</div>
+    <div class="chart-box"><canvas id="donut"></canvas></div>
+  </div>
+  <div class="chart-card">
+    <h3>연령대별 앱테크 이용률 <span style="color:var(--accent2);font-size:11px;">(실측)</span></h3>
+    <div class="cap">컨슈머인사이트 '앱테크 이용 현황'(2025.6 발표) · 동아일보 2026-07-06 보도</div>
+    <div class="chart-box"><canvas id="bar"></canvas></div>
+  </div>
+</div>
+
+<h2 class="sec">핵심 인사이트</h2>
+
+<div class="insight">
+  <div class="head">① 4050 여성 패션앱 퀸잇이 '패션몰'을 넘어 라이프스타일 플랫폼으로 확장 중이다</div>
+  <div class="body">라포랩스 발표 기준 퀸잇의 2025년 연간 거래액은 전년 대비 24%, 구매 고객 수는 47%, MAU는 41% 증가했고 누적 거래액은 1조 5,000억원을 돌파했다. 매출 856억원(+20%)에 영업적자는 27% 줄었으며, SK스토아 인수를 추진해 7월 중 방통위 심사 결과가 나올 전망 — 모바일에서 TV·T커머스로 채널을 넓히는 수순이다.</div>
+  <div class="imp">→ 시사점: 4060 여성 커머스의 승부처는 패션 단품이 아니라 뷰티·리빙까지 묶는 라이프스타일 통합 제안과 모바일+TV 옴니채널 설계로 이동하고 있다.</div>
+  <div class="src">데일리한국 · 2026-06-08 · <a href="https://daily.hankooki.com/news/articleView.html?idxno=1373564" target="_blank">원문 보기 →</a></div>
+</div>
+
+<div class="insight">
+  <div class="head">② 4050 중심이던 포스티에 6070 고객 유입이 늘며 시니어 커머스의 연령 상한이 올라가고 있다</div>
+  <div class="body">카카오스타일 포스티는 2025년 거래액 20% 증가, 누적 회원 40% 증가, 앱 다운로드 1,000만건을 기록했다. 현재 4050 고객 비중이 가장 크지만 최근 6070 고객 비중이 눈에 띄게 증가하고 있으며, 이에 맞춰 테마형 라이브 방송·숏폼 등 직관적으로 즐길 수 있는 콘텐츠를 확대하고 있다.</div>
+  <div class="imp">→ 시사점: 60대 이상 여성까지 겨냥한다면 검색·나열형 UI보다 라이브·숏폼형 '발견 콘텐츠'가 유입·체류 장치로 유효하다.</div>
+  <div class="src">데일리한국 · 2026-06-08 · <a href="https://daily.hankooki.com/news/articleView.html?idxno=1373564" target="_blank">원문 보기 →</a></div>
+</div>
+
+<div class="insight">
+  <div class="head">③ 리워드 앱(앱테크) 시장의 최중심 사용자는 5060 — 이용률·적립액 모두 전 연령 1위다</div>
+  <div class="body">컨슈머인사이트 조사에서 50대 앱테크 이용률은 90.8%로 전 연령 1위, 60대는 88.7%였고, 하루 여러 번 이용하는 비율도 50대(78.3%)가 가장 높았다. 한국소비자원(2024.7) 조사의 월평균 적립 포인트는 60대 10,498P·50대 8,152P로 상위를 차지했으며, 카카오뱅크 게임형 리워드 '돈 버는 재미'도 50대 이용률(28.3%)이 1위였다.</div>
+  <div class="imp">→ 시사점: 4060 여성 대상 앱·서비스에서 출석·걷기·퀴즈형 소액 리워드는 습관적 접속(리텐션)을 만드는 가장 검증된 장치다.</div>
+  <div class="src">동아일보 · 2026-07-06 · <a href="https://v.daum.net/v/20260706094704017" target="_blank">원문 보기 →</a></div>
+</div>
+
+<div class="insight">
+  <div class="head">④ 5060 소셜·연애 시장이 급성장 — 시놀 가입자 5.5배 증가, 플랫폼에서 가장 활발한 여성 연령대는 50대다</div>
+  <div class="body">50대 이상 전용 소셜 플랫폼 시놀 가입자는 2023년 약 2만명에서 현재 약 11만명으로 늘었고, 5060 로테이션 소개팅은 매회 경쟁률 2대 1 이상·매칭률 30~50%를 기록 중이다. 기사에 인용된 오픈서베이 '시니어 트렌드 리포트 2024'에서는 '사람과 직접 만나는 기회를 늘리고 싶다'는 응답이 50대 이상 32.8%로 40대 이하(25.9%)보다 높았다.</div>
+  <div class="imp">→ 시사점: 4060 여성에게 커뮤니티·소모임·오프라인 만남은 강력한 락인 요소 — 커머스·콘텐츠 서비스도 관계 기능을 결합하면 체류와 재방문을 늘릴 수 있다.</div>
+  <div class="src">한국경제 · 2026-05-10 · <a href="https://www.hankyung.com/article/2026050837017" target="_blank">원문 보기 →</a></div>
+</div>
+
+<div class="insight">
+  <div class="head">⑤ 공연·팬덤이 5060 여가 소비의 핵심 축으로 — 공연 티켓 재구매 비중이 커지고 있다</div>
+  <div class="body">여가 플랫폼 놀유니버스의 '2026 여가 트렌드 키워드' 발표에 따르면 5060 세대는 임영웅 등 아티스트 콘서트를 보러 전국을 이동하는 공연계 핵심 소비층으로 부상했으며, 5060의 공연 티켓 재구매 비중은 전년 대비 크게 증가하며 시장 성장을 견인하고 있다(구체 수치 미공개).</div>
+  <div class="imp">→ 시사점: 4060 여성 마케팅에는 트로트·공연 등 팬덤 IP 연계 프로모션, 그리고 원정 관람 수요를 겨냥한 여행·숙박 결합 상품이 유효하다.</div>
+  <div class="src">반론보도닷컴 · 2026-01-14 · <a href="https://www.banronbodo.com/news/articleView.html?idxno=31543" target="_blank">원문 보기 →</a></div>
+</div>
+
+<h2 class="sec">주요 소식</h2>
+<div class="news-grid">
+  <div class="news">
+    <div class="meta"><span class="d-badge">2026-07-06</span>동아일보 <span class="badge b-press">언론 보도</span></div>
+    <h3>운동하며 용돈벌이까지…'앱테크'에 빠진 5060 중장년층</h3>
+    <p>50대 앱테크 이용률 90.8%로 전 연령 1위. 월평균 적립 포인트도 60대(10,498P)·50대(8,152P)가 상위. 신한은행 '50+ 걸어요' 등 금융권도 중장년 리워드 서비스 확대.</p>
+    <a href="https://v.daum.net/v/20260706094704017" target="_blank">원문 보기 →</a>
+  </div>
+  <div class="news">
+    <div class="meta"><span class="d-badge">2026-06-08</span>데일리한국 <span class="badge b-press">언론 보도</span></div>
+    <h3>액티브 시니어가 바꾼 쇼핑 지형…퀸잇·포스티 성장 가속</h3>
+    <p>퀸잇 거래액 +24%·구매고객 +47%, 포스티 거래액 +20%·회원 +40%. 4050을 넘어 6070까지 유입. 한국섬유산업연합회 기준 50대 이상 패션 소비는 약 20조원(전체의 40%).</p>
+    <a href="https://daily.hankooki.com/news/articleView.html?idxno=1373564" target="_blank">원문 보기 →</a>
+  </div>
+  <div class="news">
+    <div class="meta"><span class="d-badge">2026-05-10</span>한국경제 <span class="badge b-press">언론 보도</span></div>
+    <h3>"이 나이에 어디서 이성 만나요"…외로운 5060 소개팅 열풍</h3>
+    <p>5060 로테이션 소개팅 경쟁률 2대 1, 매칭률 30~50%. 시놀 가입자 2만→11만명. 플랫폼에서 가장 활발한 연령대는 여성 50대·남성 60대.</p>
+    <a href="https://www.hankyung.com/article/2026050837017" target="_blank">원문 보기 →</a>
+  </div>
+  <div class="news">
+    <div class="meta"><span class="d-badge">2026-01-14</span>반론보도닷컴 <span class="badge b-press">언론 보도</span></div>
+    <h3>2026 여가 트렌드…'팬덤 여행·콘텐츠 속 성지 순례' 확산</h3>
+    <p>놀유니버스 발표: 5060은 콘서트 원정 관람이 일상화된 공연계 핵심 소비층. 공연 티켓 재구매 비중 전년 대비 크게 증가.</p>
+    <a href="https://www.banronbodo.com/news/articleView.html?idxno=31543" target="_blank">원문 보기 →</a>
+  </div>
+</div>
+
+<div class="tags">#4060여성 #액티브시니어 #퀸잇 #포스티 #앱테크 #리워드마케팅 #시니어커머스 #5060팬덤 #시놀 #라이프스타일플랫폼</div>
+
+<footer>
+  <ul>
+    <li><span class="badge b-data">1차 데이터</span> 협회·리서치사·정부 발간물을 직접 확인한 출처 / <span class="badge b-press">언론 보도</span> 기사를 통해 간접 확인한 출처. 오늘 소스는 전부 언론 보도 경유 확인(컨슈머인사이트·한국소비자원·라포랩스·놀유니버스 원자료는 기사 인용 기준).</li>
+    <li>도넛 차트는 오늘 수집 소스의 테마 분포에 대한 <b>편집자 추정</b>이며, 막대 차트는 컨슈머인사이트 조사 <b>실측 수치</b>입니다.</li>
+    <li>본 리포트는 4060(및 50~70) 여성·시니어에 특정된 수치만 게재하며, 전 연령 일반 통계는 게재하지 않습니다.</li>
+    <li>이전 14일 리포트와 출처·원천 발표·KPI 중복 없음 확인 완료 (2026-07-21).</li>
+  </ul>
+</footer>
+
+</div>
+<script>
+const donutCtx = document.getElementById('donut');
+new Chart(donutCtx, {
+  type: 'doughnut',
+  data: {
+    labels: ['커머스·플랫폼', '앱테크·리워드', '관계·커뮤니티', '팬덤·여가'],
+    datasets: [{
+      data: [35, 30, 20, 15],
+      backgroundColor: ['#c2410c', '#0f766e', '#f59e0b', '#78716c'],
+      borderColor: '#ffffff',
+      borderWidth: 2
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'bottom', labels: { font: { size: 11 } } } }
+  }
+});
+const barCtx = document.getElementById('bar');
+new Chart(barCtx, {
+  type: 'bar',
+  data: {
+    labels: ['20대', '30대', '40대', '50대', '60대'],
+    datasets: [{
+      label: '앱테크 이용률(%)',
+      data: [78.9, 83.2, 87.4, 90.8, 88.7],
+      backgroundColor: ['#d6d3d1', '#d6d3d1', '#0f766e', '#c2410c', '#0f766e'],
+      borderRadius: 6
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    scales: { y: { min: 70, max: 95, ticks: { callback: v => v + '%' } } },
+    plugins: { legend: { display: false } }
+  }
+});
+</script>
+</body>
+</html>
