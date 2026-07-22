@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4060 연구소 데일리 리포트 — 2026년 7월 22일</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#f6f4ef; font-family:'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif; color:#1f2937; line-height:1.6; }
+  .wrap { max-width:960px; margin:0 auto; padding:32px 20px 48px; }
+  header { text-align:center; margin-bottom:28px; }
+  .badge-lab { display:inline-block; background:#c2410c; color:#fff; font-size:12px; font-weight:700; letter-spacing:2px; padding:4px 14px; border-radius:999px; margin-bottom:12px; }
+  h1 { font-size:26px; font-weight:800; color:#111827; }
+  .sub { color:#6b7280; font-size:14px; margin-top:6px; }
+  .section-title { font-size:18px; font-weight:800; color:#111827; margin:36px 0 14px; border-left:4px solid #c2410c; padding-left:10px; }
+  .kpi-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:14px; }
+  .card { background:#fff; border-radius:14px; padding:18px; box-shadow:0 1px 4px rgba(0,0,0,.06); }
+  .kpi-label { font-size:13px; color:#6b7280; font-weight:600; }
+  .kpi-value { font-size:28px; font-weight:800; color:#c2410c; margin:6px 0 4px; }
+  .kpi-desc { font-size:12.5px; color:#374151; }
+  .kpi-src { font-size:11.5px; color:#9ca3af; margin-top:8px; }
+  .src-badge { display:inline-block; font-size:10.5px; font-weight:700; padding:1px 7px; border-radius:999px; margin-right:4px; vertical-align:1px; }
+  .src-media { background:#fef3c7; color:#92400e; }
+  .src-primary { background:#ccfbf1; color:#0f766e; }
+  .charts { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media (max-width:720px){ .charts { grid-template-columns:1fr; } }
+  .chart-card h3 { font-size:14.5px; font-weight:700; margin-bottom:4px; }
+  .chart-note { font-size:11.5px; color:#9ca3af; margin-bottom:10px; }
+  .chart-box { position:relative; height:260px; }
+  .insight { background:#fff; border-radius:14px; padding:18px 20px; box-shadow:0 1px 4px rgba(0,0,0,.06); margin-bottom:12px; }
+  .insight h3 { font-size:15.5px; font-weight:800; color:#111827; margin-bottom:6px; }
+  .insight p { font-size:13.5px; color:#374151; }
+  .implication { color:#0f766e; font-weight:700; font-size:13.5px; margin-top:8px; }
+  .insight .src { font-size:12px; color:#9ca3af; margin-top:8px; }
+  .insight .src a { color:#c2410c; text-decoration:none; font-weight:600; }
+  .news-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media (max-width:720px){ .news-grid { grid-template-columns:1fr; } }
+  .news-card .date-badge { display:inline-block; background:#0f766e; color:#fff; font-size:11px; font-weight:700; padding:2px 10px; border-radius:999px; margin-bottom:8px; }
+  .news-card h3 { font-size:14.5px; font-weight:700; margin-bottom:6px; }
+  .news-card p { font-size:13px; color:#4b5563; }
+  .news-card .media { font-size:12px; color:#9ca3af; margin-top:8px; }
+  .news-card a { color:#c2410c; text-decoration:none; font-weight:600; font-size:13px; }
+  .hashtags { margin-top:28px; text-align:center; font-size:13.5px; color:#0f766e; font-weight:600; }
+  footer { margin-top:32px; padding-top:16px; border-top:1px solid #e5e7eb; font-size:12px; color:#9ca3af; text-align:center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="badge-lab">4060 LAB DAILY</div>
+  <h1>4060 연구소 데일리 리포트</h1>
+  <div class="sub">2026년 7월 22일 (수) · 4060 여성·시니어 소비 인사이트</div>
+</header>
+
+<div class="section-title">핵심 KPI</div>
+<div class="kpi-grid">
+  <div class="card">
+    <div class="kpi-label">65세 이상 카드 이용금액 증가율 (2019→2025)</div>
+    <div class="kpi-value">+143%</div>
+    <div class="kpi-desc">전 연령 평균(+34%)의 4배 이상. 50대 이상은 +66%</div>
+    <div class="kpi-src"><span class="src-badge src-media">언론 보도</span>KB국민카드 분석 · 뉴스핌 2026-06-18</div>
+  </div>
+  <div class="card">
+    <div class="kpi-label">65세 이상 오프라인 결제 비중 (최근 1년)</div>
+    <div class="kpi-value">86%</div>
+    <div class="kpi-desc">65세 미만(70%)보다 16%p 높음. 금액 1위 업종은 병원·약국(38%)</div>
+    <div class="kpi-src"><span class="src-badge src-media">언론 보도</span>KB국민카드 분석 · 뉴스핌 2026-06-18</div>
+  </div>
+  <div class="card">
+    <div class="kpi-label">퀸잇 라이프그룹(리빙·뷰티) 월평균 거래액 증가율 (2026.1~5월, 전년 동기 대비)</div>
+    <div class="kpi-value">+84%</div>
+    <div class="kpi-desc">4050 여성 앱의 비패션 확장 — 리빙 54.2% · 뷰티 45.8%</div>
+    <div class="kpi-src"><span class="src-badge src-media">언론 보도</span>라포랩스(퀸잇) · 이데일리 2026-07-19</div>
+  </div>
+  <div class="card">
+    <div class="kpi-label">전국투어 콘서트 2회 이상 구매 고객 중 5060 비중 (2025)</div>
+    <div class="kpi-value">27.2%</div>
+    <div class="kpi-desc">전년(18.5%) 대비 +8.7%p — 30대(29.3%)에 근접</div>
+    <div class="kpi-src"><span class="src-badge src-media">언론 보도</span>놀유니버스 발표 · 인사이트코리아 2026-01-13</div>
+  </div>
+</div>
+
+<div class="section-title">차트</div>
+<div class="charts">
+  <div class="card chart-card">
+    <h3>오늘의 소식 테마 비중</h3>
+    <div class="chart-note">※ 오늘 수집·발행한 소스의 주제 구성 기준 편집팀 추정</div>
+    <div class="chart-box"><canvas id="donut"></canvas></div>
+  </div>
+  <div class="card chart-card">
+    <h3>카드 이용금액 증가율: 시니어 vs 전체 (2019→2025)</h3>
+    <div class="chart-note">※ 실측 — KB국민카드 개인 신용·체크카드 데이터 (뉴스핌 2026-06-18 보도)</div>
+    <div class="chart-box"><canvas id="bar"></canvas></div>
+  </div>
+</div>
+
+<div class="section-title">핵심 인사이트</div>
+
+<div class="insight">
+  <h3>1. 4050 여성 패션앱 퀸잇의 성장축이 패션에서 '생활 문제 해결형' 리빙·뷰티로 이동하고 있다</h3>
+  <p>라포랩스 집계 기준, 2026년 1~5월 퀸잇 라이프그룹(리빙·뷰티)의 월평균 거래액은 전년 동기 대비 84% 증가했고 취급 상품 수는 약 8만 개로 1년 새 두 배가 됐다. 카테고리 나열 대신 '습기·숙면·두피·청소' 같은 생활 고민 단위로 리빙과 뷰티 상품을 묶어 제안한 전략이 주효했다는 설명이다. 비패션 매출 비중은 지난해 15%에서 내년 초 30%가 목표다.</p>
+  <div class="implication">→ 시사점: 4060 여성 대상 커머스는 상품 카테고리가 아니라 '생활 고민' 단위로 큐레이션을 설계해야 지갑이 열린다.</div>
+  <div class="src">이데일리 · 2026-07-19 · <a href="https://www.edaily.co.kr/News/Read?mediaCodeNo=257&newsId=01607206645516160" target="_blank">원문 보기 →</a></div>
+</div>
+
+<div class="insight">
+  <h3>2. 시니어(65세 이상)의 카드 소비는 6년새 143% 늘었지만, 그 소비의 86%는 여전히 오프라인에서 일어난다</h3>
+  <p>KB국민카드가 2019년 대비 2025년 자사 개인 신용·체크카드 데이터를 분석한 결과, 65세 이상 이용금액은 143% 증가(전체 평균 34%)했다. 그러나 최근 1년 주요 업종 이용금액의 86%가 오프라인 매장에서 발생해 65세 미만(70%)보다 16%p 높았다. 결제 건수 1위는 음식점(38%), 금액 1위는 병원·약국(38%)이었다.</p>
+  <div class="implication">→ 시사점: 4060+ 타깃 마케팅은 '온라인 전환'을 전제하지 말고, 매장·현장 접점과 건강 카테고리를 결합한 오프라인 설계를 유지해야 한다.</div>
+  <div class="src">KB국민카드 분석, 뉴스핌 보도 · 2026-06-18 · <a href="https://www.newspim.com/news/view/20260618000983" target="_blank">원문 보기 →</a></div>
+</div>
+
+<div class="insight">
+  <h3>3. 공연(콘서트) 시장의 반복 구매 팬덤 고객으로 5060이 부상했다</h3>
+  <p>놀유니버스의 2026 여가 트렌드 발표에 따르면, 2025년 전국투어 콘서트 티켓을 2회 이상 구매한 고객 중 5060세대 비중은 27.2%로 전년(18.5%) 대비 8.7%p 늘었다. 이는 20대(23.4%)를 넘어 30대(29.3%)에 근접한 수준으로, 문화공연 분야에서 5060이 새로운 '팬덤 컬처 드라이버'로 지목됐다.</p>
+  <div class="implication">→ 시사점: 5060 여성 대상 사업이라면 콘서트 연계 여행·굿즈·커뮤니티 등 팬덤 기반 반복 구매 상품을 상시 라인업으로 검토할 시점이다.</div>
+  <div class="src">놀유니버스 발표, 인사이트코리아 보도 · 2026-01-13 · <a href="https://www.insightkorea.co.kr/news/articleView.html?idxno=239101" target="_blank">원문 보기 →</a></div>
+</div>
+
+<div class="insight">
+  <h3>4. 4050 여성 앱에서 '무형 서비스' 판매가 통했다 — 퀸잇 에어컨 청소 서비스, 출시 한 달 만에 거래액 1억 원</h3>
+  <p>퀸잇은 상품이 아닌 생활 서비스(에어컨 청소) 판매를 시험 도입해 출시 한 달 만에 거래액 1억 원을 넘겼다. 오는 8월에는 반려동물 동반 호텔 상품 등 여행·렌털·보험으로 확장 예정으로, "고객이 직접 조건을 검색·비교하기 어려운 상품을 선별 제안"하는 전략이다.</p>
+  <div class="implication">→ 시사점: 4060 여성에게는 물건보다 '대신 해결해주는 서비스'가 유효하다 — 검색·비교가 번거로운 영역일수록 큐레이션의 가치가 커진다.</div>
+  <div class="src">이데일리 · 2026-07-19 · <a href="https://www.edaily.co.kr/News/Read?mediaCodeNo=257&newsId=01607206645516160" target="_blank">원문 보기 →</a></div>
+</div>
+
+<div class="insight">
+  <h3>5. 시니어 여가가 실내로 들어온다 — 실내 파크골프장 이용객의 48%가 60세 이상</h3>
+  <p>KB국민카드 분석에서 최근 1년간 실내 파크골프장 이용 고객의 48%가 60세 이상으로 집계됐다. 실외 중심이던 파크골프가 실내로 다변화되면서 전국 실내 파크골프 가맹점 수는 2025년 1월 대비 2026년 4월 기준 94% 급증했다.</p>
+  <div class="implication">→ 시사점: 6070 여성 여가 상품은 날씨·계절 제약이 없는 '실내형 액티비티'와 결합할 때 시장이 빠르게 열린다.</div>
+  <div class="src">KB국민카드 분석, 뉴스핌 보도 · 2026-06-18 · <a href="https://www.newspim.com/news/view/20260618000983" target="_blank">원문 보기 →</a></div>
+</div>
+
+<div class="section-title">주요 소식</div>
+<div class="news-grid">
+  <div class="card news-card">
+    <div class="date-badge">2026-07-19</div>
+    <h3>"4050의 모든 생활 고민 들여다볼 것" — 퀸잇, 리빙·뷰티·여행·렌털로 확장</h3>
+    <p>4050 여성 플랫폼 퀸잇의 라이프그룹 인터뷰. 월평균 거래액 +84%, 무형 서비스 성과, 매일 8,500만 건 고객 행동 데이터 기반 큐레이션 전략 소개.</p>
+    <div class="media"><span class="src-badge src-media">언론 보도</span>이데일리 · <a href="https://www.edaily.co.kr/News/Read?mediaCodeNo=257&newsId=01607206645516160" target="_blank">원문 보기 →</a></div>
+  </div>
+  <div class="card news-card">
+    <div class="date-badge">2026-06-18</div>
+    <h3>KB국민카드 "65세 이상 카드 이용액 6년새 143% 급증"</h3>
+    <p>50대 이상 고객 수 +46%, 65세 이상 +102%. 시니어 소비는 오프라인 86%, 건강(병원·약국) 중심. 실내 파크골프 등 여가 업종에서도 강세.</p>
+    <div class="media"><span class="src-badge src-media">언론 보도</span>뉴스핌 · <a href="https://www.newspim.com/news/view/20260618000983" target="_blank">원문 보기 →</a></div>
+  </div>
+  <div class="card news-card">
+    <div class="date-badge">2026-01-13</div>
+    <h3>놀유니버스 2026 여가 트렌드 — 문화공연 팬덤의 새 주역은 5060</h3>
+    <p>전국투어 콘서트 반복 구매 고객 중 5060 비중 27.2%(+8.7%p). 팬심에서 시작해 여가·여행으로 확장되는 5060 소비 흐름 확인.</p>
+    <div class="media"><span class="src-badge src-media">언론 보도</span>인사이트코리아 · <a href="https://www.insightkorea.co.kr/news/articleView.html?idxno=239101" target="_blank">원문 보기 →</a></div>
+  </div>
+  <div class="card news-card">
+    <div class="date-badge">참고</div>
+    <h3>오늘의 수집 노트</h3>
+    <p>와이즈앱·리테일 '연령별 앱 사용 순위 2026' 원문은 스크립트 렌더링으로 수치 검증이 불가해 제외했습니다. 이전 14일 리포트에서 사용한 소스(퀸잇 연간 실적, 와이즈앱 세대별 앱, TV홈쇼핑협회, 관광데이터랩 등)와 겹치지 않는 신규 발표만 발행했습니다.</p>
+    <div class="media">4060 연구소 편집 기준 (중복 배제 원칙)</div>
+  </div>
+</div>
+
+<div class="hashtags">#퀸잇 #라이프스타일커머스 #시니어소비 #KB국민카드 #오프라인86% #5060팬덤 #콘서트 #실내파크골프 #생활서비스</div>
+
+<footer>
+  <p><b>출처 배지 안내</b> — <span class="src-badge src-primary">1차 데이터</span>협회·리서치사·정부 발간물을 직접 확인 / <span class="src-badge src-media">언론 보도</span>기사를 통한 간접 확인 (오늘 소스는 전부 언론 보도 경유이며, 인용 수치는 각 기사 본문에서 직접 확인함)</p>
+  <p style="margin-top:6px;">실측: KPI 4종·막대 차트(KB국민카드·라포랩스·놀유니버스 집계 수치) / 추정: 도넛 차트(테마 비중, 편집팀 추정)</p>
+  <p style="margin-top:6px;">모든 항목은 4060(50~70) 여성·시니어 특정 수치만 게재하며, 전 연령 일반 통계는 게재하지 않음 (전체 평균 +34%는 시니어 증가율의 비교 기준선으로만 병기).</p>
+  <p style="margin-top:6px;">© 2026 4060 연구소 · 매일 아침 자동 발행</p>
+</footer>
+
+</div>
+<script>
+new Chart(document.getElementById('donut'), {
+  type: 'doughnut',
+  data: {
+    labels: ['4050 커머스 확장 (퀸잇)', '시니어 카드 소비 (KB국민카드)', '5060 여가·팬덤 (놀유니버스)'],
+    datasets: [{
+      data: [40, 35, 25],
+      backgroundColor: ['#c2410c', '#0f766e', '#f59e0b'],
+      borderColor: '#ffffff', borderWidth: 2
+    }]
+  },
+  options: { responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{ position:'bottom', labels:{ font:{ size:11.5 }, boxWidth:12 } } } }
+});
+new Chart(document.getElementById('bar'), {
+  type: 'bar',
+  data: {
+    labels: ['65세 이상', '50대 이상', '전체 평균(참고)'],
+    datasets: [{
+      label: '카드 이용금액 증가율 (2019→2025, %)',
+      data: [143, 66, 34],
+      backgroundColor: ['#c2410c', '#0f766e', '#d1d5db'],
+      borderRadius: 6
+    }]
+  },
+  options: { responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{ display:false }, tooltip:{ callbacks:{ label: (c)=> '+' + c.parsed.y + '%' } } },
+    scales:{ y:{ beginAtZero:true, ticks:{ callback:(v)=> '+' + v + '%' } } } }
+});
+</script>
+</body>
+</html>
