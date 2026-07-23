@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4060 연구소 데일리 리포트 — 2026년 7월 23일</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#f6f4ef; font-family:'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif; color:#1f2937; line-height:1.65; }
+  .wrap { max-width:1080px; margin:0 auto; padding:32px 20px 60px; }
+  header { text-align:center; padding:28px 0 20px; }
+  header .lab { color:#c2410c; font-weight:800; letter-spacing:2px; font-size:.85rem; }
+  header h1 { font-size:1.75rem; margin:6px 0 4px; }
+  header .date { color:#6b7280; font-size:.95rem; }
+  .notice { background:#fff7ed; border:1px solid #fdba74; border-radius:10px; padding:12px 16px; font-size:.85rem; color:#9a3412; margin:18px 0; }
+  h2.sec { font-size:1.15rem; margin:34px 0 14px; border-left:5px solid #c2410c; padding-left:10px; }
+  .kpi-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; }
+  .card { background:#fff; border-radius:14px; padding:18px 20px; box-shadow:0 1px 4px rgba(0,0,0,.06); }
+  .kpi .num { font-size:2rem; font-weight:800; color:#c2410c; }
+  .kpi .label { font-weight:700; margin:4px 0 6px; font-size:.95rem; }
+  .kpi .src { font-size:.76rem; color:#6b7280; }
+  .badge { display:inline-block; font-size:.68rem; font-weight:700; padding:2px 8px; border-radius:99px; margin-right:4px; vertical-align:middle; }
+  .badge.press { background:#e0f2fe; color:#075985; }
+  .badge.primary { background:#dcfce7; color:#166534; }
+  .badge.date { background:#f3f4f6; color:#4b5563; }
+  .charts { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media (max-width:760px){ .charts { grid-template-columns:1fr; } }
+  .chart-card h3 { font-size:.98rem; margin-bottom:4px; }
+  .chart-card .cap { font-size:.76rem; color:#6b7280; margin-bottom:10px; }
+  .chart-box { position:relative; height:280px; }
+  .insight { margin-bottom:14px; }
+  .insight .head { font-weight:800; font-size:1rem; }
+  .insight .body { font-size:.9rem; margin:6px 0; color:#374151; }
+  .insight .imp { color:#0f766e; font-weight:700; font-size:.9rem; }
+  .insight .src { font-size:.78rem; color:#6b7280; margin-top:6px; }
+  .insight .src a { color:#c2410c; text-decoration:none; font-weight:600; }
+  .news-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media (max-width:760px){ .news-grid { grid-template-columns:1fr; } }
+  .news h3 { font-size:.95rem; margin:6px 0; }
+  .news p { font-size:.85rem; color:#4b5563; }
+  .news a { color:#c2410c; text-decoration:none; font-weight:600; font-size:.85rem; }
+  .tags { margin:30px 0 10px; text-align:center; }
+  .tags span { display:inline-block; background:#fff; border:1px solid #e5e7eb; border-radius:99px; padding:5px 13px; margin:4px; font-size:.82rem; color:#0f766e; font-weight:600; }
+  footer { margin-top:36px; border-top:1px solid #e5e7eb; padding-top:16px; font-size:.78rem; color:#6b7280; }
+  footer b { color:#374151; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="lab">4060 LAB · DAILY REPORT</div>
+  <h1>4060 여성 트렌드 데일리 리포트</h1>
+  <div class="date">2026년 7월 23일 (목) · 매일 아침 자동 발행</div>
+</header>
+
+<div class="notice">
+  ⚠️ <b>오늘의 소싱 노트:</b> 최근 2주 내 발행된 신규 4060 특정 소스 확보에 실패했습니다 (최신 소스: 6월 15일 발행). 최근 2주 후보였던 KB국민카드 시니어 분석·와이즈앱 연령별 자료·섬유산업연합회 통계는 지난 리포트(7/16~7/22)에서 이미 다뤄 <b>중복 배제 원칙</b>에 따라 제외했습니다. 오늘 리포트는 미발행 검증 소스 3건으로 구성됩니다.
+</div>
+
+<h2 class="sec">핵심 KPI</h2>
+<div class="kpi-grid">
+  <div class="card kpi">
+    <div class="num">49%</div>
+    <div class="label">50대 온라인쇼핑 주 1회 이상 이용률</div>
+    <div class="src"><span class="badge press">언론 보도</span>CJ메조미디어 '2026 디지털 라이프스타일 리포트' (브라보마이라이프 재인용) · 2026-06-15</div>
+  </div>
+  <div class="card kpi">
+    <div class="num">35만원</div>
+    <div class="label">50대 월평균 온라인쇼핑 지출액 (모바일 비중 73%)</div>
+    <div class="src"><span class="badge press">언론 보도</span>CJ메조미디어 '2026 디지털 라이프스타일 리포트' (브라보마이라이프 재인용) · 2026-06-15</div>
+  </div>
+  <div class="card kpi">
+    <div class="num">+100%</div>
+    <div class="label">4050 여성 플랫폼 퀸잇 4월 할인행사 명품 카테고리 거래액 증가율 (전년 대비)</div>
+    <div class="src"><span class="badge press">언론 보도</span>브릿지경제 · 2026-05-07</div>
+  </div>
+  <div class="card kpi">
+    <div class="num">91%</div>
+    <div class="label">50대 중 온라인쇼핑 전 과정을 타인 도움 없이 스스로 수행하는 비율</div>
+    <div class="src"><span class="badge press">언론 보도</span>오픈서베이 '시니어 트렌드 리포트 2025' (캐릿 재인용) · 2026-02-11</div>
+  </div>
+</div>
+
+<h2 class="sec">차트</h2>
+<div class="charts">
+  <div class="card chart-card">
+    <h3>오늘 수집 소식 테마 비중 <span class="badge date">추정</span></h3>
+    <div class="cap">오늘 검증 소스 3건의 주제 구성 비율 — 에디터 추정치입니다.</div>
+    <div class="chart-box"><canvas id="donut"></canvas></div>
+  </div>
+  <div class="card chart-card">
+    <h3>50대가 주로 이용하는 온라인쇼핑몰 (복수응답, %) <span class="badge date">실측</span></h3>
+    <div class="cap">CJ메조미디어 '2026 디지털 라이프스타일 리포트' · 브라보마이라이프 2026-06-15 재인용</div>
+    <div class="chart-box"><canvas id="bar"></canvas></div>
+  </div>
+</div>
+
+<h2 class="sec">핵심 인사이트</h2>
+
+<div class="card insight">
+  <div class="head">① 50대 온라인쇼핑의 중심은 오픈마켓·포털 — 그러나 카톡·밴드 '링크 쇼핑'이 새 입구로 부상</div>
+  <div class="body">CJ메조미디어 '2026 디지털 라이프스타일 리포트'에 따르면 50대가 주로 이용하는 온라인쇼핑몰은 오픈마켓 64%, 포털 57%가 압도적이지만, SNS몰도 11%로 집계됐다. 마트·백화점·TV 같은 '쇼핑 공간'에 들어가야 물건을 사던 세대가, 이제 카카오톡 단체방 링크·밴드 공구·유튜브 영상 하단 구매처처럼 쇼핑이 아닌 공간에서 상품을 발견하기 시작했다.</div>
+  <div class="imp">→ 시사점: 4060 여성 커머스는 쿠팡·네이버 입점을 기본으로 하되, 카톡·밴드 공유에 최적화된 '링크 상세페이지'(모바일 1화면 요약형)를 별도 설계하라.</div>
+  <div class="src">브라보마이라이프 · 2026-06-15 · <a href="https://bravo.etoday.co.kr/view/atc_view/19401" target="_blank">원문 보기 →</a></div>
+</div>
+
+<div class="card insight">
+  <div class="head">② 4050 여성 패션 플랫폼(퀸잇)에서 명품 카테고리 거래액 +100% — 중장년 여성의 프리미엄 소비 본격화</div>
+  <div class="body">브릿지경제 보도에 따르면 라포랩스의 4050 여성 플랫폼 퀸잇이 4월 2~19일 진행한 할인행사에서 거래액 +27%, 구매 고객 수 +46%(전년 대비)를 기록했고, 특히 명품 카테고리 거래액이 100% 이상 증가했다. 취향·체형·라이프스타일 기반 개인화 큐레이션이 성장 동력으로 지목된다.</div>
+  <div class="imp">→ 시사점: 4060 여성에게 '나이에 맞는 저가 상품'이 아니라 프리미엄·취향 큐레이션 라인을 전면에 배치하라 — 지갑은 이미 열려 있다.</div>
+  <div class="src">브릿지경제 · 2026-05-07 · <a href="https://v.daum.net/v/ydbrL7LxW8" target="_blank">원문 보기 →</a></div>
+</div>
+
+<div class="card insight">
+  <div class="head">③ 홈쇼핑 자체 패션 브랜드는 '젊은 디자인'으로 5060 여성을 잡았다 — GS샵 라삐아프 연 주문액 660억원</div>
+  <div class="body">브릿지경제에 따르면 GS샵의 자체 패션 브랜드 '라삐아프'는 젊고 감각적인 디자인을 앞세워 지난해 연간 주문액 660억원을 기록하며 실적을 견인했다. 롯데·현대·CJ 등 주요 홈쇼핑사도 영캐주얼 확대와 브랜드 협업으로 5060 여성 수요를 공략 중 — 기능성 중심이던 시니어 패션의 경계가 허물어지고 있다.</div>
+  <div class="imp">→ 시사점: 4060 여성 대상 상품 기획의 핵심은 '시니어 티가 나지 않는' 디자인 — 연령 라벨을 지우는 것이 구매 전환을 만든다.</div>
+  <div class="src">브릿지경제 · 2026-05-07 · <a href="https://v.daum.net/v/ydbrL7LxW8" target="_blank">원문 보기 →</a></div>
+</div>
+
+<div class="card insight">
+  <div class="head">④ 시니어 온라인쇼핑의 신뢰 기준이 '방송·상담원'에서 '리뷰 수·별점·배송 속도'로 이동</div>
+  <div class="body">브라보마이라이프 분석에 따르면 TV홈쇼핑 시대의 신뢰(쇼호스트·방송사·전화 상담)가 온라인에서는 리뷰 수·별점·가격 비교·간편결제·지인 추천으로 대체되고 있다. "방송에 나왔으니 믿을 만하다"에서 "리뷰가 많고 배송이 빠르니 괜찮겠다"로 판단 방식 자체가 바뀌는 중이다.</div>
+  <div class="imp">→ 시사점: 4060 타깃 신상품은 광고비보다 초기 리뷰 확보(체험단·첫구매 혜택)에 먼저 투자하라 — 리뷰 수가 곧 전환율이다.</div>
+  <div class="src">브라보마이라이프 · 2026-06-15 · <a href="https://bravo.etoday.co.kr/view/atc_view/19401" target="_blank">원문 보기 →</a></div>
+</div>
+
+<div class="card insight">
+  <div class="head">⑤ '도파민 시니어' — 50대는 덕질·SNS·새로운 놀이로 재미를 소비하는 세대로 진화</div>
+  <div class="body">트렌드 미디어 캐릿에 따르면 이제 막 중장년에 진입한 50대 사이에서 일상의 재미를 적극 추구하는 '도파민 시니어' 성향이 확산 중이다. 국회예산정책처는 2050년 이후 50세 이상 인구가 국내 전체 소비의 70%를 차지할 것으로 전망했고, 우리금융그룹 조사에서는 55~69세의 84.8%가 향후 AI 서비스 이용 의향을 밝혔다. 인스타·스레드로 트렌드를 흡수하고 '실패해도 괜찮은 놀이형 모임'을 찾는 것이 특징.</div>
+  <div class="imp">→ 시사점: 4060 여성 콘텐츠·커뮤니티는 '정보 전달'보다 재미·참여형 포맷(챌린지, 만들기 모임, 놀이형 클래스)으로 설계하라.</div>
+  <div class="src">캐릿(대학내일) · 2026-02-11 · <a href="https://www.careet.net/1840" target="_blank">원문 보기 →</a></div>
+</div>
+
+<h2 class="sec">주요 소식</h2>
+<div class="news-grid">
+  <div class="card news">
+    <span class="badge date">2026-06-15</span><span class="badge press">언론 보도</span>
+    <h3>TV홈쇼핑만 보던 시니어? 이제 링크로 산다</h3>
+    <p>리모컨 쇼핑에서 앱·공구·리뷰 쇼핑으로 — 50대 온라인쇼핑 주 1회 이용률 49%, 월평균 지출 35만원. 시니어 쇼핑의 '입구'가 카톡·밴드·유튜브 링크로 넓어졌다.</p>
+    <a href="https://bravo.etoday.co.kr/view/atc_view/19401" target="_blank">브라보마이라이프 · 원문 보기 →</a>
+  </div>
+  <div class="card news">
+    <span class="badge date">2026-05-07</span><span class="badge press">언론 보도</span>
+    <h3>커지는 시니어 패션 시장, '기능성' 넘어 '취향'으로 확장</h3>
+    <p>퀸잇 명품 거래액 +100%, GS샵 라삐아프 연 주문액 660억원 — 5060 여성 패션이 기능성에서 취향·프리미엄 중심으로 재편되고 있다.</p>
+    <a href="https://v.daum.net/v/ydbrL7LxW8" target="_blank">브릿지경제 · 원문 보기 →</a>
+  </div>
+  <div class="card news">
+    <span class="badge date">2026-02-11</span><span class="badge press">언론 보도</span>
+    <h3>전체 소비의 70%를 담당할 큰손, '도파민 시니어'의 근황</h3>
+    <p>덕질·스레드·놀이형 모임 — 재미를 소비하는 50대. 50대의 91%가 온라인쇼핑 전 과정을 스스로 수행하고, 55~69세 84.8%가 AI 이용 의향.</p>
+    <a href="https://www.careet.net/1840" target="_blank">캐릿 · 원문 보기 →</a>
+  </div>
+</div>
+
+<div class="tags">
+  <span>#4060여성</span><span>#액티브시니어</span><span>#링크쇼핑</span><span>#프리미엄소비</span><span>#도파민시니어</span><span>#시니어패션</span><span>#리뷰커머스</span>
+</div>
+
+<footer>
+  <p><b>출처 배지 안내:</b> <span class="badge primary">1차 데이터</span> 협회·리서치사·정부 발간물을 직접 확인한 수치 / <span class="badge press">언론 보도</span> 기사를 통해 간접 확인한 수치. 오늘 리포트의 수치는 모두 언론 보도를 통해 확인되었습니다.</p>
+  <p style="margin-top:6px;"><b>추정/실측 구분:</b> 도넛 차트(테마 비중)는 에디터 추정, 막대 차트(50대 쇼핑몰 이용률)는 CJ메조미디어 조사 실측치입니다. 본 리포트는 4060(50~70) 여성·시니어에 특정된 수치만 게재하며, <b>전 연령 일반 통계는 게재하지 않습니다.</b></p>
+  <p style="margin-top:6px;">© 2026 4060 연구소 · 매일 아침 자동 발행 · 발행일 2026-07-23</p>
+</footer>
+
+</div>
+<script>
+new Chart(document.getElementById('donut'), {
+  type:'doughnut',
+  data:{ labels:['쇼핑 채널 전환(링크·리뷰)','프리미엄 패션 소비','디지털 신뢰 기준 변화','라이프스타일·재미 소비'],
+    datasets:[{ data:[35,30,20,15], backgroundColor:['#c2410c','#0f766e','#f59e0b','#64748b'], borderWidth:2, borderColor:'#fff' }] },
+  options:{ maintainAspectRatio:false, plugins:{ legend:{ position:'bottom', labels:{ font:{ size:11 } } } } }
+});
+new Chart(document.getElementById('bar'), {
+  type:'bar',
+  data:{ labels:['오픈마켓','포털사이트','종합몰','전문몰','해외직구몰','홈쇼핑몰','SNS몰'],
+    datasets:[{ label:'50대 주 이용 온라인쇼핑몰 (복수응답, %)', data:[64,57,28,22,14,14,11], backgroundColor:'#0f766e', borderRadius:6 }] },
+  options:{ maintainAspectRatio:false, indexAxis:'y',
+    plugins:{ legend:{ display:false } },
+    scales:{ x:{ beginAtZero:true, max:70, ticks:{ callback:v=>v+'%' } } } }
+});
+</script>
+</body>
+</html>
