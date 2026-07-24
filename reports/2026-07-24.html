@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4060 연구소 데일리 리포트 — 2026년 7월 24일</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif; background:#f6f4ef; color:#1f2937; line-height:1.65; }
+  .wrap { max-width:1080px; margin:0 auto; padding:32px 20px 60px; }
+  header { text-align:center; margin-bottom:36px; }
+  .badge-lab { display:inline-block; background:#c2410c; color:#fff; font-size:13px; font-weight:700; padding:4px 14px; border-radius:999px; letter-spacing:1px; margin-bottom:12px; }
+  h1 { font-size:28px; font-weight:800; }
+  header .date { color:#6b7280; margin-top:6px; font-size:15px; }
+  .notice { background:#fff7ed; border:1px solid #fdba74; border-radius:10px; padding:12px 16px; font-size:13.5px; color:#9a3412; margin-bottom:28px; }
+  h2.sec { font-size:20px; font-weight:800; margin:36px 0 16px; border-left:5px solid #c2410c; padding-left:10px; }
+  .kpi-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; }
+  .card { background:#fff; border-radius:14px; padding:20px; box-shadow:0 1px 4px rgba(0,0,0,.06); }
+  .kpi .num { font-size:30px; font-weight:800; color:#c2410c; }
+  .kpi .label { font-size:14.5px; font-weight:700; margin-top:4px; }
+  .kpi .src { font-size:12px; color:#6b7280; margin-top:8px; }
+  .src-badge { display:inline-block; font-size:11px; font-weight:700; padding:1px 8px; border-radius:999px; margin-right:4px; }
+  .b-primary { background:#ccfbf1; color:#0f766e; }
+  .b-press { background:#fee2e2; color:#b91c1c; }
+  .charts { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media(max-width:760px){ .charts{grid-template-columns:1fr;} }
+  .chart-card h3 { font-size:15px; font-weight:700; margin-bottom:4px; }
+  .chart-card .note { font-size:12px; color:#6b7280; margin-bottom:10px; }
+  .chart-box { position:relative; height:260px; }
+  .insight { margin-bottom:14px; }
+  .insight .head { font-size:15.5px; font-weight:800; }
+  .insight .body { font-size:14px; margin-top:6px; color:#374151; }
+  .insight .imp { margin-top:8px; font-size:14px; font-weight:700; color:#0f766e; }
+  .insight .src { font-size:12px; color:#6b7280; margin-top:8px; }
+  .insight a { color:#c2410c; text-decoration:none; font-weight:700; }
+  .news-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media(max-width:760px){ .news-grid{grid-template-columns:1fr;} }
+  .news .meta { font-size:12px; color:#6b7280; margin-bottom:6px; }
+  .news .date-badge { display:inline-block; background:#0f766e; color:#fff; font-size:11px; font-weight:700; padding:1px 8px; border-radius:999px; margin-right:6px; }
+  .news h3 { font-size:15.5px; font-weight:800; margin-bottom:6px; }
+  .news p { font-size:13.5px; color:#374151; }
+  .news a { color:#c2410c; text-decoration:none; font-weight:700; font-size:13.5px; }
+  .tags { margin-top:28px; font-size:14px; color:#0f766e; font-weight:700; }
+  footer { margin-top:40px; padding-top:18px; border-top:1px solid #e5e7eb; font-size:12.5px; color:#6b7280; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="badge-lab">4060 LAB DAILY</span>
+    <h1>4060 여성 데일리 리포트</h1>
+    <div class="date">2026년 7월 24일 (금) · 매일 아침 자동 발행</div>
+  </header>
+
+  <div class="notice">
+    ⚠️ 오늘 확보된 검증 소스는 3건이며, 최근 2주 내 발행 소스는 확보하지 못했습니다(최신 소스: 2026-06-19). 중복 배제 원칙에 따라 과거 리포트에서 사용한 소스(퀸잇 플리츠, 와이즈앱 세대별 앱, TV홈쇼핑 시니어 전략 등)는 제외했습니다.
+  </div>
+
+  <h2 class="sec">핵심 KPI</h2>
+  <div class="kpi-grid">
+    <div class="card kpi">
+      <div class="num">+143%</div>
+      <div class="label">65세 이상 카드 이용금액 증가율 (2019→2025, 전체 평균 34%의 4배 이상)</div>
+      <div class="src"><span class="src-badge b-press">언론 보도</span>KB국민카드 데이터 · 일간투데이 · 2026-06-19</div>
+    </div>
+    <div class="card kpi">
+      <div class="num">+66%</div>
+      <div class="label">50대 이상 카드 이용금액 증가율 (2019→2025, 고객 수도 46% 증가)</div>
+      <div class="src"><span class="src-badge b-press">언론 보도</span>KB국민카드 데이터 · 일간투데이 · 2026-06-19</div>
+    </div>
+    <div class="card kpi">
+      <div class="num">86%</div>
+      <div class="label">65세 이상 시니어의 주요 업종 소비 중 오프라인 비중 (65세 미만은 70%)</div>
+      <div class="src"><span class="src-badge b-press">언론 보도</span>KB국민카드 데이터 · 일간투데이 · 2026-06-19</div>
+    </div>
+    <div class="card kpi">
+      <div class="num">70%</div>
+      <div class="label">2050년 50세 이상이 차지할 한국 전체 소비 비중 전망 (2020년 52%)</div>
+      <div class="src"><span class="src-badge b-press">언론 보도</span>국회입법조사처·예산정책처 보고서 · 중앙일보 · 2025-12-09</div>
+    </div>
+  </div>
+
+  <h2 class="sec">차트</h2>
+  <div class="charts">
+    <div class="card chart-card">
+      <h3>오늘 수집 소식 테마 비중</h3>
+      <div class="note">※ 오늘 검증된 소스 3건의 주제를 기준으로 한 편집상 추정 비중입니다.</div>
+      <div class="chart-box"><canvas id="donut"></canvas></div>
+    </div>
+    <div class="card chart-card">
+      <h3>카드 이용금액 증가율: 시니어가 평균의 2~4배 (2019→2025)</h3>
+      <div class="note">실측 · KB국민카드 신용/체크카드 데이터 (일간투데이 2026-06-19 보도)</div>
+      <div class="chart-box"><canvas id="bar"></canvas></div>
+    </div>
+  </div>
+
+  <h2 class="sec">핵심 인사이트</h2>
+  <div class="card insight">
+    <div class="head">국내 카드 소비 시장의 성장은 50대 이상이 견인 — 이용금액 증가율이 전체 평균의 2배</div>
+    <div class="body">KB국민카드가 2019년 대비 2025년 자사 신용/체크카드 데이터를 분석한 결과, 50대 이상 고객 수는 46%, 이용금액은 66% 증가해 전체 평균 증가율(34%)을 크게 웃돌았다. 65세 이상은 이용금액이 143% 늘어 전 연령대 중 가장 가팔랐다.</div>
+    <div class="imp">→ 시사점: 4060 여성 대상 커머스는 "지불 여력이 있는가"가 아니라 "결제 순간의 마찰을 얼마나 줄이는가"의 싸움 — 카드 간편결제 연동·큰 글씨 결제 UI 최적화가 매출에 직결된다.</div>
+    <div class="src"><span class="src-badge b-press">언론 보도</span>일간투데이 · 2026-06-19 · <a href="https://www.dtoday.co.kr/news/articleView.html?idxno=776297" target="_blank">원문 보기 →</a></div>
+  </div>
+  <div class="card insight">
+    <div class="head">시니어(65세 이상) 소비의 86%는 여전히 오프라인 — 음식점·병원·약국이 중심</div>
+    <div class="body">KB국민카드 최근 1년 데이터에서 65세 이상 고객은 주요 업종 이용금액의 86%를 오프라인에서 썼다(65세 미만은 70%). 이용건수는 음식점 38%, 병원·약국 25%, 커피·디저트 10% 순이었고, 이용금액 기준으로는 병원·약국이 38%로 건강관리 소비가 최대 영역이었다.</div>
+    <div class="imp">→ 시사점: 60대 이상 여성 타깃은 온라인 광고만으로 닿지 않는다 — 병원·약국·동네 상권 등 오프라인 접점과 연계한 O2O(전단 QR, 매장 픽업) 설계가 필요하다.</div>
+    <div class="src"><span class="src-badge b-press">언론 보도</span>일간투데이 · 2026-06-19 · <a href="https://www.dtoday.co.kr/news/articleView.html?idxno=776297" target="_blank">원문 보기 →</a></div>
+  </div>
+  <div class="card insight">
+    <div class="head">60대 여가의 새 격전지 '실내 파크골프' — 이용 고객 절반이 60세 이상, 가맹점 94% 급증</div>
+    <div class="body">KB국민카드 분석에서 최근 1년 실내 파크골프 이용 고객의 48%가 60세 이상이었고, 실내 파크골프 가맹점 수는 2025년 1월 대비 2026년 4월 94% 증가했다. 실외 스포츠였던 파크골프가 날씨와 무관한 실내 여가로 확산 중이다.</div>
+    <div class="imp">→ 시사점: 실내 파크골프장은 6070 여성 모임이 정기적으로 모이는 신규 오프라인 커뮤니티 채널 — 시니어 여성 대상 샘플링·제휴 이벤트 장소로 우선 검토할 만하다.</div>
+    <div class="src"><span class="src-badge b-press">언론 보도</span>일간투데이 · 2026-06-19 · <a href="https://www.dtoday.co.kr/news/articleView.html?idxno=776297" target="_blank">원문 보기 →</a></div>
+  </div>
+  <div class="card insight">
+    <div class="head">광고 미디어 관점의 50대는 'SNS로 소통하는 스마트 실버' — TV와 OTT·디지털을 함께 쓴다</div>
+    <div class="body">CJ메조미디어의 '2026 타겟 리포트_50대'(소비자 설문 기반)는 50대를 SNS·커뮤니티로 활발히 소통하고, 레거시 TV와 OTT 등 디지털 플랫폼을 폭넓게 넘나드는 '스마트 실버'로 규정했다. 50대가 디지털 생태계의 새 주역이라는 진단이다.</div>
+    <div class="imp">→ 시사점: 5060 여성 캠페인은 TV 단일 편성이 아니라 TV+유튜브/OTT 크로스 미디어 플래닝이 기본값 — 커뮤니티발 입소문 설계를 병행해야 한다.</div>
+    <div class="src"><span class="src-badge b-primary">1차 데이터</span>CJ메조미디어(오픈애즈 게재) · 2026-04-29 · <a href="https://www.openads.co.kr/content/contentDetail?contsId=19365" target="_blank">원문 보기 →</a></div>
+  </div>
+  <div class="card insight">
+    <div class="head">한국의 50세 이상 소비 비중은 2050년 70%로 — G7보다 빠른 '시니어 시프트'</div>
+    <div class="body">국회입법조사처·예산정책처 '인구위기와 축소사회 대응' 특별보고서에 따르면 2050년부터 50세 이상이 한국 전체 소비의 70%를 차지할 전망이다. 미국 은퇴자협회 분석 기준 한국 고령층 소비지출 비중은 2020년 52%에서 2050년 71.1%로, 증가 폭이 G7 국가 중 가장 크다.</div>
+    <div class="imp">→ 시사점: 4060 여성 시장은 일시적 유행이 아닌 구조적 성장 시장 — 중장기 브랜드·상품 투자의 정당화 근거로 이 수치를 활용할 수 있다.</div>
+    <div class="src"><span class="src-badge b-press">언론 보도</span>중앙일보 · 2025-12-09 · <a href="https://v.daum.net/v/27FUjwjJWq" target="_blank">원문 보기 →</a></div>
+  </div>
+
+  <h2 class="sec">주요 소식</h2>
+  <div class="news-grid">
+    <div class="card news">
+      <div class="meta"><span class="date-badge">2026-06-19</span>일간투데이 <span class="src-badge b-press">언론 보도</span></div>
+      <h3>KB국민카드, 시니어 소비 데이터 분석…65세 이상 카드 이용액 143% 급증</h3>
+      <p>50대 이상 이용금액 66%↑·65세 이상 143%↑(2019→2025). 65세 이상 소비의 86%는 오프라인, 실내 파크골프 이용객 절반이 60세 이상.</p>
+      <a href="https://www.dtoday.co.kr/news/articleView.html?idxno=776297" target="_blank">원문 보기 →</a>
+    </div>
+    <div class="card news">
+      <div class="meta"><span class="date-badge">2026-04-29</span>CJ메조미디어 · 오픈애즈 <span class="src-badge b-primary">1차 데이터</span></div>
+      <h3>2026 타겟 리포트_50대: 'SMART SILVER' 페르소나</h3>
+      <p>디지털 적응력이 높아진 50대는 SNS·커뮤니티로 소통하며 TV와 OTT를 넘나드는 '스마트 실버'. 50대 미디어 이용 패턴과 광고 전략을 담은 오디언스 리포트.</p>
+      <a href="https://www.openads.co.kr/content/contentDetail?contsId=19365" target="_blank">원문 보기 →</a>
+    </div>
+    <div class="card news">
+      <div class="meta"><span class="date-badge">2025-12-09</span>중앙일보 <span class="src-badge b-press">언론 보도</span></div>
+      <h3>한국 소비 70%, 이들 지갑서 나온다…액티브 시니어 시대</h3>
+      <p>국회입법조사처·예산정책처 특별보고서: 2050년부터 50세 이상이 전체 소비의 70% 차지. 고령층 소비 비중 증가 폭은 G7 중 최대.</p>
+      <a href="https://v.daum.net/v/27FUjwjJWq" target="_blank">원문 보기 →</a>
+    </div>
+  </div>
+
+  <div class="tags">#4060여성 #액티브시니어 #KB국민카드 #실내파크골프 #스마트실버 #시니어시프트 #오프라인소비</div>
+
+  <footer>
+    <p><b>출처 배지 안내</b> — <span class="src-badge b-primary">1차 데이터</span> 협회·리서치사·정부 발간물을 직접 확인한 소스 / <span class="src-badge b-press">언론 보도</span> 기사를 통해 간접 확인한 소스.</p>
+    <p>실측/추정 구분: KPI·막대 차트는 원문에서 직접 확인한 실측 수치, 도넛 차트는 편집상 추정 비중입니다. 전 연령 일반 통계는 게재하지 않습니다(연령별 세부 수치가 확인된 경우만 사용).</p>
+    <p>ⓒ 4060 연구소 · 본 리포트는 매일 아침 자동 발행됩니다.</p>
+  </footer>
+</div>
+
+<script>
+new Chart(document.getElementById('donut'), {
+  type: 'doughnut',
+  data: {
+    labels: ['시니어 카드 소비·결제', '오프라인·여가(파크골프)', '미디어·SNS 이용(50대)', '인구구조·소비 전망'],
+    datasets: [{
+      data: [35, 25, 20, 20],
+      backgroundColor: ['#c2410c', '#f59e0b', '#0f766e', '#64748b'],
+      borderWidth: 2, borderColor: '#fff'
+    }]
+  },
+  options: { maintainAspectRatio:false, plugins:{ legend:{ position:'bottom', labels:{ font:{size:12} } } } }
+});
+new Chart(document.getElementById('bar'), {
+  type: 'bar',
+  data: {
+    labels: ['전체 평균(참고)', '50대 이상', '65세 이상'],
+    datasets: [{
+      label: '카드 이용금액 증가율 % (2019→2025)',
+      data: [34, 66, 143],
+      backgroundColor: ['#cbd5e1', '#f59e0b', '#c2410c'],
+      borderRadius: 6
+    }]
+  },
+  options: {
+    maintainAspectRatio:false,
+    plugins:{ legend:{ display:false }, tooltip:{ callbacks:{ label:(c)=>c.parsed.y+'%' } } },
+    scales:{ y:{ beginAtZero:true, ticks:{ callback:(v)=>v+'%' } } }
+  }
+});
+</script>
+</body>
+</html>
