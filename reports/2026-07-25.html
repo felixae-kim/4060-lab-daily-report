@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4060 연구소 데일리 리포트 — 2026년 7월 25일</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#f6f4ef; font-family:'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif; color:#292524; line-height:1.65; }
+  .wrap { max-width:1080px; margin:0 auto; padding:32px 20px 64px; }
+  header.hero { background:#fff; border-radius:16px; padding:36px 40px; margin-bottom:24px; border-top:6px solid #c2410c; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+  .hero .label { color:#c2410c; font-weight:800; letter-spacing:.14em; font-size:12px; }
+  .hero h1 { font-size:28px; margin:8px 0 6px; }
+  .hero p.sub { color:#78716c; font-size:14px; }
+  .notice { background:#fff7ed; border:1px solid #fdba74; border-radius:10px; padding:12px 16px; font-size:13px; color:#9a3412; margin-top:16px; }
+  h2.sec { font-size:19px; margin:36px 0 14px; padding-left:12px; border-left:5px solid #0f766e; }
+  .kpi-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; }
+  .kpi { background:#fff; border-radius:14px; padding:20px 22px; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+  .kpi .num { font-size:30px; font-weight:800; color:#c2410c; }
+  .kpi .desc { font-size:14px; font-weight:700; margin:4px 0 8px; }
+  .kpi .src { font-size:12px; color:#78716c; }
+  .badge { display:inline-block; font-size:11px; font-weight:700; padding:2px 8px; border-radius:99px; margin-right:4px; vertical-align:1px; }
+  .badge.primary { background:#ccfbf1; color:#0f766e; }
+  .badge.press { background:#fee2e2; color:#b91c1c; }
+  .badge.date { background:#e7e5e4; color:#57534e; }
+  .charts { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .chart-card { background:#fff; border-radius:14px; padding:22px; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+  .chart-card h3 { font-size:15px; margin-bottom:4px; }
+  .chart-card .cap { font-size:12px; color:#78716c; margin-bottom:12px; }
+  .chart-box { position:relative; height:280px; }
+  .insight { background:#fff; border-radius:14px; padding:22px 26px; margin-bottom:12px; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+  .insight h3 { font-size:16px; margin-bottom:8px; }
+  .insight p { font-size:14px; color:#44403c; }
+  .insight .imp { display:block; margin-top:10px; color:#0f766e; font-weight:700; font-size:14px; }
+  .insight .src { display:block; margin-top:8px; font-size:12px; color:#78716c; }
+  .insight .src a { color:#c2410c; text-decoration:none; font-weight:700; }
+  .news-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .news { background:#fff; border-radius:14px; padding:20px 22px; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+  .news h3 { font-size:15px; margin:8px 0 8px; }
+  .news p { font-size:13px; color:#57534c; }
+  .news a { color:#c2410c; font-size:13px; font-weight:700; text-decoration:none; }
+  .tags { margin-top:28px; font-size:14px; color:#0f766e; font-weight:700; line-height:2; }
+  footer { margin-top:36px; font-size:12px; color:#78716c; border-top:1px solid #e7e5e4; padding-top:16px; }
+  footer b { color:#57534e; }
+  @media (max-width:760px){ .charts,.news-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="label">4060 LAB · DAILY REPORT</div>
+  <h1>2026년 7월 25일 (토) 데일리 리포트</h1>
+  <p class="sub">4060 여성·시니어 소비 인사이트 — 오늘의 키워드: <b>'나를 위한 소비', 디지털 자립, 그리고 AI·신기술 수용</b></p>
+  <div class="notice">⚠️ 오늘의 발행 참고: 중복 배제 원칙(최근 14일 사용 소스 제외)과 검증 상한(6개) 적용 결과, 발행일·수치가 원문에서 확인된 <b>신규 소스는 2건(모두 1차 데이터)</b>입니다. 최근 2주 내 발행 소스는 확보하지 못했으며 가장 최신 소스는 7월 6일 발행입니다. 일반(전 연령 합산) 통계로 채우지 않고 4060·시니어 특정 데이터만 게재합니다.</div>
+</header>
+
+<h2 class="sec">핵심 KPI</h2>
+<div class="kpi-grid">
+  <div class="kpi">
+    <div class="num">74.5%</div>
+    <div class="desc">시니어(50~79세)가 꼽은 행복 조건 1위 '경제력'</div>
+    <div class="src"><span class="badge primary">1차 데이터</span>오픈서베이 시니어 트렌드 리포트 2025 · 2025.10.27</div>
+  </div>
+  <div class="kpi">
+    <div class="num">71.0%</div>
+    <div class="desc">'나를 위한 소비'로 외식 지출을 늘린 시니어 비율 (여행 66.3%, 문화·여가 58.2%)</div>
+    <div class="src"><span class="badge primary">1차 데이터</span>오픈서베이 시니어 트렌드 리포트 2025 · 2025.10.27</div>
+  </div>
+  <div class="kpi">
+    <div class="num">91%</div>
+    <div class="desc">50대의 온라인 쇼핑 '본인 주도' 비율 — 70대는 75.6%로 세대 격차 뚜렷</div>
+    <div class="src"><span class="badge primary">1차 데이터</span>오픈서베이 시니어 트렌드 리포트 2025 · 2025.10.27</div>
+  </div>
+  <div class="kpi">
+    <div class="num">67.7%</div>
+    <div class="desc">AI 기술을 이미 경험한 시니어(50~79세) — 10명 중 7명</div>
+    <div class="src"><span class="badge primary">1차 데이터</span>오픈서베이 시니어 트렌드 리포트 2025 · 2025.10.27</div>
+  </div>
+</div>
+
+<h2 class="sec">차트</h2>
+<div class="charts">
+  <div class="chart-card">
+    <h3>오늘 수집 소스의 테마 비중 (추정)</h3>
+    <div class="cap">※ 오늘 검증된 소스 내 다뤄진 주제 비중을 편집자가 추정 분류한 값입니다.</div>
+    <div class="chart-box"><canvas id="donut"></canvas></div>
+  </div>
+  <div class="chart-card">
+    <h3>시니어(50~79세)가 꼽은 행복의 조건 (실측)</h3>
+    <div class="cap">출처: 오픈서베이 시니어 트렌드 리포트 2025 (만 50~79세 600명, 복수응답)</div>
+    <div class="chart-box"><canvas id="bar"></canvas></div>
+  </div>
+</div>
+
+<h2 class="sec">핵심 인사이트</h2>
+
+<div class="insight">
+  <h3><b>국내 50~70대 시니어의 행복 기준이 '관계'에서 '경제력·자기 성장'으로 이동했다</b></h3>
+  <p>오픈서베이가 전국 만 50~79세 600명을 조사한 결과(2025년 조사), 행복의 핵심 조건으로 경제력(74.5%)이 압도적 1위였고 정신적 건강(53.3%)·신체적 건강(42.3%)이 뒤를 이었다. 반면 인간관계(31.8%)와 결혼·가정(28.3%)은 하위권으로, 50~60대는 스스로를 실제 나이보다 10살 이상 젊게 인식하며 취미·사회활동을 통한 성장을 지속하려 한다.</p>
+  <span class="imp">→ 시사점: 4060 여성 대상 마케팅 메시지는 '가족을 위한 헌신' 프레임이 아니라 '나의 성취와 성장'을 중심에 둔 화법으로 전환해야 한다.</span>
+  <span class="src">오픈서베이 블로그 · 2025.10.27 · <a href="https://blog.opensurvey.co.kr/article/senior-2025-2-2/" target="_blank">원문 보기 →</a></span>
+</div>
+
+<div class="insight">
+  <h3><b>시니어 소비 시장의 성장축은 여행·외식·문화 등 '나를 위한 경험 소비'다</b></h3>
+  <p>같은 조사에서 시니어(50~79세)의 지출 증가 항목은 외식 71.0%, 여행 66.3%, 문화·여가 58.2%로 경험 소비가 상위를 휩쓸었고, 증가폭은 월평균 가구소득 700만 원 이상 고소득층에서 가장 컸다(오픈서베이, 2025년 조사).</p>
+  <span class="imp">→ 시사점: 구매력 있는 5060 여성에게는 물건이 아닌 '경험'(여행+외식+문화 결합형 프리미엄 패키지)을 팔아야 지갑이 열린다.</span>
+  <span class="src">오픈서베이 블로그 · 2025.10.27 · <a href="https://blog.opensurvey.co.kr/article/senior-2025-2-2/" target="_blank">원문 보기 →</a></span>
+</div>
+
+<div class="insight">
+  <h3><b>온라인 쇼핑에서 50대는 '완전 자립', 70대부터는 자녀·배우자가 결제에 개입한다</b></h3>
+  <p>온라인 쇼핑을 본인이 주도하는 비율은 50대 91%, 70대 75.6%로 세대 격차가 뚜렷하다(오픈서베이, 2025년 조사). 특히 패션의류·주방가전 등 고관여 제품은 정보 탐색은 본인이 해도 결제는 배우자·자녀에게 맡기는 경우가 많아, '구매 의사결정자'와 '결제자'가 분리된다.</p>
+  <span class="imp">→ 시사점: 4060 여성 타깃은 본인 직접 결제 퍼널로 충분하지만, 60대 후반 이상으로 확장할 때는 자녀 대상 '선물하기·대신 결제' 경로를 반드시 병행 설계해야 한다.</span>
+  <span class="src">오픈서베이 블로그 · 2025.10.27 · <a href="https://blog.opensurvey.co.kr/article/senior-2025-2-2/" target="_blank">원문 보기 →</a></span>
+</div>
+
+<div class="insight">
+  <h3><b>시니어 3명 중 2명이 이미 AI를 써봤다 — 4060 서비스의 AI 도입 장벽은 생각보다 낮다</b></h3>
+  <p>시니어(50~79세)의 67.7%가 AI 기술을 경험했으며, 주 이용 형태는 챗GPT 등 텍스트 챗봇과 음성 비서(빅스비·시리)다. AI 앱 설치 순위에서도 만보기·건강관리 앱 다음으로 챗GPT(8.3%)가 올랐다(오픈서베이, 2025년 조사).</p>
+  <span class="imp">→ 시사점: 4060 여성 대상 커머스·커뮤니티에 AI 챗 상담이나 음성 인터페이스를 붙이는 것은 '시기상조'가 아니라 이미 수용 준비가 끝난 영역이다.</span>
+  <span class="src">오픈서베이 블로그 · 2025.10.27 · <a href="https://blog.opensurvey.co.kr/article/senior-2025-2-2/" target="_blank">원문 보기 →</a></span>
+</div>
+
+<div class="insight">
+  <h3><b>결제 신기술 '페이스페이' 인지 확산이 고연령층에서 가장 가팔랐다 — 시니어 결제 UX의 통념 붕괴</b></h3>
+  <p>오픈서베이 결제 서비스 트렌드 리포트 2026(만 20~69세 2,000명, 2026년 7월 발행)에 따르면 페이스페이 인지율은 1년 새 44.2%→75.3%(전 연령 기준)로 뛰었는데, 원문은 "특히 고연령층에서 상승폭이 커 세대 간 인지 격차가 좁혀졌다"고 명시했다. 즉 인지 확산을 견인한 축이 5060이다.</p>
+  <span class="imp">→ 시사점: 5060 여성 대상 결제·앱 설계에서 '신기술은 어려워할 것'이라는 가정을 버릴 때다 — 컨택리스·생체결제 도입 시 시니어 배제 우려는 과대평가돼 있다.</span>
+  <span class="src">오픈서베이 블로그 · 2026.07.06 · <a href="https://blog.opensurvey.co.kr/article/payment-2026-2/" target="_blank">원문 보기 →</a></span>
+</div>
+
+<h2 class="sec">주요 소식</h2>
+<div class="news-grid">
+  <div class="news">
+    <span class="badge date">2025.10.27</span><span class="badge primary">1차 데이터</span>
+    <h3>오픈서베이 시니어 트렌드 리포트 2025 — "시니어 소비, '나를 위한 소비'가 커진다"</h3>
+    <p>만 50~79세 600명 조사. 행복 조건 1위 경제력(74.5%), 경험 소비 확대, 세대별 온라인 쇼핑 주도율 격차, AI 경험률 67.7% 등 시니어 소비·결제 행동 전반을 담은 원천 리포트.</p>
+    <a href="https://blog.opensurvey.co.kr/article/senior-2025-2-2/" target="_blank">원문 보기 →</a>
+  </div>
+  <div class="news">
+    <span class="badge date">2026.07.06</span><span class="badge primary">1차 데이터</span>
+    <h3>오픈서베이 결제 서비스 트렌드 리포트 2026 — 페이스페이 인지, 고연령층이 견인</h3>
+    <p>만 20~69세 2,000명 조사. 페이스페이 인지율 44.2%→75.3% 급상승, 상승폭은 고연령층에서 최대. 시니어 결제 UX 설계의 통념을 뒤집는 데이터.</p>
+    <a href="https://blog.opensurvey.co.kr/article/payment-2026-2/" target="_blank">원문 보기 →</a>
+  </div>
+</div>
+
+<div class="tags">#4060여성 #시니어소비 #나를위한소비 #경험소비 #액티브시니어 #시니어AI #페이스페이 #온라인쇼핑주도율 #오픈서베이</div>
+
+<footer>
+  <p><b>출처 배지 안내</b> — <span class="badge primary">1차 데이터</span> 협회·리서치사·정부 발간물을 직접 확인한 출처 / <span class="badge press">언론 보도</span> 기사를 통한 간접 확인 출처.</p>
+  <p style="margin-top:6px;"><b>실측/추정 구분</b> — KPI·막대 차트는 원문에서 직접 확인한 실측 수치이며, 도넛 차트(테마 비중)만 편집자 추정입니다. 본 리포트는 전 연령 일반 통계는 게재하지 않습니다(인사이트 5의 전체 인지율은 원문의 연령별 서술을 설명하기 위한 참고 수치로만 병기). 발행일 미확인·최근 14일 내 기사용 소스는 배제했습니다.</p>
+  <p style="margin-top:6px;">4060 연구소 · 매일 아침 자동 발행 · 2026-07-25</p>
+</footer>
+
+</div>
+<script>
+const teal='#0f766e', orange='#c2410c', sand='#a8a29e', amber='#d97706', dark='#57534e';
+new Chart(document.getElementById('donut'),{
+  type:'doughnut',
+  data:{labels:['나를 위한 경험 소비','디지털·온라인 주도성','AI·신기술 수용','결제 트렌드'],
+    datasets:[{data:[35,25,20,20],backgroundColor:[orange,teal,amber,sand],borderWidth:2,borderColor:'#fff'}]},
+  options:{maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{font:{size:12}}}}}
+});
+new Chart(document.getElementById('bar'),{
+  type:'bar',
+  data:{labels:['경제력','정신적 건강','신체적 건강','인간관계','결혼·가정'],
+    datasets:[{label:'응답 비율(%)',data:[74.5,53.3,42.3,31.8,28.3],backgroundColor:[orange,teal,teal,sand,sand],borderRadius:6}]},
+  options:{maintainAspectRatio:false,indexAxis:'y',scales:{x:{max:100,ticks:{callback:v=>v+'%'}}},plugins:{legend:{display:false}}}
+});
+</script>
+</body>
+</html>
