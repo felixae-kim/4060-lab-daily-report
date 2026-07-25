@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4060 연구소 데일리 리포트 — 2026년 7월 26일</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#f6f4ef; font-family:'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif; color:#1f2937; line-height:1.65; }
+  .wrap { max-width:1080px; margin:0 auto; padding:32px 20px 60px; }
+  header { text-align:center; padding:36px 0 28px; }
+  header .lab { font-size:14px; letter-spacing:3px; color:#c2410c; font-weight:700; }
+  header h1 { font-size:30px; margin:10px 0 6px; }
+  header .date { color:#6b7280; font-size:15px; }
+  .notice { background:#fff7ed; border:1px solid #fdba74; border-radius:10px; padding:12px 16px; font-size:13.5px; color:#9a3412; margin:18px 0 6px; }
+  h2.section { font-size:20px; margin:38px 0 16px; padding-left:12px; border-left:5px solid #c2410c; }
+  .kpi-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px; }
+  .card { background:#fff; border-radius:14px; padding:20px 22px; box-shadow:0 1px 4px rgba(0,0,0,.06); }
+  .kpi .num { font-size:30px; font-weight:800; color:#c2410c; }
+  .kpi .label { font-size:14.5px; font-weight:600; margin-top:4px; }
+  .kpi .src { font-size:12px; color:#6b7280; margin-top:10px; }
+  .badge { display:inline-block; font-size:11px; font-weight:700; padding:2px 8px; border-radius:20px; margin-right:4px; }
+  .badge.primary { background:#ccfbf1; color:#0f766e; }
+  .badge.press { background:#fef3c7; color:#92400e; }
+  .badge.date { background:#e5e7eb; color:#374151; }
+  .charts { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  @media (max-width:760px){ .charts { grid-template-columns:1fr; } }
+  .chart-card h3 { font-size:15.5px; margin-bottom:4px; }
+  .chart-card .cap { font-size:12px; color:#6b7280; margin-bottom:12px; }
+  .chart-box { position:relative; height:280px; }
+  .insight { margin-bottom:14px; }
+  .insight .head { font-size:16px; font-weight:800; }
+  .insight .body { font-size:14.5px; margin-top:6px; color:#374151; }
+  .insight .imp { margin-top:8px; font-size:14.5px; font-weight:700; color:#0f766e; }
+  .insight .src { font-size:12px; color:#6b7280; margin-top:8px; }
+  .insight .src a { color:#c2410c; text-decoration:none; font-weight:600; }
+  .news-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  @media (max-width:760px){ .news-grid { grid-template-columns:1fr; } }
+  .news h3 { font-size:15.5px; margin:6px 0 8px; }
+  .news p { font-size:13.5px; color:#4b5563; }
+  .news a { color:#c2410c; font-size:13.5px; font-weight:600; text-decoration:none; }
+  .tags { margin-top:34px; font-size:14px; color:#0f766e; font-weight:600; }
+  footer { margin-top:40px; padding-top:18px; border-top:1px solid #e5e7eb; font-size:12.5px; color:#6b7280; }
+  footer .bhelp span { margin-right:14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="lab">4060 LAB · DAILY REPORT</div>
+  <h1>4060 여성 트렌드 데일리 리포트</h1>
+  <div class="date">2026년 7월 26일 (일)</div>
+</header>
+
+<div class="notice">
+  ⚠️ 오늘 리포트는 발행일이 확인된 4060/시니어 특정 신규 소스 3건으로 구성했습니다. 최근 2주 이내 발행 소스는 확보하지 못했으며(최신: 7월 9일 나스미디어), 전 연령 일반 통계는 원칙에 따라 게재하지 않았습니다.
+</div>
+
+<h2 class="section">핵심 KPI</h2>
+<div class="kpi-grid">
+  <div class="card kpi">
+    <div class="num">26.7%</div>
+    <div class="label">50대 이상 온라인 명품(의류·잡화) 구매 경험률 — 전 연령 중 최고</div>
+    <div class="src"><span class="badge primary">1차 데이터</span><span class="badge date">2026.07.09</span><br>kt 나스미디어 럭셔리 트렌드 리포트 (최근 1년 내, 40대는 24.4%)</div>
+  </div>
+  <div class="card kpi">
+    <div class="num">53.3%</div>
+    <div class="label">40대 이상 온라인 명품 구매자 중 여성 비중 — 여성이 주도</div>
+    <div class="src"><span class="badge primary">1차 데이터</span><span class="badge date">2026.07.09</span><br>kt 나스미디어 럭셔리 트렌드 리포트 (30대는 남성 63%)</div>
+  </div>
+  <div class="card kpi">
+    <div class="num">96.9%</div>
+    <div class="label">액티브 시니어의 여행·취미 소비 적극 투자 의향</div>
+    <div class="src"><span class="badge press">언론 보도</span><span class="badge date">2026.05.01</span><br>한국시니어신문 (한국방송광고진흥공사 액티브시니어 조사 인용)</div>
+  </div>
+  <div class="card kpi">
+    <div class="num">70%</div>
+    <div class="label">2050년 50세 이상이 차지할 전체 소비 비중 (전망)</div>
+    <div class="src"><span class="badge press">언론 보도</span><span class="badge date">2026.05.01</span><br>한국시니어신문 (국회입법조사처 등 '인구위기와 축소사회 대응' 보고서 인용)</div>
+  </div>
+</div>
+
+<h2 class="section">차트</h2>
+<div class="charts">
+  <div class="card chart-card">
+    <h3>오늘 수집 소식 테마 비중 <span class="badge date">추정</span></h3>
+    <div class="cap">오늘 확보된 소스 3건의 주제 분류 기준 (편집자 추정치)</div>
+    <div class="chart-box"><canvas id="donut"></canvas></div>
+  </div>
+  <div class="card chart-card">
+    <h3>연령대별 온라인 명품 구매 경험률 <span class="badge primary">실측</span></h3>
+    <div class="cap">최근 1년 내 온라인 명품 의류·잡화 구매 경험 — kt 나스미디어 (2026.07.09)</div>
+    <div class="chart-box"><canvas id="bar"></canvas></div>
+  </div>
+</div>
+
+<h2 class="section">핵심 인사이트</h2>
+<div class="card insight">
+  <div class="head">온라인 명품 시장의 최대 구매층은 4060, 그중에서도 여성이 주도한다</div>
+  <div class="body">kt 나스미디어의 2026 럭셔리 소비자 조사에 따르면 최근 1년 내 온라인 명품 의류·잡화 구매 경험은 50대 이상 26.7%, 40대 24.4%로 20대(18.3%)·30대(21.1%)를 앞선다. 특히 40대 이상 온라인 명품 구매자의 53.3%가 여성으로, 30대(남성 63%)와 달리 4060 구간에서는 여성이 구매를 주도한다.</div>
+  <div class="imp">→ 시사점: 4060 여성 대상 커머스라면 '가성비 중심'이라는 고정관념을 버리고 프리미엄·명품 카테고리를 정면 배치할 근거가 확보됐다.</div>
+  <div class="src"><span class="badge primary">1차 데이터</span> kt 나스미디어 · 2026.07.09 · <a href="https://blog.nasmedia.co.kr/entry/2026-luxury-trend-report-2" target="_blank">원문 보기 →</a></div>
+</div>
+<div class="card insight">
+  <div class="head">온라인 명품 구매층(40대 이상 여성 중심)의 채널은 '백화점몰 + 오프라인 병행', 정보원은 SNS</div>
+  <div class="body">같은 나스미디어 조사에서 온라인 명품 구매자의 패션·잡화 구매 경로는 백화점몰·종합몰·홈쇼핑몰 41.4%(전체 대비 +19.6%p), 오프라인 매장 40.8%로 복합 채널 이용이 뚜렷하다. 정보 획득 경로는 SNS 38.5%(전체 대비 +10.4%p), 블로그·카페·커뮤니티 28.7%(+9.7%p)로 공식몰 밖 접점의 영향이 크다.</div>
+  <div class="imp">→ 시사점: 4060 여성 프리미엄 상품은 '온라인 탐색 → 오프라인 확인' 여정을 전제로, SNS 스타일링·착용 후기 콘텐츠와 백화점몰 입점을 병행 설계해야 한다.</div>
+  <div class="src"><span class="badge primary">1차 데이터</span> kt 나스미디어 · 2026.07.09 · <a href="https://blog.nasmedia.co.kr/entry/2026-luxury-trend-report-2" target="_blank">원문 보기 →</a></div>
+</div>
+<div class="card insight">
+  <div class="head">액티브 시니어(50세 이상) 소비의 중심이 '가족을 위한 지출'에서 '나를 위한 지출'로 이동 중</div>
+  <div class="body">한국시니어신문 분석에 따르면 한국방송광고진흥공사(KOBACO) 액티브시니어 조사에서 96.9%가 여행·취미 소비에 적극 투자하겠다고 답했고, 92.6%는 은퇴 후에도 경제활동 지속을 원했다. 가정의 달인 5월조차 자녀·손주 지출보다 등산화·여행 예약·문화생활 등 본인 지출이 커지는 흐름이 확인된다.</div>
+  <div class="imp">→ 시사점: 4060 여성에게는 '가족 선물' 프레임보다 '나를 위한 투자'(여행·취미·건강·배움) 프레임의 상품 제안과 카피가 유효하다.</div>
+  <div class="src"><span class="badge press">언론 보도</span> 한국시니어신문 · 2026.05.01 · <a href="https://www.kseniornews.com/news/articleView.html?idxno=26715" target="_blank">원문 보기 →</a></div>
+</div>
+<div class="card insight">
+  <div class="head">5060의 건강기능식품 선택은 '막연한 건강'이 아니라 콜레스테롤·혈행 개선으로 세분화</div>
+  <div class="body">오픈서베이 건강기능식품 트렌드 리포트 2026(전국 만 20~69세 2,000명, 2026.04.05~09 조사)에 따르면 50·60대는 콜레스테롤·혈행 개선 제품을 타 연령 대비 더 많이 선택한다. 뷰티 목적에서도 피부는 콜라겐, 모발은 비오틴 등 품목이 정교하게 쪼개지는 추세다.</div>
+  <div class="imp">→ 시사점: 4060 여성 대상 건기식은 '종합 영양제'가 아니라 콜레스테롤·혈행·모발 등 증상·목적 특정형 큐레이션으로 접근해야 전환율이 높다.</div>
+  <div class="src"><span class="badge primary">1차 데이터</span> 오픈서베이 · 2026.04.20 · <a href="https://blog.opensurvey.co.kr/trendreport/health-supplement-2026/" target="_blank">원문 보기 →</a></div>
+</div>
+
+<h2 class="section">주요 소식</h2>
+<div class="news-grid">
+  <div class="card news">
+    <span class="badge date">2026.07.09</span><span class="badge primary">1차 데이터</span>
+    <h3>[kt 나스미디어] 2026 명품 트렌드 — 럭셔리 구매자 행태 분석</h3>
+    <p>온라인 명품 구매는 30대 남성과 40대 이상 여성이 주도. 50대 이상 구매 경험률 26.7%로 전 연령 최고. 구매 채널은 백화점몰(41.4%)과 오프라인 매장(40.8%) 병행, 정보원은 SNS·커뮤니티 비중이 전체 대비 크게 높음.</p>
+    <a href="https://blog.nasmedia.co.kr/entry/2026-luxury-trend-report-2" target="_blank">원문 보기 →</a>
+  </div>
+  <div class="card news">
+    <span class="badge date">2026.05.01</span><span class="badge press">언론 보도</span>
+    <h3>[한국시니어신문] 액티브 시니어 소비, 지갑 여는 곳이 달라졌다</h3>
+    <p>KOBACO 조사 인용: 액티브 시니어 96.9%가 여행·취미 소비에 적극 투자 의향, 92.6%가 은퇴 후 경제활동 지속 희망. 국회 보고서는 2050년부터 50세 이상이 전체 소비의 70%를 차지할 것으로 전망.</p>
+    <a href="https://www.kseniornews.com/news/articleView.html?idxno=26715" target="_blank">원문 보기 →</a>
+  </div>
+  <div class="card news">
+    <span class="badge date">2026.04.20</span><span class="badge primary">1차 데이터</span>
+    <h3>[오픈서베이] 건강기능식품 트렌드 리포트 2026</h3>
+    <p>연령·성별·목적별로 섭취 품목이 세분화. 50·60대는 콜레스테롤·혈행 개선 제품을 더 많이 선택. 채널별 장바구니 차이(올리브영=콜라겐, 다이소=비타민)도 뚜렷.</p>
+    <a href="https://blog.opensurvey.co.kr/trendreport/health-supplement-2026/" target="_blank">원문 보기 →</a>
+  </div>
+</div>
+
+<div class="tags">#4060여성 #온라인명품 #액티브시니어 #나를위한소비 #건강기능식품 #백화점몰 #SNS커머스</div>
+
+<footer>
+  <div class="bhelp">
+    <span><b class="badge primary" style="font-size:11px;">1차 데이터</b> 협회·리서치사·정부 발간물을 직접 확인한 출처</span>
+    <span><b class="badge press" style="font-size:11px;">언론 보도</b> 기사를 통해 간접 확인한 출처</span>
+  </div>
+  <p style="margin-top:10px;">· 도넛 차트는 편집자 추정치이며, 막대 차트는 출처 원문에서 직접 확인한 실측 수치입니다.<br>
+  · 본 리포트는 4060(50~70) 여성·시니어에 특정된 수치·내용만 게재하며, 전 연령 일반 통계는 게재하지 않습니다.<br>
+  · 4060 연구소 데일리 리포트 · 매일 아침 자동 발행 · 2026-07-26</p>
+</footer>
+
+</div>
+<script>
+const donut = new Chart(document.getElementById('donut'), {
+  type:'doughnut',
+  data:{
+    labels:['명품·프리미엄 소비','자기투자형 소비(여행·취미)','건강기능식품'],
+    datasets:[{ data:[40,30,30], backgroundColor:['#c2410c','#0f766e','#f59e0b'], borderColor:'#fff', borderWidth:2 }]
+  },
+  options:{ maintainAspectRatio:false, plugins:{ legend:{ position:'bottom', labels:{ font:{ size:12 } } } } }
+});
+const bar = new Chart(document.getElementById('bar'), {
+  type:'bar',
+  data:{
+    labels:['20대','30대','40대','50대 이상'],
+    datasets:[{ label:'온라인 명품 구매 경험률(%)', data:[18.3,21.1,24.4,26.7], backgroundColor:['#d1d5db','#d1d5db','#c2410c','#9a3412'], borderRadius:6 }]
+  },
+  options:{ maintainAspectRatio:false, scales:{ y:{ beginAtZero:true, max:30, ticks:{ callback:v=>v+'%' } } }, plugins:{ legend:{ display:false } } }
+});
+</script>
+</body>
+</html>
