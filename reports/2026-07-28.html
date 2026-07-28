@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4060 연구소 데일리 리포트 — 2026년 7월 28일</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif; background:#f6f4ef; color:#1f2937; line-height:1.6; }
+  .wrap { max-width:960px; margin:0 auto; padding:32px 20px 60px; }
+  header { text-align:center; margin-bottom:32px; }
+  .brand { display:inline-block; background:#c2410c; color:#fff; font-size:13px; font-weight:700; letter-spacing:2px; padding:4px 14px; border-radius:20px; margin-bottom:12px; }
+  h1 { font-size:26px; color:#111827; }
+  .date-sub { color:#6b7280; font-size:14px; margin-top:6px; }
+  .notice { background:#fff7ed; border:1px solid #fdba74; border-radius:10px; padding:10px 16px; font-size:13px; color:#9a3412; margin-bottom:24px; }
+  .kpi-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:14px; margin-bottom:32px; }
+  .kpi { background:#fff; border-radius:14px; padding:20px 18px; box-shadow:0 1px 4px rgba(0,0,0,.06); }
+  .kpi .num { font-size:28px; font-weight:800; color:#c2410c; }
+  .kpi .label { font-size:14px; font-weight:600; margin-top:4px; }
+  .kpi .src { font-size:11.5px; color:#6b7280; margin-top:8px; }
+  .badge { display:inline-block; font-size:10px; font-weight:700; padding:1px 7px; border-radius:9px; vertical-align:middle; }
+  .badge.press { background:#e0e7ff; color:#3730a3; }
+  .badge.primary { background:#ccfbf1; color:#0f766e; }
+  .badge.date { background:#f3f4f6; color:#374151; }
+  h2.section { font-size:19px; margin:36px 0 16px; color:#111827; border-left:5px solid #c2410c; padding-left:10px; }
+  .charts { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  @media (max-width:720px){ .charts { grid-template-columns:1fr; } }
+  .chart-card { background:#fff; border-radius:14px; padding:20px; box-shadow:0 1px 4px rgba(0,0,0,.06); }
+  .chart-card h3 { font-size:15px; margin-bottom:4px; }
+  .chart-card .cap { font-size:11.5px; color:#6b7280; margin-bottom:10px; }
+  .insight { background:#fff; border-radius:14px; padding:20px 22px; box-shadow:0 1px 4px rgba(0,0,0,.06); margin-bottom:14px; }
+  .insight h3 { font-size:15.5px; color:#111827; margin-bottom:6px; }
+  .insight p { font-size:14px; color:#374151; }
+  .insight .imp { color:#0f766e; font-weight:600; margin-top:8px; font-size:14px; }
+  .insight .isrc { font-size:12px; color:#6b7280; margin-top:8px; }
+  .insight .isrc a { color:#c2410c; text-decoration:none; font-weight:600; }
+  .news-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media (max-width:720px){ .news-grid { grid-template-columns:1fr; } }
+  .news { background:#fff; border-radius:14px; padding:18px 20px; box-shadow:0 1px 4px rgba(0,0,0,.06); }
+  .news h3 { font-size:14.5px; margin:8px 0 6px; }
+  .news p { font-size:13px; color:#4b5563; }
+  .news a { color:#c2410c; font-size:13px; font-weight:600; text-decoration:none; }
+  .tags { margin-top:32px; text-align:center; }
+  .tags span { display:inline-block; background:#fff; border:1px solid #e5e7eb; color:#0f766e; font-size:12.5px; padding:4px 12px; border-radius:16px; margin:4px 3px; }
+  footer { margin-top:40px; font-size:12px; color:#6b7280; border-top:1px solid #e5e7eb; padding-top:16px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">4060 LAB DAILY</div>
+    <h1>4060 여성 트렌드 데일리 리포트</h1>
+    <div class="date-sub">2026년 7월 28일 (화) · 4060 여성·시니어 특정 데이터만 게재</div>
+  </header>
+
+  <div class="notice">
+    ⚠️ <b>오늘은 신규 검증 통과 소스가 1건입니다</b> (통상 3건 이상). 중복 배제 원칙에 따라 최근 14일 리포트에서 이미 다룬 원천 발표(퀸잇 플리츠 7/7 발표, 그립 상반기 리포트, KB국민카드 시니어 분석, 와이즈앱 세대별 분석 등)를 모두 제외한 결과입니다. 최근 2주 이내 발행 소스 확보에도 실패했음을 표기합니다. 원칙에 따라 과거 소스 재사용이나 전 연령 일반 통계로 채우지 않고, 확보된 소스만으로 발행합니다.
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi">
+      <div class="num">+20%</div>
+      <div class="label">현대홈쇼핑 5060 고객 매출 증가 (2026년 1~2월, 전년比)</div>
+      <div class="src"><span class="badge press">언론 보도</span> 서울경제 · 2026.03.29</div>
+    </div>
+    <div class="kpi">
+      <div class="num">+25%</div>
+      <div class="label">GS샵 5060 패션 주문액 증가 (뷰티 +24%, 1~2월 전년比)</div>
+      <div class="src"><span class="badge press">언론 보도</span> 서울경제 · 2026.03.29</div>
+    </div>
+    <div class="kpi">
+      <div class="num">+20%</div>
+      <div class="label">롯데홈쇼핑 5060 1인당 구매액 증가 (고객 수 +10%, 1~2월 전년比)</div>
+      <div class="src"><span class="badge press">언론 보도</span> 서울경제 · 2026.03.29</div>
+    </div>
+    <div class="kpi">
+      <div class="num">18.1%</div>
+      <div class="label">60대 주식 투자 수익률 중위값 (50대 15.9%, 1~2월 · 전 연령 1위 — 미래에셋증권 집계)</div>
+      <div class="src"><span class="badge press">언론 보도</span> 서울경제 · 2026.03.29</div>
+    </div>
+  </div>
+
+  <h2 class="section">📊 차트</h2>
+  <div class="charts">
+    <div class="chart-card">
+      <h3>오늘의 인사이트 테마 비중 <span class="badge date">추정</span></h3>
+      <div class="cap">오늘 검증 소스 내 주제 비중을 편집상 추정한 값입니다.</div>
+      <canvas id="donut"></canvas>
+    </div>
+    <div class="chart-card">
+      <h3>홈쇼핑 3사 5060 지표 증가율 (1~2월, 전년比) <span class="badge date">실측</span></h3>
+      <div class="cap">서울경제(2026.03.29) 원문 수치 — 5060세대 고객 한정 지표.</div>
+      <canvas id="bar"></canvas>
+    </div>
+  </div>
+
+  <h2 class="section">💡 핵심 인사이트</h2>
+
+  <div class="insight">
+    <h3>① TV홈쇼핑의 5060 여성 매출이 '자산효과'로 반등 — 3사 모두 두 자릿수 안팎 성장</h3>
+    <p>업계 집계(2026년 1~2월, 전년 동기 대비): 현대홈쇼핑 5060 매출 +20%, GS샵 5060 패션 주문액 +25%·뷰티 +24%, 롯데홈쇼핑 5060 고객 수 +10%·1인당 구매액 +20%. 배경은 코스피 상승 — 미래에셋증권 집계 50대 수익률 15.9%, 60대 18.1%(중위값)로 전 연령 최고. 우량주 장기 투자 성향의 5060 여성 자산 증가가 소비 여력 확대로 이어졌다는 분석.</p>
+    <p class="imp">→ 시사점: 자산시장 호황 국면에는 4060 여성 대상 고가 상품(패션·주얼리·프리미엄 뷰티) 편성과 프로모션을 확대할 타이밍이다.</p>
+    <div class="isrc">서울경제 · 2026.03.29 · <a href="https://www.sedaily.com/article/20025440" target="_blank">원문 보기 →</a></div>
+  </div>
+
+  <div class="insight">
+    <h3>② 홈쇼핑 50~60대 여성 뷰티의 지배 키워드는 '슬로에이징(저속노화)'</h3>
+    <p>GS샵 집계(2026년 1~2월): 50~60대 여성 고객 중심으로 슬로에이징 트렌드가 확산되며 바이오 화장품 '세포랩'이 약 100억 원, 녹는 실 앰플 '셀폰즈'가 약 40억 원의 주문액을 기록.</p>
+    <p class="imp">→ 시사점: 4060 여성 뷰티 마케팅은 '안티에이징(노화 부정)'이 아니라 '슬로에이징(속도 관리)' 언어로 전환해야 반응이 온다.</p>
+    <div class="isrc">서울경제 · 2026.03.29 · <a href="https://www.sedaily.com/article/20025440" target="_blank">원문 보기 →</a></div>
+  </div>
+
+  <div class="insight">
+    <h3>③ 홈쇼핑 중장년 여성 패션은 '실용'에서 '자신을 위한 소비'로 — 단독 브랜드가 견인</h3>
+    <p>GS샵 집계(2026년 1~2월): 소비 여력이 커진 중장년 여성 고객이 단독 패션 브랜드와 잡화로 이동 — 자체 브랜드 '코어 어센틱' 약 80억 원, '모르간'·'라삐아프' 각 50억 원 안팎 주문 실적.</p>
+    <p class="imp">→ 시사점: 4060 여성 패션은 가성비 소구보다 '나를 위한 브랜드' 서사의 단독·전속 브랜드 전략이 객단가를 끌어올린다.</p>
+    <div class="isrc">서울경제 · 2026.03.29 · <a href="https://www.sedaily.com/article/20025440" target="_blank">원문 보기 →</a></div>
+  </div>
+
+  <div class="insight">
+    <h3>④ 홈쇼핑 5060의 '자기관리형 소비'가 여행·레저로 확장 — 1천만 원대 상품도 통한다</h3>
+    <p>롯데홈쇼핑 집계(2026년 1~2월): 여행 카테고리의 5060 주문 건수가 전년 대비 약 +20%. 1월 편성된 900만~1200만 원대 스위스 여행 상품에 약 700건의 상담이 접수.</p>
+    <p class="imp">→ 시사점: 4060 여성에게 프리미엄 여행은 이미 TV·커머스 채널로 판매 가능한 카테고리 — 가격 저항보다 '경험 가치' 서사가 관건이다.</p>
+    <div class="isrc">서울경제 · 2026.03.29 · <a href="https://www.sedaily.com/article/20025440" target="_blank">원문 보기 →</a></div>
+  </div>
+
+  <h2 class="section">📰 주요 소식</h2>
+  <div class="news-grid">
+    <div class="news">
+      <span class="badge date">2026.03.29 발행</span> <span class="badge press">언론 보도</span>
+      <h3>증시 활황에 지갑 연 5060…TV홈쇼핑 모처럼 '숨통'</h3>
+      <p>홈쇼핑 3사 5060 지표 일제 반등(현대 매출 +20%, GS샵 패션 +25%·뷰티 +24%, 롯데 객단가 +20%). 50대 수익률 15.9%·60대 18.1%(미래에셋증권)로 자산효과가 5060 여성 소비 확대를 견인. 슬로에이징 뷰티·단독 브랜드 패션·프리미엄 여행이 성장 카테고리.</p>
+      <a href="https://www.sedaily.com/article/20025440" target="_blank">서울경제 원문 →</a>
+    </div>
+    <div class="news">
+      <span class="badge date">편집 노트</span>
+      <h3>오늘 제외된 후보 소스들</h3>
+      <p>퀸잇 플리츠 +260%(7/7 발표)·그립 상반기 리포트·KB국민카드 시니어 분석·와이즈앱 세대별 분석은 최근 14일 리포트에서 이미 다룬 동일 원천 발표라 중복 배제. 서울시50플러스재단 분석(2025.01)·포스티 거래액 발표(2025.07) 등은 발행 1년 초과로 제외.</p>
+    </div>
+  </div>
+
+  <div class="tags">
+    <span>#4060여성</span><span>#TV홈쇼핑</span><span>#자산효과</span><span>#슬로에이징</span><span>#단독브랜드</span><span>#자기관리형소비</span><span>#프리미엄여행</span>
+  </div>
+
+  <footer>
+    <p><b>출처 배지 안내</b> — [1차 데이터]: 협회·리서치사·정부 발간물을 직접 확인한 수치 / [언론 보도]: 기사를 통해 간접 확인한 수치. 오늘 리포트는 전 건 [언론 보도]이며, 모든 수치는 원문 본문에서 직접 확인했습니다.</p>
+    <p style="margin-top:6px;">도넛 차트는 편집상 <b>추정</b>, 막대 차트는 원문 <b>실측</b> 수치(5060세대 한정)입니다. 본 리포트는 전 연령 일반 통계는 게재하지 않습니다.</p>
+    <p style="margin-top:6px;">© 4060 연구소 · 매일 아침 자동 발행</p>
+  </footer>
+</div>
+
+<script>
+new Chart(document.getElementById('donut'), {
+  type:'doughnut',
+  data:{ labels:['패션(단독 브랜드)','뷰티(슬로에이징)','여행·레저','자산·소비심리'],
+    datasets:[{ data:[30,25,25,20], backgroundColor:['#c2410c','#0f766e','#f59e0b','#64748b'], borderWidth:2, borderColor:'#fff' }] },
+  options:{ plugins:{ legend:{ position:'bottom', labels:{ font:{ size:11 } } } } }
+});
+new Chart(document.getElementById('bar'), {
+  type:'bar',
+  data:{
+    labels:['현대 5060 매출','GS샵 5060 패션 주문액','GS샵 5060 뷰티','롯데 5060 객단가','롯데 5060 여행 주문','롯데 5060 고객 수'],
+    datasets:[{ label:'증가율(%)', data:[20,25,24,20,20,10],
+      backgroundColor:['#c2410c','#0f766e','#0f766e','#f59e0b','#f59e0b','#64748b'], borderRadius:6 }]
+  },
+  options:{ indexAxis:'y', plugins:{ legend:{ display:false } },
+    scales:{ x:{ beginAtZero:true, ticks:{ callback:v=>v+'%' } }, y:{ ticks:{ font:{ size:11 } } } } }
+});
+</script>
+</body>
+</html>
