@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4060 연구소 데일리 리포트 — 2026년 7월 30일</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#f6f4ef; font-family:'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif; color:#292524; line-height:1.6; }
+  .wrap { max-width:960px; margin:0 auto; padding:32px 20px 60px; }
+  header { text-align:center; margin-bottom:28px; }
+  .brand { display:inline-block; background:#c2410c; color:#fff; font-size:13px; font-weight:700; letter-spacing:2px; padding:4px 14px; border-radius:20px; margin-bottom:12px; }
+  h1 { font-size:26px; font-weight:800; }
+  .date { color:#78716c; font-size:14px; margin-top:6px; }
+  .notice { background:#fff7ed; border:1px solid #fdba74; border-radius:12px; padding:14px 18px; font-size:13.5px; color:#9a3412; margin-bottom:24px; }
+  .kpi-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:14px; margin-bottom:28px; }
+  .kpi { background:#fff; border-radius:14px; padding:20px 18px; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+  .kpi .num { font-size:28px; font-weight:800; color:#c2410c; }
+  .kpi .num.teal { color:#0f766e; }
+  .kpi .label { font-size:14px; font-weight:700; margin-top:4px; }
+  .kpi .src { font-size:11.5px; color:#a8a29e; margin-top:8px; }
+  .badge { display:inline-block; font-size:10.5px; font-weight:700; padding:1px 7px; border-radius:10px; margin-right:4px; vertical-align:1px; }
+  .badge.press { background:#e7e5e4; color:#57534e; }
+  .badge.primary { background:#ccfbf1; color:#0f766e; }
+  .badge.date-badge { background:#fef3c7; color:#92400e; }
+  h2 { font-size:19px; font-weight:800; margin:34px 0 14px; padding-left:12px; border-left:5px solid #c2410c; }
+  .charts { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  @media (max-width:720px){ .charts{ grid-template-columns:1fr; } }
+  .chart-card { background:#fff; border-radius:14px; padding:20px; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+  .chart-card h3 { font-size:14.5px; margin-bottom:4px; }
+  .chart-card .cap { font-size:11.5px; color:#a8a29e; margin-bottom:10px; }
+  .insight { background:#fff; border-radius:14px; padding:20px 22px; box-shadow:0 1px 3px rgba(0,0,0,.06); margin-bottom:14px; font-size:14.5px; }
+  .insight b.head { display:block; font-size:15.5px; margin-bottom:6px; }
+  .insight .implication { display:block; margin-top:8px; color:#0f766e; font-weight:700; }
+  .insight .isrc { display:block; margin-top:8px; font-size:12px; color:#a8a29e; }
+  .insight .isrc a { color:#c2410c; text-decoration:none; font-weight:700; }
+  .news-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media (max-width:720px){ .news-grid{ grid-template-columns:1fr; } }
+  .news { background:#fff; border-radius:14px; padding:18px 20px; box-shadow:0 1px 3px rgba(0,0,0,.06); font-size:13.5px; }
+  .news h4 { font-size:14.5px; margin:8px 0 6px; }
+  .news a { color:#c2410c; text-decoration:none; font-weight:700; font-size:13px; }
+  .news .media { font-size:12px; color:#78716c; font-weight:700; }
+  .tags { margin-top:30px; font-size:13.5px; color:#0f766e; font-weight:700; line-height:2; }
+  footer { margin-top:36px; padding-top:18px; border-top:1px solid #e7e5e4; font-size:12px; color:#a8a29e; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="brand">4060 LAB DAILY</div>
+  <h1>4060 여성 트렌드 데일리 리포트</h1>
+  <div class="date">2026년 7월 30일 (목) · 매일 아침 자동 발행</div>
+</header>
+
+<div class="notice">
+  ⚠️ <b>오늘의 소스 확보 현황:</b> 중복 배제 원칙(최근 14일 리포트와 동일 원천 발표 사용 금지)과 발행 1년 초과 소스 제외 기준을 적용한 결과, 오늘은 검증 통과 소스가 <b>2건</b>입니다(원칙상 3건 목표 미달). 최근 2주 내 발행 소스 확보에도 실패했습니다(신규 후보 다수가 기사용 원천 중복 또는 발행 1년 초과). 일반(전 연령) 통계로 채우지 않고 확보된 4060·시니어 특정 소스만으로 발행합니다.
+</div>
+
+<section class="kpi-grid">
+  <div class="kpi">
+    <div class="num">+2.7%</div>
+    <div class="label">60대 신용카드 소비 증가율<br>(4월 2주차, 전년 동기 대비)</div>
+    <div class="src"><span class="badge press">언론 보도</span>국민일보 · 2026.04.27<br>원자료: 국가데이터처 나우캐스트</div>
+  </div>
+  <div class="kpi">
+    <div class="num">+14.3%</div>
+    <div class="label">70대 이상 신용카드 소비 증가율<br>(4월 2주차, 전년 동기 대비)</div>
+    <div class="src"><span class="badge press">언론 보도</span>국민일보 · 2026.04.27</div>
+  </div>
+  <div class="kpi">
+    <div class="num teal">6주 연속</div>
+    <div class="label">60대 이상 카드 소비 증가 지속<br>(관세전쟁 국면, 3월 1주~4월 2주)</div>
+    <div class="src"><span class="badge press">언론 보도</span>국민일보 · 2026.04.27</div>
+  </div>
+  <div class="kpi">
+    <div class="num">−2.1%</div>
+    <div class="label">40대 신용카드 소비 (50대 −0.1%)<br>— 4050은 감소 전환</div>
+    <div class="src"><span class="badge press">언론 보도</span>국민일보 · 2026.04.27</div>
+  </div>
+</section>
+
+<h2>오늘의 차트</h2>
+<section class="charts">
+  <div class="chart-card">
+    <h3>오늘 수집 소스 테마 비중 (추정)</h3>
+    <div class="cap">검증 통과 소스 2건의 주제 분류 — 편집상 추정치</div>
+    <canvas id="donut"></canvas>
+  </div>
+  <div class="chart-card">
+    <h3>연령대별 신용카드 소비 증감률 (실측)</h3>
+    <div class="cap">4월 2주차, 전년 동기 대비 · 국가데이터처 나우캐스트 (국민일보 2026.04.27 보도)</div>
+    <canvas id="bar"></canvas>
+  </div>
+</section>
+
+<h2>핵심 인사이트</h2>
+
+<div class="insight">
+  <b class="head">국내 신용카드 시장에서 관세전쟁발 소비 위축 국면에도 '증가세를 지킨 유일한 연령대'는 60대 이상 시니어</b>
+  국가데이터처 나우캐스트(주간 카드 지출 집계) 기준 4월 2주차에 50대 이하 전 연령대의 신용카드 지출이 전년 대비 감소로 돌아선 반면, 60대는 +2.7%, 70대 이상은 +14.3%로 3월 1주차부터 6주 연속 증가를 이어갔다. 시니어 지출은 보건(헬스케어) 분야에 집중됐다.
+  <span class="implication">→ 시사점: 경기 불확실성 국면에서 안정적 매출을 지키려면 60대 이상 여성 대상 건강·헬스케어 연계 상품(건기식, 병의원 연계 서비스, 웰니스)을 상시 라인업으로 강화하라.</span>
+  <span class="isrc">국민일보 · 2026.04.27 · <a href="https://www.kmib.co.kr/article/view.asp?arcid=1777192802&code=11151300&sid1=eco" target="_blank">원문 보기 →</a></span>
+</div>
+
+<div class="insight">
+  <b class="head">같은 카드 지출 데이터에서 40·50대 여성이 속한 4050 구간은 소비 감소 전환 — '가격 정당화' 없는 제안은 통하지 않는 국면</b>
+  동일 집계(4월 2주차, 전년 대비)에서 40대 카드 소비는 −2.1%, 50대는 −0.1%로 감소 전환했다(20대 이하 −6.7%, 30대 −0.2%). 60대 이상과 달리 4050은 지출을 조이고 있다는 뜻이다.
+  <span class="implication">→ 시사점: 4050 여성 대상 커머스·콘텐츠는 당분간 할인·적립·묶음 등 가격 정당화 장치와 '필수 지출' 프레임(건강·가족)을 앞세워야 전환이 나온다. 60대 이상과 4050은 별도 메시지로 분리 운영하라.</span>
+  <span class="isrc">국민일보 · 2026.04.27 · <a href="https://www.kmib.co.kr/article/view.asp?arcid=1777192802&code=11151300&sid1=eco" target="_blank">원문 보기 →</a></span>
+</div>
+
+<div class="insight">
+  <b class="head">시니어 패션 시장의 화두는 '나이에 맞추는 옷'이 아니라 '자기 주도 스타일' — 오프라인 체험형 행사가 6070 여성을 움직인다</b>
+  시니어 매거진 브라보마이라이프가 4월 8일 개최한 '브라보 골든 보그 2026'(패션 강연·트렁크쇼·체험)에서는 2026 S/S 트렌드로 스트레이트 핏·볼륨 실루엣, 레이스·시스루·레이어드, 스카프·과감한 주얼리 포인트가 제시됐고, 6070 참가자들이 강연·트렁크쇼·스타일링 상담에 적극 참여했다.
+  <span class="implication">→ 시사점: 4060 여성 패션 콘텐츠는 '중년용 옷' 프레임 대신 스카프·컬러·실루엣 등 트렌드 아이템 중심의 스타일링 제안과 체험형(강연·상담) 포맷으로 설계하라.</span>
+  <span class="isrc">브라보마이라이프 · 2026.04.08 · <a href="https://bravo.etoday.co.kr/view/atc_view/19015" target="_blank">원문 보기 →</a></span>
+</div>
+
+<h2>주요 소식</h2>
+<section class="news-grid">
+  <div class="news">
+    <span class="badge date-badge">2026.04.27</span><span class="badge press">언론 보도</span>
+    <span class="media">국민일보</span>
+    <h4>관세전쟁 6주, 카드 소비 꺾였다… 60대 이상만 소비 증가</h4>
+    <p>주간 카드 지출 집계에서 50대 이하 전 연령 감소 속 60대(+2.7%)·70대 이상(+14.3%)만 6주 연속 증가. 시니어 지출은 보건 분야 집중.</p>
+    <a href="https://www.kmib.co.kr/article/view.asp?arcid=1777192802&code=11151300&sid1=eco" target="_blank">원문 보기 →</a>
+  </div>
+  <div class="news">
+    <span class="badge date-badge">2026.04.08</span><span class="badge press">언론 보도</span>
+    <span class="media">브라보마이라이프</span>
+    <h4>'브라보 골든 보그 2026' 시니어 패션 열기 "멋은 나로부터"</h4>
+    <p>스타일링 강연·트렁크쇼·체험형 행사에 6070 여성 적극 참여. 2026 S/S 시니어 패션 키워드는 스트레이트 핏, 레이스·시스루, 스카프.</p>
+    <a href="https://bravo.etoday.co.kr/view/atc_view/19015" target="_blank">원문 보기 →</a>
+  </div>
+</section>
+
+<div class="tags">#4060여성 #시니어소비 #카드소비 #세대별소비 #시니어패션 #액티브시니어 #헬스케어소비</div>
+
+<footer>
+  <p><b>출처 배지 안내:</b> [1차 데이터] 협회·리서치사·정부 발간물을 직접 확인한 수치 / [언론 보도] 기사를 통해 간접 확인한 수치. 오늘 리포트는 전건 언론 보도 기반입니다.</p>
+  <p><b>실측/추정 구분:</b> 막대 차트는 실측(국가데이터처 나우캐스트 보도치), 도넛 차트는 편집상 추정입니다. 전 연령 합산 일반 통계는 게재하지 않습니다.</p>
+  <p>본 리포트의 모든 KPI·인사이트는 4060(또는 50~70) 여성·시니어에 특정된 수치만 사용합니다. 발행일 미확인·발행 1년 초과 소스는 제외했습니다.</p>
+  <p>© 4060 연구소 · 매일 아침 자동 발행</p>
+</footer>
+
+</div>
+<script>
+new Chart(document.getElementById('donut'), {
+  type:'doughnut',
+  data:{ labels:['소비·지출 데이터','패션·라이프스타일'], datasets:[{ data:[50,50], backgroundColor:['#c2410c','#0f766e'], borderWidth:2, borderColor:'#fff' }]},
+  options:{ plugins:{ legend:{ position:'bottom', labels:{ font:{ size:12 } } } } }
+});
+new Chart(document.getElementById('bar'), {
+  type:'bar',
+  data:{
+    labels:['20대 이하','30대','40대','50대','60대','70대 이상'],
+    datasets:[{ label:'전년 대비 증감률(%)', data:[-6.7,-0.2,-2.1,-0.1,2.7,14.3],
+      backgroundColor:['#d6d3d1','#d6d3d1','#e7a17a','#e7a17a','#0f766e','#0f766e'] }]
+  },
+  options:{ plugins:{ legend:{ display:false } }, scales:{ y:{ title:{ display:true, text:'%' } } } }
+});
+</script>
+</body>
+</html>
