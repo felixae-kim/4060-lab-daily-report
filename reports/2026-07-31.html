@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4060 연구소 데일리 리포트 — 2026년 7월 31일</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#f6f4ef; font-family:'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif; color:#292524; line-height:1.6; }
+  .wrap { max-width:960px; margin:0 auto; padding:32px 20px 60px; }
+  header { text-align:center; margin-bottom:28px; }
+  .brand { display:inline-block; background:#c2410c; color:#fff; font-size:13px; font-weight:700; letter-spacing:2px; padding:4px 14px; border-radius:20px; margin-bottom:12px; }
+  h1 { font-size:26px; font-weight:800; }
+  .date { color:#78716c; font-size:14px; margin-top:6px; }
+  .notice { background:#fff7ed; border:1px solid #fdba74; border-radius:12px; padding:14px 18px; font-size:13.5px; color:#9a3412; margin-bottom:24px; }
+  .kpi-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:14px; margin-bottom:28px; }
+  .kpi { background:#fff; border-radius:14px; padding:20px 18px; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+  .kpi .num { font-size:28px; font-weight:800; color:#c2410c; }
+  .kpi .num.teal { color:#0f766e; }
+  .kpi .label { font-size:14px; font-weight:700; margin-top:4px; }
+  .kpi .src { font-size:11.5px; color:#a8a29e; margin-top:8px; }
+  .badge { display:inline-block; font-size:10.5px; font-weight:700; padding:1px 7px; border-radius:10px; margin-right:4px; vertical-align:1px; }
+  .badge.press { background:#e7e5e4; color:#57534e; }
+  .badge.primary { background:#ccfbf1; color:#0f766e; }
+  .badge.date-badge { background:#fef3c7; color:#92400e; }
+  h2 { font-size:19px; font-weight:800; margin:34px 0 14px; padding-left:12px; border-left:5px solid #c2410c; }
+  .charts { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  @media (max-width:720px){ .charts{ grid-template-columns:1fr; } }
+  .chart-card { background:#fff; border-radius:14px; padding:20px; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+  .chart-card h3 { font-size:14.5px; margin-bottom:4px; }
+  .chart-card .cap { font-size:11.5px; color:#a8a29e; margin-bottom:10px; }
+  .insight { background:#fff; border-radius:14px; padding:20px 22px; box-shadow:0 1px 3px rgba(0,0,0,.06); margin-bottom:14px; font-size:14.5px; }
+  .insight b.head { display:block; font-size:15.5px; margin-bottom:6px; }
+  .insight .implication { display:block; margin-top:8px; color:#0f766e; font-weight:700; }
+  .insight .isrc { display:block; margin-top:8px; font-size:12px; color:#a8a29e; }
+  .insight .isrc a { color:#c2410c; text-decoration:none; font-weight:700; }
+  .news-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media (max-width:720px){ .news-grid{ grid-template-columns:1fr; } }
+  .news { background:#fff; border-radius:14px; padding:18px 20px; box-shadow:0 1px 3px rgba(0,0,0,.06); font-size:13.5px; }
+  .news h4 { font-size:14.5px; margin:8px 0 6px; }
+  .news a { color:#c2410c; text-decoration:none; font-weight:700; font-size:13px; }
+  .news .media { font-size:12px; color:#78716c; font-weight:700; }
+  .tags { margin-top:30px; font-size:13.5px; color:#0f766e; font-weight:700; line-height:2; }
+  footer { margin-top:36px; padding-top:18px; border-top:1px solid #e7e5e4; font-size:12px; color:#a8a29e; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="brand">4060 LAB DAILY</div>
+  <h1>4060 여성 트렌드 데일리 리포트</h1>
+  <div class="date">2026년 7월 31일 (금) · 매일 아침 자동 발행</div>
+</header>
+
+<div class="notice">
+  ⚠️ <b>오늘의 소스 확보 현황:</b> 중복 배제 원칙(최근 14일 리포트와 동일 원천 발표·동일 KPI 사용 금지)을 적용한 결과, 오늘 신규 검증을 통과한 소스는 <b>2건</b>입니다(원칙상 3건 목표 미달). 검증 과정에서 확인한 후보 다수(한국TV홈쇼핑협회 산업현황, 와이즈앱 액티브 시니어 트렌드, KB국민카드 시니어 분석, 퀸잇·그립 발표 등)가 이미 최근 리포트에서 사용된 원천이라 배제했습니다. 최근 2주 내 발행 소스 확보에도 실패했습니다. 일반(전 연령) 통계로 채우지 않고 확보된 4060·시니어 특정 소스만으로 발행합니다.
+</div>
+
+<section class="kpi-grid">
+  <div class="kpi">
+    <div class="num">+188%</div>
+    <div class="label">마켓컬리 5060 신규 가입자 증가율<br>(2021.1~5, 전년 동기 대비 — 팬데믹기 유입 기점)</div>
+    <div class="src"><span class="badge press">언론 보도</span>테크M · 2026.03.10</div>
+  </div>
+  <div class="kpi">
+    <div class="num">+148%</div>
+    <div class="label">쿠팡 60대 이상 결제금액 증가율 — 전 연령 1위<br>(2021, 하나금융경영연구소 · 50대 +123%로 2위)</div>
+    <div class="src"><span class="badge press">언론 보도</span>테크M · 2026.03.10</div>
+  </div>
+  <div class="kpi">
+    <div class="num teal">글자 30%↑</div>
+    <div class="label">더현대닷컴, 50대 이상 고객용 앱 개편<br>(상품 이미지 3배·딥러닝 오타 보정 도입)</div>
+    <div class="src"><span class="badge press">언론 보도</span>테크M · 2026.03.10</div>
+  </div>
+  <div class="kpi">
+    <div class="num teal">40대 1위</div>
+    <div class="label">러닝 전문매장 이용 증가율, 연령대별 1위<br>(최근 2년 — 전 연령 증가 중 40대 최고)</div>
+    <div class="src"><span class="badge primary">1차 데이터</span>신한카드 빅데이터연구소 · 2025.08.14</div>
+  </div>
+</section>
+
+<h2>오늘의 차트</h2>
+<section class="charts">
+  <div class="chart-card">
+    <h3>오늘 수집 소스 테마 비중 (추정)</h3>
+    <div class="cap">검증 통과 소스 2건의 콘텐츠 주제 분류 — 편집상 추정치</div>
+    <canvas id="donut"></canvas>
+  </div>
+  <div class="chart-card">
+    <h3>팬데믹기(2021) 5060 온라인 소비 급증 지표 (실측)</h3>
+    <div class="cap">전년 대비 증가율 · 마켓컬리 자체 집계 / 하나금융경영연구소 (테크M 2026.03.10 보도)</div>
+    <canvas id="bar"></canvas>
+  </div>
+</section>
+
+<h2>핵심 인사이트</h2>
+
+<div class="insight">
+  <b class="head">국내 이커머스의 '시니어 시프트'가 앱 UI 표준을 바꾸고 있다 — 더현대닷컴은 50대 이상 고객용으로 글자 최대 30% 확대, 상품 이미지 3배</b>
+  현대백화점 공식몰 더현대닷컴은 50대 이상 고객의 쇼핑 편의를 위해 모바일 앱 글자 크기를 최대 30%가량 키우고 상품 이미지 수를 3배 이상 늘렸으며, 자판 입력이 낯선 장년층을 위한 딥러닝 오타 보정 검색까지 도입했다(테크M 2026.03.10 보도). 시니어 선호 카테고리(안티에이징 뷰티·건기식) 물량 확대와 또래 구매 기반 추천도 병행 중이다.
+  <span class="implication">→ 시사점: 4060 여성 대상 서비스는 콘텐츠 이전에 '읽히는 화면'이 먼저다 — 큰 글자·큰 이미지·오타를 흡수하는 검색을 기본값으로 설계하면 그 자체가 전환율 개선 장치가 된다.</span>
+  <span class="isrc">테크M · 2026.03.10 · <a href="https://www.techm.kr/news/articleView.html?idxno=150055" target="_blank">원문 보기 →</a></span>
+</div>
+
+<div class="insight">
+  <b class="head">주요 이커머스에서 5060의 온라인 장보기 습관은 팬데믹기(2021)에 형성돼 5년째 유지되고 있다 — 마켓컬리 5060 신규 가입 +188%</b>
+  마켓컬리의 2021년 1~5월 5060 신규 가입자는 전년 동기 대비 188% 급증했고, 전체 신규 가입 중 5060 비중은 18%→26%로 확대됐다. 같은 해 5060의 1회 평균 구매액은 20대보다 43% 높았으며, 2025년 2분기 기준 쿠팡의 5060 사용률도 2021년 대비 증가한 것으로 알려져 당시 형성된 습관이 고착됐음을 보여준다(테크M 종합).
+  <span class="implication">→ 시사점: 4060 여성 신규 고객은 일회성 프로모션이 아니라 '습관 형성'(첫 새벽배송 경험, 간편결제 온보딩, 재구매 리마인드) 중심으로 설계해야 5년짜리 고객이 된다.</span>
+  <span class="isrc">테크M · 2026.03.10 · <a href="https://www.techm.kr/news/articleView.html?idxno=150055" target="_blank">원문 보기 →</a></span>
+</div>
+
+<div class="insight">
+  <b class="head">'젊은 플랫폼'도 고객과 함께 늙는다 — 마켓컬리의 주 고객층은 2030에서 3040으로 이동, 이커머스 업계는 시니어 시프트 가속 전망</b>
+  2030의 전폭적 지지로 성장한 마켓컬리는 서비스 10년차에 주 고객층이 3040으로 이동했다. 업계는 50대 이상 인구 비중과 경제력 확대에 따라 유통업계의 시니어 시프트가 더 가속화될 것으로 보고, 라이브커머스·유튜브 등 중장년의 영상 기반 소비에 맞춘 커머스 비중 확대를 대비책으로 꼽았다(테크M).
+  <span class="implication">→ 시사점: 지금 3040 여성이 주 고객인 브랜드라면 5년 뒤 핵심 고객은 4050이다 — 연령 상향을 전제로 한 상품·UX 로드맵(영상 커머스 포함)을 미리 준비하는 쪽이 시장을 가져간다.</span>
+  <span class="isrc">테크M · 2026.03.10 · <a href="https://www.techm.kr/news/articleView.html?idxno=150055" target="_blank">원문 보기 →</a></span>
+</div>
+
+<div class="insight">
+  <b class="head">신한카드 결제 데이터: 불황에도 '자기관리' 소비는 계속된다 — 러닝 매장 이용 증가율은 40대가 1위, 50대 이상의 마음 관리 관심사는 '정서·감정'</b>
+  신한카드 빅데이터연구소 집계에서 러닝 전문매장 이용 건수는 최근 2년간 전 연령에서 늘었고 증가율은 40대가 가장 높았다. '심리상담' 검색 데이터에서는 50대 이상이 (연애·직장 갈등 중심의 젊은 층과 달리) 개인의 정서·감정 관리에 관심이 집중되는 것으로 나타났다.
+  <span class="implication">→ 시사점: 4060 여성 대상 커뮤니티·콘텐츠는 '몸 관리'(러닝·걷기 챌린지)와 '마음 돌봄'(감정 관리 콘텐츠)을 한 세트로 묶으면 불황 국면에서도 지갑이 열리는 자기관리 수요를 잡을 수 있다.</span>
+  <span class="isrc">신한카드 빅데이터연구소(공식 블로그) · 2025.08.14 · <a href="https://www.shinhancardblog.com/1381" target="_blank">원문 보기 →</a></span>
+</div>
+
+<h2>주요 소식</h2>
+<section class="news-grid">
+  <div class="news">
+    <span class="badge date-badge">2026.03.10</span> <span class="media">테크M [언론 보도]</span>
+    <h4>'모바일 큰손' 부상한 5060…이커머스 '액티브 시니어' 모시기 총력전</h4>
+    <p>팬데믹기 유입된 5060이 이커머스 핵심 소비층으로 정착. 더현대닷컴 글자 30% 확대·이미지 3배·오타 보정 등 시니어 맞춤 UI 개편과 시니어 선호 카테고리 확대가 업계 표준이 되는 중.</p>
+    <a href="https://www.techm.kr/news/articleView.html?idxno=150055" target="_blank">원문 보기 →</a>
+  </div>
+  <div class="news">
+    <span class="badge date-badge">2025.08.14</span> <span class="media">신한카드 빅데이터연구소 [1차 데이터]</span>
+    <h4>불황에도 멈추지 않는 소비: 자기관리 편</h4>
+    <p>러닝 전문매장 이용 증가율 40대 1위(전 연령 증가), 50대 이상 심리상담 관심은 정서·감정 관리에 집중. 불황에도 자기관리 소비는 선택과 집중으로 지속.</p>
+    <a href="https://www.shinhancardblog.com/1381" target="_blank">원문 보기 →</a>
+  </div>
+</section>
+
+<div class="tags">
+  #4060여성 &nbsp;#액티브시니어 &nbsp;#시니어시프트 &nbsp;#시니어UX &nbsp;#온라인장보기 &nbsp;#자기관리소비 &nbsp;#러닝 &nbsp;#마음돌봄
+</div>
+
+<footer>
+  <p><b>출처 배지 안내</b> — <span class="badge primary">1차 데이터</span> 협회·리서치사·정부·기업 연구소 발간물을 직접 확인 / <span class="badge press">언론 보도</span> 기사를 통한 간접 확인.</p>
+  <p>차트 중 '테마 비중'은 편집상 추정치이며, 막대 차트는 원문에서 직접 확인한 실측 수치입니다(집계 시점 2021년 — 카드 내 명시). 전 연령 합산 일반 통계는 게재하지 않습니다.</p>
+  <p>본 리포트의 모든 KPI·인사이트는 4060(50~70 포함) 여성·시니어에 특정된 수치·내용만 사용하며, 최근 14일 내 사용된 원천 발표·KPI는 재사용하지 않습니다. 오늘은 이 원칙 적용으로 소스 2건만 발행되었습니다.</p>
+  <p>4060 연구소 · 자동 생성 리포트 · 2026-07-31</p>
+</footer>
+
+</div>
+
+<script>
+new Chart(document.getElementById('donut'), {
+  type: 'doughnut',
+  data: {
+    labels: ['이커머스·플랫폼 전략', '시니어 UX·접근성', '자기관리·웰니스'],
+    datasets: [{
+      data: [40, 30, 30],
+      backgroundColor: ['#c2410c', '#f59e0b', '#0f766e'],
+      borderWidth: 2, borderColor: '#fff'
+    }]
+  },
+  options: { plugins: { legend: { position: 'bottom', labels: { font: { size: 12 } } } } }
+});
+new Chart(document.getElementById('bar'), {
+  type: 'bar',
+  data: {
+    labels: ['마켓컬리 5060\n신규가입(2021.1~5)', '쿠팡 60대+\n결제금액(2021)', '쿠팡 50대\n결제금액(2021)'],
+    datasets: [{
+      label: '전년 대비 증가율(%)',
+      data: [188, 148, 123],
+      backgroundColor: ['#c2410c', '#0f766e', '#14b8a6'],
+      borderRadius: 6
+    }]
+  },
+  options: {
+    plugins: { legend: { display: false } },
+    scales: { y: { beginAtZero: true, ticks: { callback: v => v + '%' } } }
+  }
+});
+</script>
+</body>
+</html>
