@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4060 연구소 데일리 리포트 — 2026년 8월 1일</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic',sans-serif; background:#f6f4ef; color:#1f2937; line-height:1.65; }
+  .wrap { max-width:1080px; margin:0 auto; padding:32px 20px 60px; }
+  header { text-align:center; margin-bottom:36px; }
+  .brand { display:inline-block; background:#c2410c; color:#fff; font-size:13px; font-weight:700; letter-spacing:2px; padding:4px 14px; border-radius:999px; margin-bottom:14px; }
+  h1 { font-size:30px; font-weight:800; }
+  .date { color:#6b7280; margin-top:6px; font-size:15px; }
+  .freshnote { margin-top:10px; font-size:12.5px; color:#92400e; background:#fef3c7; display:inline-block; padding:4px 12px; border-radius:8px; }
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px; margin-bottom:36px; }
+  .kpi { background:#fff; border-radius:14px; padding:22px 20px; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+  .kpi .num { font-size:32px; font-weight:800; color:#c2410c; }
+  .kpi .label { font-size:14px; font-weight:700; margin-top:4px; }
+  .kpi .src { font-size:12px; color:#6b7280; margin-top:8px; }
+  .badge { display:inline-block; font-size:10.5px; font-weight:700; padding:2px 7px; border-radius:6px; margin-right:4px; vertical-align:middle; }
+  .badge.press { background:#e0e7ff; color:#3730a3; }
+  .badge.primary { background:#ccfbf1; color:#0f766e; }
+  .badge.date { background:#f3f4f6; color:#4b5563; font-weight:600; }
+  .charts { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:36px; }
+  @media (max-width:760px){ .charts{grid-template-columns:1fr;} }
+  .card { background:#fff; border-radius:14px; padding:24px; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+  .card h3 { font-size:16px; margin-bottom:4px; }
+  .card .sub { font-size:12px; color:#6b7280; margin-bottom:14px; }
+  .chartbox { position:relative; height:260px; }
+  h2.sec { font-size:21px; font-weight:800; margin:0 0 16px; border-left:5px solid #c2410c; padding-left:12px; }
+  .insight { background:#fff; border-radius:14px; padding:20px 24px; box-shadow:0 1px 3px rgba(0,0,0,.06); margin-bottom:14px; }
+  .insight .head { font-weight:800; font-size:15.5px; }
+  .insight .body { font-size:14px; margin-top:6px; color:#374151; }
+  .insight .impl { font-size:14px; margin-top:8px; color:#0f766e; font-weight:700; }
+  .insight .isrc { font-size:12px; color:#6b7280; margin-top:8px; }
+  .insight .isrc a { color:#c2410c; text-decoration:none; font-weight:700; }
+  .news { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:36px; }
+  @media (max-width:760px){ .news{grid-template-columns:1fr;} }
+  .news .card h4 { font-size:15px; margin:8px 0 6px; }
+  .news .card p { font-size:13.5px; color:#4b5563; }
+  .news .card a { color:#c2410c; font-size:13px; font-weight:700; text-decoration:none; }
+  .tags { margin:8px 0 36px; }
+  .tags span { display:inline-block; background:#fff; border:1px solid #e5e7eb; color:#0f766e; font-size:13px; font-weight:600; padding:5px 12px; border-radius:999px; margin:0 6px 8px 0; }
+  footer { font-size:12.5px; color:#6b7280; border-top:1px solid #e5e7eb; padding-top:18px; }
+  footer li { margin-left:18px; margin-bottom:4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="brand">4060 LAB DAILY</div>
+  <h1>4060 여성 트렌드 데일리 리포트</h1>
+  <div class="date">2026년 8월 1일 (토) · 4060 연구소</div>
+  <div class="freshnote">신규 소스 3건 확보 (최근 2주 내 발행 1건 · 7/30) — 중복 배제 원칙에 따라 기존 게재 데이터(캐시워크·라포랩스 매출 등)는 제외했습니다</div>
+</header>
+
+<div class="kpis">
+  <div class="kpi">
+    <div class="num">461만명</div>
+    <div class="label">퀸잇 '2026 봄 럭퀸세일' 방문자 — 전년比 방문 +20%, 거래액 +27%</div>
+    <div class="src"><span class="badge press">언론 보도</span><span class="badge date">2026.05.18</span>반론보도닷컴 (퀸잇 발표)</div>
+  </div>
+  <div class="kpi">
+    <div class="num">220만명</div>
+    <div class="label">4050 겨냥 '포스티' 누적 회원 — 전년比 +40%, 연간 거래액 +20%</div>
+    <div class="src"><span class="badge press">언론 보도</span><span class="badge date">2026.06.26</span>인사이트코리아 (카카오스타일 발표·금감원 공시)</div>
+  </div>
+  <div class="kpi">
+    <div class="num">82%</div>
+    <div class="label">요양병원 간병인 중 60대 이상 비중 — 간병 노동의 주축이 시니어</div>
+    <div class="src"><span class="badge press">언론 보도</span><span class="badge date">2026.07.30</span>캐어유 뉴스 (간병급여화 논의 보도)</div>
+  </div>
+  <div class="kpi">
+    <div class="num">100억원</div>
+    <div class="label">부산시 '에이지테크 건강돌봄 플랫폼' 3년 투자 규모 (7/29 발표)</div>
+    <div class="src"><span class="badge press">언론 보도</span><span class="badge date">2026.07.30</span>캐어유 뉴스</div>
+  </div>
+</div>
+
+<div class="charts">
+  <div class="card">
+    <h3>오늘의 소식 테마 비중 <span style="color:#c2410c;font-size:12px;">(추정)</span></h3>
+    <div class="sub">이번 호 수집 소스 기준 편집팀 추정 비중입니다 (실측 아님)</div>
+    <div class="chartbox"><canvas id="donut"></canvas></div>
+  </div>
+  <div class="card">
+    <h3>퀸잇 '2026 봄 럭퀸세일' 전년比 성장률 <span style="color:#0f766e;font-size:12px;">(실측)</span></h3>
+    <div class="sub">퀸잇(라포랩스) 발표, 전년 동기 대비 % · 출처: 반론보도닷컴 2026.05.18</div>
+    <div class="chartbox"><canvas id="bar"></canvas></div>
+  </div>
+</div>
+
+<h2 class="sec">핵심 인사이트</h2>
+
+<div class="insight">
+  <div class="head">4050 여성·중년 남성 버티컬 패션 플랫폼이 '외형 성장'을 넘어 수익성까지 증명하기 시작했다</div>
+  <div class="body">금감원 공시·운영사 발표 기준, 4050 겨냥 포스티는 누적 회원 220만명(전년比 +40%)·연간 거래액 +20%를 기록했고, 운영사 카카오스타일은 2023년 영업손실 198억원에서 2025년 영업이익 58억원으로 흑자 전환했다. 35세 이상 남성 패션앱 애슬러도 지난해 매출 +407%, MAU 303만명을 돌파했다.</div>
+  <div class="impl">→ 시사점: 4060 타깃 버티컬 커머스는 더 이상 니치 실험이 아니라 수익 모델 — 패션에서 리빙·유아동(손주 소비)으로 넓히는 카테고리 확장이 검증된 경로다.</div>
+  <div class="isrc">인사이트코리아 · 2026.06.26 · <a href="https://www.insightkorea.co.kr/news/articleView.html?idxno=248966" target="_blank">원문 보기 →</a></div>
+</div>
+
+<div class="insight">
+  <div class="head">4050 여성 패션앱에서도 '시즌 대형 세일' 이벤트가 강하게 작동한다 — 퀸잇 봄 세일에 461만명</div>
+  <div class="body">퀸잇이 4월 진행한 '2026 봄 럭퀸세일'은 방문자 약 461만명을 모으며 전년 동기 대비 방문자 +20%, 거래액 +27%, 구매 고객 수·주문 수 +40% 이상을 기록했다 (퀸잇 발표, 반론보도닷컴 보도).</div>
+  <div class="impl">→ 시사점: 젊은 층의 전유물로 여겨졌던 시즌 세일 이벤트 마케팅이 4060 여성에게도 유효 — 맞춤 큐레이션과 결합한 연 시즌제 기획전 구조를 참고할 것.</div>
+  <div class="isrc">반론보도닷컴 · 2026.05.18 · <a href="https://www.banronbodo.com/news/articleView.html?idxno=32291" target="_blank">원문 보기 →</a></div>
+</div>
+
+<div class="insight">
+  <div class="head">은퇴 후 '20년 소비기'를 가진 5060 여성이 TV홈쇼핑에서 모바일 패션앱으로 소비 접점을 넓히고 있다</div>
+  <div class="body">국가데이터처 '2025 고령자 통계' 기준 65세 기대여명은 21.5년 — 은퇴 이후에도 20년 안팎의 소비 기간이 이어진다. 이 기반 위에서 5060은 익숙한 TV홈쇼핑을 유지하면서 홈쇼핑 앱과 연령 맞춤 패션앱으로 소비 접점을 동시에 확장하는 중이다.</div>
+  <div class="impl">→ 시사점: 4060 여성 마케팅은 'TV 아니면 모바일'의 양자택일이 아니라, 홈쇼핑식 신뢰·큐레이션 문법을 모바일로 이어주는 브릿지 설계가 핵심.</div>
+  <div class="isrc">반론보도닷컴 · 2026.05.18 · <a href="https://www.banronbodo.com/news/articleView.html?idxno=32291" target="_blank">원문 보기 →</a></div>
+</div>
+
+<div class="insight">
+  <div class="head">시니어 돌봄 정책이 선언을 넘어 예산 집행 단계로 — '병원동행'과 '에이지테크'가 같은 날 가동됐다</div>
+  <div class="body">7월 29일부터 전국 282개 장기요양기관에서 요양보호사·간호사가 접수부터 귀가까지 동행하는 '장기요양 병원동행 시범사업'(연 50만원 한도)이 시행됐고, 같은 날 부산시는 3년간 100억원 규모의 에이지테크 기반 건강돌봄 플랫폼 구축을 공식 발표했다.</div>
+  <div class="impl">→ 시사점: 부모 돌봄의 실질 주체인 4060 여성에게 '병원동행 서비스 신청 방법' 같은 실용 정보 콘텐츠는 즉시 반응이 나올 수 있는 소재다.</div>
+  <div class="isrc">캐어유 뉴스 · 2026.07.30 · <a href="https://www.careyounews.org/news/articleView.html?idxno=10885" target="_blank">원문 보기 →</a></div>
+</div>
+
+<div class="insight">
+  <div class="head">요양병원 간병 노동의 주축은 이미 60대 이상(82%) — 간병급여화 논의는 시니어 여성의 '일자리 이슈'이기도 하다</div>
+  <div class="body">간병비 본인부담을 100%에서 30%로 낮추는 간병급여화 방안이 공론화됐고(2027년 상반기 시범사업 추진), 현장 간병인의 82%가 60대 이상으로 보도됐다. 제도 재편이 시니어 여성 중심의 간병 인력 시장 구조를 직접 흔들 수 있는 국면이다.</div>
+  <div class="impl">→ 시사점: 4060 여성 재취업·부업 콘텐츠에서 간병·돌봄 직군의 제도 변화(급여화, 직고용 요건)를 시리즈로 추적할 가치가 있다.</div>
+  <div class="isrc">캐어유 뉴스 · 2026.07.30 · <a href="https://www.careyounews.org/news/articleView.html?idxno=10885" target="_blank">원문 보기 →</a></div>
+</div>
+
+<h2 class="sec" style="margin-top:36px;">주요 소식</h2>
+<div class="news">
+  <div class="card">
+    <span class="badge date">2026.07.30</span><span class="badge press">언론 보도</span>
+    <h4>돌봄의 무게중심이 병원 밖으로 — 병원동행·에이지테크·간병급여화가 한꺼번에 움직였다</h4>
+    <p>장기요양 병원동행 시범사업 시행(282개 기관, 연 50만원 한도), 부산 100억 에이지테크 플랫폼 발표, 간병급여화 공론화(간병인 82%가 60대 이상)까지 — 시니어 돌봄 정책이 실행 단계로 진입.</p>
+    <a href="https://www.careyounews.org/news/articleView.html?idxno=10885" target="_blank">캐어유 뉴스 · 원문 보기 →</a>
+  </div>
+  <div class="card">
+    <span class="badge date">2026.06.26</span><span class="badge press">언론 보도</span>
+    <h4>'온라인판 아울렛' 퀸잇·애슬러·포스티 — 4050 지갑 열기 경쟁</h4>
+    <p>포스티 회원 220만명(+40%)·거래액 +20%, 운영사 카카오스타일 흑자 전환, 애슬러 매출 +407%. 4050 패션 플랫폼이 재무 실적으로 성장을 증명하는 국면.</p>
+    <a href="https://www.insightkorea.co.kr/news/articleView.html?idxno=248966" target="_blank">인사이트코리아 · 원문 보기 →</a>
+  </div>
+  <div class="card">
+    <span class="badge date">2026.05.18</span><span class="badge press">언론 보도</span>
+    <h4>"홈쇼핑만 본다는 옛말" — 모바일 쇼핑 큰손 된 5060</h4>
+    <p>65세 기대여명 21.5년(국가데이터처 2025 고령자 통계) 속 퀸잇 봄 럭퀸세일 방문 461만명·거래액 +27%. 5060 소비가 TV에서 모바일 패션앱으로 자연스럽게 확장.</p>
+    <a href="https://www.banronbodo.com/news/articleView.html?idxno=32291" target="_blank">반론보도닷컴 · 원문 보기 →</a>
+  </div>
+  <div class="card" style="background:#fdf6ec;">
+    <span class="badge date">편집 노트</span>
+    <h4>오늘 제외된 데이터</h4>
+    <p>캐시워크 5060 사용 지표(7/18 기발행), 라포랩스 연매출 856억원(7/21 기발행)은 중복 배제 원칙에 따라 이번 호에서 제외했습니다. KB국민카드 시니어 143% 분석 인용 기사들도 동일 원천(7/24 기발행)으로 배제.</p>
+  </div>
+</div>
+
+<div class="tags">
+  <span>#4060여성</span><span>#액티브시니어</span><span>#퀸잇</span><span>#포스티</span><span>#럭퀸세일</span><span>#간병급여화</span><span>#병원동행서비스</span><span>#에이지테크</span><span>#중장년커머스</span>
+</div>
+
+<footer>
+  <ul>
+    <li><b>출처 배지 안내</b> — <span class="badge primary">1차 데이터</span> 협회·리서치사·정부 발간물을 직접 확인한 수치 / <span class="badge press">언론 보도</span> 기사를 통해 간접 확인한 수치. 이번 호는 전 소스가 언론 보도 검증분입니다.</li>
+    <li>도넛 차트(테마 비중)는 편집팀 <b>추정</b>이며, 막대 차트(럭퀸세일 성장률)는 퀸잇 발표 기반 <b>실측</b> 수치입니다.</li>
+    <li>본 리포트는 4060(50~70) 여성·시니어 특정 수치만 게재하며, <b>전 연령 일반 통계는 게재하지 않습니다</b>.</li>
+    <li>모든 KPI는 원문 본문에서 직접 확인된 수치이며, 발행일 미확인 소스는 사용하지 않았습니다. 최근 2주 내 신규 발행 소스는 1건(7/30)입니다.</li>
+    <li>© 2026 4060 연구소 · 매일 아침 자동 발행</li>
+  </ul>
+</footer>
+
+</div>
+<script>
+new Chart(document.getElementById('donut'), {
+  type:'doughnut',
+  data:{ labels:['패션·커머스','돌봄·정책','시니어 일자리','인구·소비구조'],
+    datasets:[{ data:[45,35,10,10], backgroundColor:['#c2410c','#0f766e','#f59e0b','#64748b'], borderWidth:2, borderColor:'#fff' }]},
+  options:{ maintainAspectRatio:false, plugins:{ legend:{ position:'bottom', labels:{ font:{ size:12 } } } } }
+});
+new Chart(document.getElementById('bar'), {
+  type:'bar',
+  data:{ labels:['방문자','거래액','구매 고객','주문 수'],
+    datasets:[{ label:'전년比 성장률(%)', data:[20,27,40,40], backgroundColor:['#f1a883','#e07040','#c2410c','#a53709'], borderRadius:6 }]},
+  options:{ maintainAspectRatio:false, plugins:{ legend:{ display:false } },
+    scales:{ y:{ beginAtZero:true, ticks:{ callback:v=>'+'+v+'%' } } } }
+});
+</script>
+</body>
+</html>
