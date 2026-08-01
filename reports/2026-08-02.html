@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4060 연구소 데일리 리포트 — 2026년 8월 2일</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root { --accent:#c2410c; --teal:#0f766e; --bg:#f6f4ef; --card:#ffffff; --text:#292524; --muted:#78716c; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic',sans-serif; background:var(--bg); color:var(--text); line-height:1.65; }
+  .wrap { max-width:960px; margin:0 auto; padding:32px 20px 60px; }
+  header { text-align:center; margin-bottom:36px; }
+  .lab-badge { display:inline-block; background:var(--accent); color:#fff; font-size:13px; font-weight:700; padding:4px 14px; border-radius:999px; letter-spacing:1px; margin-bottom:12px; }
+  h1 { font-size:28px; font-weight:800; }
+  .date-line { color:var(--muted); font-size:14px; margin-top:6px; }
+  .notice { background:#fff7ed; border:1px solid #fed7aa; border-radius:10px; padding:10px 16px; font-size:13px; color:#9a3412; margin:18px auto 0; max-width:720px; }
+  .kpi-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:14px; margin-bottom:36px; }
+  .kpi { background:var(--card); border-radius:14px; padding:20px 18px; box-shadow:0 1px 4px rgba(0,0,0,.06); }
+  .kpi .label { font-size:13px; color:var(--muted); margin-bottom:6px; }
+  .kpi .value { font-size:26px; font-weight:800; color:var(--accent); }
+  .kpi .desc { font-size:13px; margin-top:6px; }
+  .kpi .src { font-size:11px; color:var(--muted); margin-top:10px; }
+  .badge { display:inline-block; font-size:10px; font-weight:700; padding:1px 7px; border-radius:999px; margin-right:4px; vertical-align:1px; }
+  .badge.primary { background:#ccfbf1; color:var(--teal); }
+  .badge.press { background:#ffedd5; color:var(--accent); }
+  h2 { font-size:20px; font-weight:800; margin:40px 0 16px; border-left:5px solid var(--accent); padding-left:12px; }
+  .charts { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  @media (max-width:720px){ .charts { grid-template-columns:1fr; } }
+  .chart-card { background:var(--card); border-radius:14px; padding:20px; box-shadow:0 1px 4px rgba(0,0,0,.06); }
+  .chart-card h3 { font-size:15px; margin-bottom:4px; }
+  .chart-card .note { font-size:11px; color:var(--muted); margin-bottom:12px; }
+  .insight { background:var(--card); border-radius:14px; padding:20px 22px; box-shadow:0 1px 4px rgba(0,0,0,.06); margin-bottom:14px; font-size:14px; }
+  .insight b.head { display:block; font-size:15px; margin-bottom:8px; }
+  .insight .implication { display:block; margin-top:8px; color:var(--teal); font-weight:700; }
+  .insight .src { display:block; margin-top:8px; font-size:12px; color:var(--muted); }
+  .insight .src a { color:var(--accent); text-decoration:none; font-weight:700; }
+  .news-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media (max-width:720px){ .news-grid { grid-template-columns:1fr; } }
+  .news { background:var(--card); border-radius:14px; padding:18px 20px; box-shadow:0 1px 4px rgba(0,0,0,.06); font-size:13px; }
+  .news .date-badge { display:inline-block; background:var(--teal); color:#fff; font-size:11px; font-weight:700; padding:2px 8px; border-radius:6px; margin-bottom:8px; }
+  .news h3 { font-size:15px; margin-bottom:6px; }
+  .news .media { color:var(--muted); font-size:12px; margin-bottom:8px; }
+  .news a { color:var(--accent); text-decoration:none; font-weight:700; font-size:13px; }
+  .tags { margin-top:36px; text-align:center; font-size:14px; color:var(--teal); font-weight:700; }
+  footer { margin-top:40px; padding-top:20px; border-top:1px solid #e7e5e4; font-size:12px; color:var(--muted); text-align:center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="lab-badge">4060 연구소</div>
+    <h1>4060 여성 데일리 리포트</h1>
+    <div class="date-line">2026년 8월 2일 (일) · 시니어 여성 소비·라이프스타일 인사이트</div>
+    <div class="notice">⚠️ 오늘 확보된 소스는 4건 모두 최근 2주 이전 발행분입니다(2026년 6월 3건, 2025년 8월 1건). 최근 1~2주 내 신규 발표 중 4060 여성 특정 데이터·미중복 소스를 확보하지 못했습니다.</div>
+  </header>
+
+  <div class="kpi-grid">
+    <div class="kpi">
+      <div class="label">70세 이상 여성 취업자</div>
+      <div class="value">104.9만 명</div>
+      <div class="desc">사상 첫 100만 돌파, 전년 대비 +8.7% (2025년 기준)</div>
+      <div class="src"><span class="badge press">언론 보도</span>KOSIS 국가데이터처 · 신아일보 · 2026.06.10</div>
+    </div>
+    <div class="kpi">
+      <div class="label">5060 건강앱(캐시워크) 월평균 접속일</div>
+      <div class="value">28.5일</div>
+      <div class="desc">2030세대 대비 약 33% 높음 ('25.9~'26.4 데이터)</div>
+      <div class="src"><span class="badge press">언론 보도</span>와이즈앱·리테일 · 더퍼스트미디어 · 2026.06.02</div>
+    </div>
+    <div class="kpi">
+      <div class="label">50대 "완전한 휴식·힐링" 휴가 선호</div>
+      <div class="value">63.6%</div>
+      <div class="desc">전 연령대 중 최고 (전체 평균 54.1%, 40대 57.2%)</div>
+      <div class="src"><span class="badge press">언론 보도</span>피앰아이(PMI) 조사 · 여행을말하다 · 2026.06.21</div>
+    </div>
+    <div class="kpi">
+      <div class="label">중장년(40~69세) OTT 이용률</div>
+      <div class="value">95%+</div>
+      <div class="desc">유튜브·넷플릭스 포함, 숏폼 소비 확산</div>
+      <div class="src"><span class="badge press">언론 보도</span>서울시50플러스재단 · 고구마팜 · 2025.08.19</div>
+    </div>
+  </div>
+
+  <h2>📊 차트</h2>
+  <div class="charts">
+    <div class="chart-card">
+      <h3>오늘 소식의 테마 분포</h3>
+      <div class="note">※ 금일 검증 소스 4건의 주제 분류 기준 (편집자 추정)</div>
+      <canvas id="donut"></canvas>
+    </div>
+    <div class="chart-card">
+      <h3>"완전한 휴식·힐링" 휴가 선호율 (연령별, 실측)</h3>
+      <div class="note">※ PMI, 2026.6.5~10 전국 20~59세 1,000명 조사 · 여행을말하다 2026.06.21</div>
+      <canvas id="bar"></canvas>
+    </div>
+  </div>
+
+  <h2>💡 핵심 인사이트</h2>
+  <div class="insight">
+    <b class="head">한국 고용시장에서 시니어 여성의 '일하는 노년'이 표준이 됐다 — 70세 이상 여성 취업자가 사상 처음 100만 명을 넘었다.</b>
+    KOSIS 국가데이터처 집계(2025년 연간) 기준 70세 이상 여성 취업자는 104만9,000명(+8.7%)으로 첫 100만 돌파, 60세 이상 전체 취업자(683만4,000명)도 통계 작성 1963년 이래 처음으로 50대를 추월했다.
+    <span class="implication">→ 시사점: 4060 여성 대상 커머스·콘텐츠 기획 시 '은퇴한 전업주부' 전제를 버리고, 일하는 시니어 여성의 출퇴근 시간대·소득 여력·간편식 수요를 반영한 상품 구성이 필요하다.</span>
+    <span class="src">신아일보 · 2026.06.10 · <a href="https://www.shinailbo.co.kr/news/articleView.html?idxno=5028988" target="_blank">원문 보기 →</a></span>
+  </div>
+  <div class="insight">
+    <b class="head">모바일 건강관리 앱 시장에서 5060의 이용 강도가 2030을 앞질렀다 — 캐시워크 5060 월평균 접속일 28.5일.</b>
+    와이즈앱·리테일 '2025 하반기 액티브 시니어 세대 트렌드'(2025.9~2026.4 데이터)에 따르면 캐시워크는 50대 이상 점유율 상위 15개 앱 중 4위(38.6%)이며, 5060의 월평균 접속일(28.5일)은 2030보다 약 33%, 앱 내 메신저 사용은 약 159% 많다.
+    <span class="implication">→ 시사점: 4060 여성 대상 앱·서비스는 '걷기 보상 + 커뮤니티(수다·챌린지)' 조합이 사실상 매일 접속을 만드는 리텐션 공식 — 건강 기능 단독보다 소통 기능을 붙여야 한다.</span>
+    <span class="src">더퍼스트미디어 · 2026.06.02 · <a href="https://www.thefirstmedia.net/news/articleView.html?idxno=200490" target="_blank">원문 보기 →</a></span>
+  </div>
+  <div class="insight">
+    <b class="head">국내 여행 시장에서 40·50대의 휴가 키워드는 체험이 아니라 '완전한 휴식'이다 — 50대 63.6%로 전 연령 최고.</b>
+    피앰아이(PMI)의 2026년 여름휴가 조사(6.5~10, 20~59세 1,000명)에서 '완전한 휴식·힐링'을 원한 비율은 40대 57.2%, 50대 63.6%로 연령이 높을수록 뚜렷했고, 국내 선호 74.2%·1~2박 단기 42.2%가 주류였다.
+    <span class="implication">→ 시사점: 4060 여성 대상 여행 상품·콘텐츠는 액티비티 나열형 대신 '가까운 곳에서 짧게, 아무것도 안 하기'를 전면에 내세운 근거리 휴식 패키지가 적중률이 높다.</span>
+    <span class="src">여행을말하다 · 2026.06.21 · <a href="https://www.telltrip.com/news/korea-2026-summer-vacation-trends-revealed/" target="_blank">원문 보기 →</a></span>
+  </div>
+  <div class="insight">
+    <b class="head">미디어 시장에서 중장년(40~69세)은 더 이상 TV 세대가 아니다 — OTT 이용률 95%를 넘고 시니어가 콘텐츠 주인공으로 부상했다.</b>
+    서울시50플러스재단 조사 기준 중장년의 유튜브·넷플릭스 등 OTT 이용률은 95% 이상이며, 시니어 연애 리얼리티('끝사랑')와 초고령 유튜버, 시니어 커뮤니티 '시놀'(회원 9만 명) 등 시니어가 콘텐츠의 주체가 되는 흐름이 이어지고 있다.
+    <span class="implication">→ 시사점: 4060 여성 마케팅의 기본 채널은 이제 유튜브 쇼츠·릴스이며, 시니어 여성을 '모델·크리에이터'로 세우는 참여형 캠페인이 공감과 전환을 동시에 잡는 포맷이다.</span>
+    <span class="src">고구마팜 · 2025.08.19 · <a href="https://gogumafarm.kr/5060-%EC%97%B0%ED%94%84%EC%97%90-%EC%9D%B4%EC%96%B4-%EC%9D%B4%EC%A0%A0-%EC%B4%88%EA%B3%A0%EB%A0%B9-%EC%9C%A0%ED%8A%9C%EB%B2%84%EA%B9%8C%EC%A7%80-%EC%8B%9C%EB%8B%88%EC%96%B4-%EB%A7%88%EC%BC%80/" target="_blank">원문 보기 →</a></span>
+  </div>
+
+  <h2>📰 주요 소식</h2>
+  <div class="news-grid">
+    <div class="news">
+      <span class="date-badge">2026.06.10</span>
+      <h3>70세 이상 취업자 첫 200만 돌파…여성은 첫 100만</h3>
+      <div class="media"><span class="badge press">언론 보도</span>신아일보 (원천: KOSIS 국가데이터처)</div>
+      60세 이상 취업자(683.4만)가 사상 처음 50대를 추월. 70세 이상 여성 취업자 104.9만 명으로 첫 100만 돌파.
+      <div style="margin-top:8px"><a href="https://www.shinailbo.co.kr/news/articleView.html?idxno=5028988" target="_blank">원문 보기 →</a></div>
+    </div>
+    <div class="news">
+      <span class="date-badge">2026.06.02</span>
+      <h3>"모바일 앱으로 건강까지"…스마트폰과 친해진 5060</h3>
+      <div class="media"><span class="badge press">언론 보도</span>더퍼스트미디어 (원천: 와이즈앱·리테일)</div>
+      50대 이상이 카톡·유튜브·네이버 다음으로 많이 쓰는 앱은 캐시워크. 5060 월 28.5일 접속, 메신저 사용은 2030의 2.6배.
+      <div style="margin-top:8px"><a href="https://www.thefirstmedia.net/news/articleView.html?idxno=200490" target="_blank">원문 보기 →</a></div>
+    </div>
+    <div class="news">
+      <span class="date-badge">2026.06.21</span>
+      <h3>올여름 휴가, 40·50대는 "완전한 휴식"이 압도적</h3>
+      <div class="media"><span class="badge press">언론 보도</span>여행을말하다 (원천: 피앰아이 조사)</div>
+      50대 63.6%·40대 57.2%가 휴식·힐링형 휴가 희망. 국내 74.2%, 1~2박 단기 42.2% — '짧고 가깝게 푹 쉬기'가 대세.
+      <div style="margin-top:8px"><a href="https://www.telltrip.com/news/korea-2026-summer-vacation-trends-revealed/" target="_blank">원문 보기 →</a></div>
+    </div>
+    <div class="news">
+      <span class="date-badge">2025.08.19</span>
+      <h3>5060 연프에 초고령 유튜버까지…시니어 마케팅의 변화</h3>
+      <div class="media"><span class="badge press">언론 보도</span>고구마팜 (원천: 서울시50플러스재단 외)</div>
+      중장년 OTT 이용률 95%+. 시니어 크리에이터·시니어 연애 리얼리티·커뮤니티 '시놀' 등 시니어가 콘텐츠 주체로.
+      <div style="margin-top:8px"><a href="https://gogumafarm.kr/5060-%EC%97%B0%ED%94%84%EC%97%90-%EC%9D%B4%EC%96%B4-%EC%9D%B4%EC%A0%A0-%EC%B4%88%EA%B3%A0%EB%A0%B9-%EC%9C%A0%ED%8A%9C%EB%B2%84%EA%B9%8C%EC%A7%80-%EC%8B%9C%EB%8B%88%EC%96%B4-%EB%A7%88%EC%BC%80/" target="_blank">원문 보기 →</a></div>
+    </div>
+  </div>
+
+  <div class="tags">#4060여성 #일하는시니어여성 #캐시워크 #휴식형여행 #시니어크리에이터 #액티브시니어</div>
+
+  <footer>
+    <p><b>출처 배지 안내</b> — <span class="badge primary">1차 데이터</span> 협회·리서치사·정부 발간물을 직접 확인한 출처 / <span class="badge press">언론 보도</span> 기사를 통해 간접 확인한 출처</p>
+    <p style="margin-top:6px">도넛 차트는 편집자 추정(테마 분류), 막대 차트는 실측 조사 수치입니다. 전 연령 일반 통계는 게재하지 않습니다.</p>
+    <p style="margin-top:6px">4060 연구소 · 발행일 2026-08-02 · 모든 수치는 원문에서 직접 확인된 것만 사용</p>
+  </footer>
+</div>
+
+<script>
+new Chart(document.getElementById('donut'), {
+  type: 'doughnut',
+  data: {
+    labels: ['고용·경제활동', '디지털 헬스케어', '여행·여가', '미디어·콘텐츠'],
+    datasets: [{ data: [1, 1, 1, 1], backgroundColor: ['#c2410c', '#0f766e', '#f59e0b', '#78716c'] }]
+  },
+  options: { plugins: { legend: { position: 'bottom', labels: { font: { size: 12 } } } } }
+});
+new Chart(document.getElementById('bar'), {
+  type: 'bar',
+  data: {
+    labels: ['전체 평균', '40대', '50대'],
+    datasets: [{ label: '"완전한 휴식·힐링" 희망 비율(%)', data: [54.1, 57.2, 63.6], backgroundColor: ['#d6d3d1', '#0f766e', '#c2410c'] }]
+  },
+  options: {
+    scales: { y: { beginAtZero: true, max: 80, ticks: { callback: v => v + '%' } } },
+    plugins: { legend: { display: false } }
+  }
+});
+</script>
+</body>
+</html>
