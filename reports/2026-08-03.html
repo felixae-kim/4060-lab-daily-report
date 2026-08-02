@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4060 연구소 데일리 리포트 — 2026년 8월 3일</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root { --accent:#c2410c; --teal:#0f766e; --bg:#f6f4ef; --ink:#1f2937; --muted:#6b7280; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--ink); font-family:'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif; line-height:1.65; }
+  .wrap { max-width:960px; margin:0 auto; padding:32px 20px 64px; }
+  header { text-align:center; padding:28px 0 20px; }
+  .brand { display:inline-block; font-size:12px; letter-spacing:3px; font-weight:800; color:#fff; background:var(--accent); padding:4px 12px; border-radius:999px; }
+  h1 { font-size:26px; margin-top:14px; font-weight:800; }
+  .date { color:var(--muted); font-size:14px; margin-top:6px; }
+  .notice { background:#fff7ed; border:1px solid #fdba74; border-radius:12px; padding:16px 18px; font-size:13.5px; margin:22px 0; color:#7c2d12; }
+  .notice b { color:var(--accent); }
+  section h2 { font-size:18px; font-weight:800; margin:34px 0 14px; padding-left:10px; border-left:4px solid var(--accent); }
+  .kpi-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:14px; }
+  .kpi { background:#fff; border-radius:14px; padding:18px 16px; box-shadow:0 1px 4px rgba(0,0,0,.06); }
+  .kpi .v { font-size:26px; font-weight:800; color:var(--accent); }
+  .kpi .t { font-size:13.5px; margin-top:6px; font-weight:600; }
+  .kpi .s { font-size:11.5px; color:var(--muted); margin-top:8px; }
+  .badge { display:inline-block; font-size:10.5px; font-weight:700; padding:2px 8px; border-radius:999px; margin-top:8px; }
+  .badge.press { background:#e0f2f1; color:var(--teal); }
+  .badge.primary { background:#ffedd5; color:var(--accent); }
+  .charts { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .chart-card { background:#fff; border-radius:14px; padding:18px; box-shadow:0 1px 4px rgba(0,0,0,.06); }
+  .chart-card h3 { font-size:14px; margin-bottom:4px; }
+  .chart-card .cap { font-size:11.5px; color:var(--muted); margin-bottom:10px; }
+  .chart-box { position:relative; height:230px; }
+  .insight { background:#fff; border-radius:14px; padding:18px 20px; box-shadow:0 1px 4px rgba(0,0,0,.06); margin-bottom:12px; font-size:14px; }
+  .insight b.head { display:block; font-size:15px; margin-bottom:8px; }
+  .insight .imp { display:block; margin-top:10px; color:var(--teal); font-weight:700; }
+  .insight .src { display:block; margin-top:10px; font-size:12px; color:var(--muted); }
+  .insight .src a { color:var(--accent); text-decoration:none; font-weight:700; }
+  .news-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .news { background:#fff; border-radius:14px; padding:16px 18px; box-shadow:0 1px 4px rgba(0,0,0,.06); font-size:13.5px; }
+  .news .db { display:inline-block; background:var(--teal); color:#fff; font-size:11px; font-weight:700; padding:2px 8px; border-radius:999px; margin-bottom:8px; }
+  .news b { display:block; margin-bottom:6px; font-size:14px; }
+  .news .m { color:var(--muted); font-size:12px; margin-top:8px; }
+  .news a { color:var(--accent); text-decoration:none; font-weight:700; font-size:12.5px; }
+  .tags { margin-top:30px; text-align:center; font-size:13px; color:var(--teal); font-weight:700; line-height:2; }
+  footer { margin-top:36px; border-top:1px solid #e5e1d8; padding-top:18px; font-size:12px; color:var(--muted); }
+  footer b { color:var(--ink); }
+  @media (max-width:680px){ .charts,.news-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <span class="brand">4060 LAB DAILY</span>
+  <h1>4060 여성 트렌드 데일리 리포트</h1>
+  <div class="date">2026년 8월 3일 (월) · 매일 아침 자동 발행</div>
+</header>
+
+<div class="notice">
+  ⚠️ <b>오늘의 소스 확보 현황:</b> 신규 검증을 통과한 소스는 <b>1건</b>입니다(원칙상 3건 목표 미달). 후보 6건을 직접 검증했으나, 퀸잇 플리츠 발표(7/20 게재)·국세청 시니어 유튜버 자료(7/16~18 게재)·오픈서베이 시니어 수치(7/15·7/25 게재)는 <b>기존 리포트와 동일 원천</b>이라 중복 배제 원칙에 따라 제외했고, 2건은 본문 수집 실패(스크립트 렌더링 등)로 탈락했습니다. 일반(전 연령) 통계로 채우지 않고 확보된 4060·시니어 특정 소스만으로 발행합니다. 확보 소스는 <b>최근 2주 내 발행(7/31)</b>입니다.
+</div>
+
+<section>
+  <h2>핵심 KPI</h2>
+  <div class="kpi-grid">
+    <div class="kpi">
+      <div class="v">1.2배</div>
+      <div class="t">치매 노인 실종 신고, 7~8월 평시 대비</div>
+      <div class="s">폭염기 실종 급증 통계 (7/30 발표 보도) · 캐어유 뉴스 · 2026.07.31</div>
+      <span class="badge press">언론 보도</span>
+    </div>
+    <div class="kpi">
+      <div class="v">약 2억원</div>
+      <div class="t">일본, 부모 간병 6년 평균 비용 (2,300만엔 ≈ 2억 436만원)</div>
+      <div class="s">일본 간병 비용 조사 보도 · 캐어유 뉴스 · 2026.07.31</div>
+      <span class="badge press">언론 보도</span>
+    </div>
+    <div class="kpi">
+      <div class="v">56%</div>
+      <div class="t">일본 부모 세대 중 간병 재정 대비가 없는 비율 — 간병비 대화 가정은 5곳 중 1곳</div>
+      <div class="s">일본 간병 비용 조사 보도 · 캐어유 뉴스 · 2026.07.31</div>
+      <span class="badge press">언론 보도</span>
+    </div>
+    <div class="kpi">
+      <div class="v">7/30 선언</div>
+      <div class="t">중장년 여성복 그룹 형지, '시니어테크 기업' 전환 리밸런싱 공식화</div>
+      <div class="s">자산 매각 재원 → 시니어테크·웨어러블 로봇 투자 · 캐어유 뉴스 · 2026.07.31</div>
+      <span class="badge press">언론 보도</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>오늘의 차트</h2>
+  <div class="charts">
+    <div class="chart-card">
+      <h3>오늘 소식 테마 비중 (추정)</h3>
+      <div class="cap">검증 통과 소스 1건(트렌드 분석) 내 항목의 주제 분류 — 편집상 추정치</div>
+      <div class="chart-box"><canvas id="donut"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <h3>일본 간병 준비 실태 (실측)</h3>
+      <div class="cap">일본 간병 비용 조사 결과, % · 캐어유 뉴스 2026.07.31 보도 인용</div>
+      <div class="chart-box"><canvas id="bar"></canvas></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>핵심 인사이트</h2>
+
+  <div class="insight">
+    <b class="head">국내 패션 시장에서 중장년 여성복 대표 그룹 형지가 '시니어테크 기업' 전환을 선언했다 — 시니어 산업이 '검증된 실전 무대'에 진입했다는 신호</b>
+    크로커다일레이디 등 중장년 여성복 중심으로 성장해 온 패션그룹 형지는 7월 30일 주요 자산을 매각하는 리밸런싱을 추진하고, 확보 재원을 시니어테크·웨어러블 로봇에 집중 투자하겠다는 전략을 공식화했다(캐어유 뉴스 7/31 보도). 수십 년간 의류 사업을 해온 기업이 사업 구조 자체를 시니어 산업으로 옮기는 결정이다.
+    <span class="imp">→ 시사점: 4060 여성 고객 기반을 가진 브랜드의 다음 확장 카테고리가 '패션 → 건강·보조기기'로 이동 중 — 의류·뷰티에 건강 관리 상품과 콘텐츠를 결합하는 크로스셀 설계를 검토할 시점이다.</span>
+    <span class="src">캐어유 뉴스 · 2026.07.31 · <a href="https://www.careyounews.org/news/articleView.html?idxno=10886" target="_blank">원문 보기 →</a></span>
+  </div>
+
+  <div class="insight">
+    <b class="head">국내 대기업 인사 모델에서 시니어 숙련 인력이 '폐기 대상'에서 '조직 자산'으로 재정의되고 있다 — 현대엘리베이터 '안전마스터 트랙' 도입</b>
+    현대엘리베이터는 7월 30일 정년을 앞둔 숙련 기술자의 현장 경험을 안전 전문 역량으로 전환해 계속 활용하는 '안전마스터 트랙'을 도입한다고 밝혔다(캐어유 뉴스 7/31 보도). 형지의 시니어테크 전환과 같은 날 나온 발표로, 시니어를 성장 동력·핵심 인적 자원으로 보는 민간 기업의 전략 전환이 본격화됐다.
+    <span class="imp">→ 시사점: 4060 여성 재취업 시장에서도 '경력 재포장'이 핵심 — 오래 해온 일(살림·돌봄·판매·상담 등)을 전문 트랙으로 전환해 주는 교육·자격 콘텐츠 수요가 커질 것이다.</span>
+    <span class="src">캐어유 뉴스 · 2026.07.31 · <a href="https://www.careyounews.org/news/articleView.html?idxno=10886" target="_blank">원문 보기 →</a></span>
+  </div>
+
+  <div class="insight">
+    <b class="head">노인 돌봄 현장에서 여름(7~8월) 치매 실종 신고는 평시의 1.2배 — 폭염기 리스크가 지자체의 배회감지기·스마트태그 무상 지원 확대를 앞당기고 있다</b>
+    7월 30일 발표된 통계 기준 치매 노인 실종 신고는 7~8월 두 달간 평시 대비 1.2배까지 치솟는다. 이에 강릉시치매안심센터는 배회감지기·스마트태그 연중 무상 지원을 확대하고, 보은군도 스마트태그 지원 사업을 본격 추진한다(캐어유 뉴스 7/31 보도).
+    <span class="imp">→ 시사점: 부모 돌봄의 주축인 4060 여성에게 '우리 지역 배회감지기 무상 지원 신청법'은 여름 시즌 즉효성 콘텐츠 — 지역별 신청 가이드 포맷이 도달·저장률 모두에서 유리하다.</span>
+    <span class="src">캐어유 뉴스 · 2026.07.31 · <a href="https://www.careyounews.org/news/articleView.html?idxno=10886" target="_blank">원문 보기 →</a></span>
+  </div>
+
+  <div class="insight">
+    <b class="head">일본 간병 시장 조사가 한국 4060 돌봄 세대의 선행지표를 보여준다 — 부모 간병 6년에 평균 약 2억원, 그런데 부모 세대 56%는 재정 대비가 없다</b>
+    일본에서 부모를 6년간 간병하는 데 평균 2,300만엔(약 2억 436만원)이 든다는 조사 결과가 공개됐다. 자녀와 간병 비용을 구체적으로 대화한 가정은 5곳 중 1곳에 그쳤고, 부모 세대의 56%는 재정적 대비가 없었다(캐어유 뉴스 7/31 보도). 한국보다 고령화가 앞선 시장의 수치다.
+    <span class="imp">→ 시사점: 간병 당사자가 될 한국 4060 여성의 '돌봄 재무' 수요는 커질 수밖에 없다 — 간병비 계산기, 부모와의 간병비 대화 가이드 같은 실용 콘텐츠·상담 상품을 선점할 기회다.</span>
+    <span class="src">캐어유 뉴스 · 2026.07.31 · <a href="https://www.careyounews.org/news/articleView.html?idxno=10886" target="_blank">원문 보기 →</a></span>
+  </div>
+</section>
+
+<section>
+  <h2>주요 소식</h2>
+  <div class="news-grid">
+    <div class="news">
+      <span class="db">2026.07.31</span>
+      <b>패션그룹 형지, 자산 리밸런싱으로 시니어테크·웨어러블 로봇 집중 투자 선언</b>
+      중장년 여성복 중심 기업의 사업 구조 전환 — 시니어 시장이 투자 수익이 검증된 단계로 진입했다는 신호.
+      <div class="m">캐어유 뉴스 <span class="badge press">언론 보도</span></div>
+      <a href="https://www.careyounews.org/news/articleView.html?idxno=10886" target="_blank">원문 보기 →</a>
+    </div>
+    <div class="news">
+      <span class="db">2026.07.31</span>
+      <b>현대엘리베이터, 시니어 숙련 기술자용 '안전마스터 트랙' 인사 모델 도입</b>
+      정년 전 숙련 인력의 경험을 안전 전문 역량으로 전환 — 시니어 인적자원 재정의 사례.
+      <div class="m">캐어유 뉴스 <span class="badge press">언론 보도</span></div>
+      <a href="https://www.careyounews.org/news/articleView.html?idxno=10886" target="_blank">원문 보기 →</a>
+    </div>
+    <div class="news">
+      <span class="db">2026.07.31</span>
+      <b>여름철 치매 실종 신고 평시 1.2배 — 강릉·보은, 배회감지기·스마트태그 무상 지원 확대</b>
+      폭염기 돌봄 리스크 대응이 기술(감지기)·금융(치매극복선도 금융창구)·문화(주민 행사)로 다층화.
+      <div class="m">캐어유 뉴스 <span class="badge press">언론 보도</span></div>
+      <a href="https://www.careyounews.org/news/articleView.html?idxno=10886" target="_blank">원문 보기 →</a>
+    </div>
+    <div class="news">
+      <span class="db">2026.07.31</span>
+      <b>일본 간병비 조사 — 6년 평균 2,300만엔(약 2억원), 부모 세대 56%는 재정 무대비</b>
+      간병비 대화를 나눈 가정은 5곳 중 1곳뿐 — '돌봄 재무 상담' 제도 도입 논의로 이어지는 흐름.
+      <div class="m">캐어유 뉴스 <span class="badge press">언론 보도</span></div>
+      <a href="https://www.careyounews.org/news/articleView.html?idxno=10886" target="_blank">원문 보기 →</a>
+    </div>
+  </div>
+</section>
+
+<div class="tags">#4060여성 #시니어테크 #형지 #웨어러블로봇 #치매돌봄 #배회감지기 #간병재무 #액티브시니어</div>
+
+<footer>
+  <b>출처 배지 안내:</b> <span class="badge primary">1차 데이터</span> 협회·리서치사·정부 발간물을 직접 확인한 수치 / <span class="badge press">언론 보도</span> 기사를 통해 간접 확인한 수치 — 오늘 소스는 전부 언론 보도(캐어유 뉴스 2026.07.31, 발행일 직접 확인)입니다.<br><br>
+  <b>실측/추정 구분:</b> 도넛 차트(테마 비중)는 편집상 추정치이며, 막대 차트(일본 간병 준비 실태)와 KPI 수치는 원문 보도에서 직접 확인한 실측 인용값입니다. 일본 간병비 원화 환산액(약 2억 436만원)은 보도 표기 기준입니다.<br><br>
+  <b>편집 원칙:</b> 전 연령 일반 통계는 게재하지 않습니다. 최근 14일 내 게재된 원천 발표·KPI는 재사용하지 않습니다(오늘 5건 배제). 신규 소스 3건 목표에 미달(1건)한 사실을 상단에 표기했습니다.<br><br>
+  ⓒ 4060 연구소 · 데일리 리포트 · 2026.08.03
+</footer>
+
+</div>
+<script>
+new Chart(document.getElementById('donut'), {
+  type:'doughnut',
+  data:{ labels:['시니어 산업·기업 전환','치매·돌봄 안전망','간병 재무(글로벌)'],
+    datasets:[{ data:[35,35,30], backgroundColor:['#c2410c','#0f766e','#d97706'], borderWidth:2, borderColor:'#fff' }]},
+  options:{ maintainAspectRatio:false, plugins:{ legend:{ position:'bottom', labels:{ font:{size:11} } } } }
+});
+new Chart(document.getElementById('bar'), {
+  type:'bar',
+  data:{ labels:['간병 재정 대비 없는 부모 세대','간병비 대화 나눈 가정'],
+    datasets:[{ label:'%', data:[56,20], backgroundColor:['#c2410c','#0f766e'], borderRadius:6 }]},
+  options:{ maintainAspectRatio:false, plugins:{ legend:{ display:false } },
+    scales:{ y:{ beginAtZero:true, max:70, ticks:{ callback:v=>v+'%' } } } }
+});
+</script>
+</body>
+</html>
