@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4060 연구소 데일리 리포트 — 2026년 8월 4일</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root{ --bg:#f6f4ef; --card:#ffffff; --ink:#1f2937; --sub:#6b7280; --accent:#c2410c; --teal:#0f766e; --line:#e7e2d8; }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  body{ background:var(--bg); color:var(--ink); font-family:"Pretendard Variable",Pretendard,"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif; line-height:1.65; }
+  .wrap{ max-width:1080px; margin:0 auto; padding:32px 20px 60px; }
+  header.hero{ background:linear-gradient(135deg,#c2410c 0%,#9a3412 100%); color:#fff; border-radius:18px; padding:36px 32px; margin-bottom:28px; }
+  .hero .tag{ display:inline-block; font-size:12px; letter-spacing:.14em; font-weight:700; background:rgba(255,255,255,.18); padding:4px 12px; border-radius:999px; margin-bottom:12px; }
+  .hero h1{ font-size:clamp(22px,3.4vw,32px); font-weight:800; margin-bottom:6px; }
+  .hero p{ opacity:.92; font-size:14px; }
+  .notice{ background:#fffbeb; border:1px solid #fde68a; border-radius:12px; padding:14px 18px; font-size:13.5px; color:#92400e; margin-bottom:28px; }
+  .notice b{ color:#78350f; }
+  h2.sec{ font-size:19px; font-weight:800; margin:34px 0 14px; display:flex; align-items:center; gap:8px; }
+  h2.sec::before{ content:""; width:6px; height:20px; background:var(--accent); border-radius:3px; display:inline-block; }
+  .kpis{ display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; }
+  .kpi{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px 18px; box-shadow:0 1px 3px rgba(0,0,0,.04); }
+  .kpi .kpi-value{ font-size:28px; font-weight:800; color:var(--accent); letter-spacing:-.02em; }
+  .kpi .kpi-label{ font-size:13.5px; color:var(--ink); margin-top:6px; font-weight:600; }
+  .kpi .src{ font-size:12px; color:var(--sub); margin-top:10px; }
+  .badge{ display:inline-block; font-size:10.5px; font-weight:700; padding:2px 8px; border-radius:999px; vertical-align:1px; margin-right:4px; }
+  .badge.press{ background:#eef2ff; color:#4338ca; }
+  .badge.primary{ background:#ecfdf5; color:#047857; }
+  .badge.date{ background:#f3f4f6; color:#4b5563; }
+  .charts{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:14px; }
+  .chartcard{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px; box-shadow:0 1px 3px rgba(0,0,0,.04); }
+  .chartcard h3{ font-size:15px; font-weight:700; margin-bottom:4px; }
+  .chartcard .cap{ font-size:12px; color:var(--sub); margin-bottom:12px; }
+  .chartbox{ position:relative; height:260px; }
+  .insight{ background:var(--card); border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:12px; padding:20px 22px; margin-bottom:14px; box-shadow:0 1px 3px rgba(0,0,0,.04); }
+  .insight h3{ font-size:15.5px; font-weight:800; margin-bottom:8px; }
+  .insight p{ font-size:14px; color:#374151; }
+  .insight .impl{ margin-top:10px; font-size:14px; font-weight:700; color:var(--teal); }
+  .insight .src{ margin-top:10px; font-size:12.5px; color:var(--sub); }
+  .insight .src a{ color:var(--accent); text-decoration:none; font-weight:700; }
+  .newsgrid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:14px; }
+  .news{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 20px; box-shadow:0 1px 3px rgba(0,0,0,.04); display:flex; flex-direction:column; gap:8px; }
+  .news h3{ font-size:14.5px; font-weight:700; line-height:1.5; }
+  .news p{ font-size:13px; color:#4b5563; flex:1; }
+  .news .meta{ font-size:12px; color:var(--sub); }
+  .news a.more{ font-size:13px; font-weight:700; color:var(--accent); text-decoration:none; }
+  .tags{ margin-top:30px; display:flex; flex-wrap:wrap; gap:8px; }
+  .tags span{ background:#fff; border:1px solid var(--line); color:var(--teal); font-size:12.5px; font-weight:600; padding:5px 12px; border-radius:999px; }
+  footer{ margin-top:40px; border-top:1px solid var(--line); padding-top:18px; font-size:12px; color:var(--sub); }
+  footer p{ margin-bottom:5px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <span class="tag">4060 LAB DAILY</span>
+    <h1>4060 여성 트렌드 데일리 리포트</h1>
+    <p>2026년 8월 4일 (화) · 4060 연구소 · 매일 아침 자동 발행</p>
+  </header>
+
+  <div class="notice">
+    ⚠️ <b>오늘의 소스 확보 현황:</b> 신규 검증 통과 소스는 <b>2건</b>입니다 (원칙상 3건 목표 미달). 후보 6건을 직접 검증한 결과 — 2건 통과, 2건은 본문 수집 실패(스크립트 렌더링), 2건은 배제(오픈서베이 「시니어 트렌드 리포트 2025」 인용 기사는 기존 리포트와 <b>동일 원천 중복</b>, 서울시50플러스재단 소비 분석 기사는 <b>발행 1년 초과</b>). 일반(전 연령) 통계로 채우지 않고 확보된 4060·시니어 특정 소스만으로 발행합니다. 확보 소스 2건은 모두 <b>최근 1주 내 발행(7/29·8/3)</b>입니다.
+  </div>
+
+  <h2 class="sec">핵심 KPI</h2>
+  <div class="kpis">
+    <div class="kpi">
+      <div class="kpi-value">1조 8,000억</div>
+      <div class="kpi-label">신한 'SOL메이트 정기예금'(만 50세 이상 우대) 1~4차 누적 완판 한도 — 4차 3,000억은 열흘 만에 소진, 현재 5차 판매 중</div>
+      <div class="src"><span class="badge press">언론 보도</span>한국경제 · 2026.08.03</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-value">연 3.7%</div>
+      <div class="kpi-label">농협 'NH올원더풀행복동행' 시니어 우대 예금 금리 — 가입금액 제한 없음 (신한·하나는 연금 수령자 대상 연 0.1~1% '비상금대출' 병행)</div>
+      <div class="src"><span class="badge press">언론 보도</span>한국경제 · 2026.08.03</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-value">20.7%</div>
+      <div class="kpi-label">65세 이상 인구 비중 — 첫 20% 돌파로 초고령사회 공식 진입, 독거노인은 전국 10가구 중 1가구 (통계청 발표)</div>
+      <div class="src"><span class="badge press">언론 보도</span>캐어유 뉴스 · 2026.07.29 (통계청 발표 보도)</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-value">11개 거점</div>
+      <div class="kpi-label">하나은행 시니어 특화 '하나더넥스트 라운지' 연내 전국 확대 목표 — 대구 개점으로 비수도권 첫 진출 (자산관리·노후설계·라이프케어 복합 공간)</div>
+      <div class="src"><span class="badge press">언론 보도</span>캐어유 뉴스 · 2026.07.29</div>
+    </div>
+  </div>
+
+  <h2 class="sec">오늘의 차트</h2>
+  <div class="charts">
+    <div class="chartcard">
+      <h3>오늘 소식 테마 비중 (추정)</h3>
+      <div class="cap">금일 검증 소스 2건 내 항목의 주제 분류 — 편집상 추정치 (실측 아님)</div>
+      <div class="chartbox"><canvas id="donut"></canvas></div>
+    </div>
+    <div class="chartcard">
+      <h3>신한 'SOL메이트 정기예금' 차수별 판매 한도 — 전 차수 완판 (실측)</h3>
+      <div class="cap">만 50세 이상 우대 상품, 억원 · 출처: 한국경제 2026.08.03 (5차 판매 진행 중)</div>
+      <div class="chartbox"><canvas id="bar"></canvas></div>
+    </div>
+  </div>
+
+  <h2 class="sec">핵심 인사이트</h2>
+
+  <div class="insight">
+    <h3>은행 수신 시장에서 '5060 연금 연계 예적금'이 완판 상품이 됐다 — 신한 SOL메이트 1~4차 누적 1조 8,000억 소진</h3>
+    <p>한국경제(8/3 지면 A19) 보도 기준, 신한은행 'SOL메이트 정기예금'은 만 50세 이상에게 우대금리 0.2%p를 얹어 최고 연 3.5%를 주는 상품으로, 1~3차 각 5,000억원 한도가 모두 소진되고 4차 3,000억원도 열흘 만에 완판돼 현재 5차 판매 중이다. 가입 조건은 공적연금을 3개월 이상 신한 계좌로 수령하거나 사적연금을 월 20만원 이상 수령하는 것. 농협 'NH올원더풀행복동행'(연 3.7%, 한도 무제한)도 인기다. 증시 조정장에서 은퇴 전후 5060의 안전자산 수요가 수신 상품으로 몰리고 있다.</p>
+    <div class="impl">→ 시사점: 5060 고객 확보의 관문은 '연금 수령 계좌'다 — 4060 여성 대상 서비스·제휴 설계 시 연금 이체 고객에게 혜택을 얹는 구조(우대금리·멤버십)가 대규모 완판으로 검증된 공식임을 참고할 것.</div>
+    <div class="src">한국경제 · 2026.08.03 · <a href="https://www.hankyung.com/article/2026080201651" target="_blank">원문 보기 →</a></div>
+  </div>
+
+  <div class="insight">
+    <h3>시니어 특화 금융 채널이 수도권을 벗어나 전국화를 시작했다 — 하나은행, 대구에 비수도권 첫 '하나더넥스트 라운지'</h3>
+    <p>하나은행은 7월 28일 대구 중심가에 시니어 특화 채널 '하나더넥스트 대구중앙 라운지'를 열었다. 시니어 특화 점포의 비수도권 진출은 처음으로, 연내 전국 11개 거점으로 확대할 계획이다. 단순 창구가 아니라 자산관리·노후설계·라이프케어 상담을 아우르는 복합 공간이며, 은행권 전반이 금리 우대 예금→전용 라운지→디지털 교육까지 묶은 '토탈 케어' 모델을 표준화하는 중이다(캐어유 뉴스 7/29 종합, 매일경제 분석 인용).</p>
+    <div class="impl">→ 시사점: 지방 거주 4060 여성이 걸어서 닿는 시니어 서비스 거점이 늘어난다 — 금융권 라운지는 시니어 유동 인구가 검증된 입지이므로, 지역 기반 클래스·팝업·제휴 마케팅의 접점으로 활용 가치가 크다.</div>
+    <div class="src">캐어유 뉴스 · 2026.07.29 · <a href="https://www.careyounews.org/news/articleView.html?idxno=10873" target="_blank">원문 보기 →</a></div>
+  </div>
+
+  <div class="insight">
+    <h3>대한민국이 초고령사회에 공식 진입했다 — 65세 이상 20.7%, 독거노인 10가구 중 1가구 (통계청)</h3>
+    <p>통계청이 공식 확인한 수치(캐어유 뉴스 7/29 보도) 기준 65세 이상 인구 비중이 20.7%로 처음 20%를 넘어 유엔 기준 초고령사회에 진입했고, 생산연령인구(15~64세) 비중은 35년 만에 70% 아래로 떨어졌다. 전국 10가구 중 1가구가 혼자 사는 노인이며 1인 가구는 824만으로 역대 최대다. 고령사회(14%) 진입 후 초고령사회 도달까지 8년 — 세계에서 유례없는 속도다.</p>
+    <div class="impl">→ 시사점: 4060 여성 시장 설계에서 '배우자와 함께 사는 주부' 전제를 버려야 한다 — 본인 1인 가구화와 독거 부모 돌봄이 동시에 기본 시나리오가 되는 만큼, 소용량 상품·비대면 돌봄·안부 서비스 결합형 기획이 표준이 된다.</div>
+    <div class="src">캐어유 뉴스 (통계청 발표 보도) · 2026.07.29 · <a href="https://www.careyounews.org/news/articleView.html?idxno=10873" target="_blank">원문 보기 →</a></div>
+  </div>
+
+  <div class="insight">
+    <h3>시니어 헬스케어에서 '먹는 치매약' 시대가 가시권 — 아리바이오 AR1001 글로벌 3상 투약 종료, 11월 결과 발표</h3>
+    <p>아리바이오는 경구용 치매 치료제 'AR1001'의 글로벌 임상 3상 투약을 종료했다(캐어유 뉴스 7/29 보도). 11월 결과 발표 예정으로, 성공 시 주사제 중심 치매 치료가 '집에서 먹는 약'으로 바뀌어 환자·가족의 접근성이 크게 개선된다. 같은 날 국립중앙의료원-보건의료정보원의 치매 데이터 협약 등 '발병 10년 전 예방' 패러다임 확산 흐름도 확인됐다.</p>
+    <div class="impl">→ 시사점: 4060 여성은 부모 간병과 본인 예방의 '이중 당사자'다 — 치매 예방 콘텐츠·인지 건강 관리 상품 수요가 신약 상용화 뉴스와 함께 선행적으로 커지는 시점이므로, 관련 정보 콘텐츠를 선점할 타이밍이다.</div>
+    <div class="src">캐어유 뉴스 · 2026.07.29 · <a href="https://www.careyounews.org/news/articleView.html?idxno=10873" target="_blank">원문 보기 →</a></div>
+  </div>
+
+  <h2 class="sec">주요 소식</h2>
+  <div class="newsgrid">
+    <div class="news">
+      <h3>조정장에 안전지대 찾는 5060 — "연금 연계 예적금 들어볼까"</h3>
+      <p>신한 SOL메이트 정기예금(만 50세 이상 우대, 최고 연 3.5%) 1~4차 완판·5차 판매 중, 농협 NH올원더풀행복동행 연 3.7%. 연금 수령자 대상 연 0.1~1% 소액 비상금대출도 확산.</p>
+      <div class="meta"><span class="badge date">2026.08.03</span><span class="badge press">언론 보도</span>한국경제</div>
+      <a class="more" href="https://www.hankyung.com/article/2026080201651" target="_blank">원문 보기 →</a>
+    </div>
+    <div class="news">
+      <h3>대한민국 초고령사회 공식 진입 — 65세 이상 20.7%, 독거노인 10가구 중 1가구</h3>
+      <p>통계청 공식 확인: 생산연령인구 비중 35년 만에 70% 붕괴, 1인 가구 824만 역대 최대. 고령사회→초고령사회 도달 8년, 세계 최고 속도.</p>
+      <div class="meta"><span class="badge date">2026.07.29</span><span class="badge press">언론 보도</span>캐어유 뉴스 (통계청 발표 보도)</div>
+      <a class="more" href="https://www.careyounews.org/news/articleView.html?idxno=10873" target="_blank">원문 보기 →</a>
+    </div>
+    <div class="news">
+      <h3>하나은행, 비수도권 첫 시니어 특화 라운지 대구 개점 — 연내 전국 11개 거점</h3>
+      <p>자산관리·노후설계·라이프케어를 아우르는 복합 공간. 은행권은 시니어 수신 확보 경쟁 속 '토탈 케어' 모델을 표준화하는 중.</p>
+      <div class="meta"><span class="badge date">2026.07.29</span><span class="badge press">언론 보도</span>캐어유 뉴스</div>
+      <a class="more" href="https://www.careyounews.org/news/articleView.html?idxno=10873" target="_blank">원문 보기 →</a>
+    </div>
+    <div class="news">
+      <h3>아리바이오, 먹는 치매약 AR1001 글로벌 3상 투약 종료 — 11월 결과 발표</h3>
+      <p>국내 최초 경구용 치매 치료제 시판이 가시권에. 치매 관리 데이터 협약, 초로기 치매 카페 확산 등 '예방 생태계'도 동시 진화.</p>
+      <div class="meta"><span class="badge date">2026.07.29</span><span class="badge press">언론 보도</span>캐어유 뉴스</div>
+      <a class="more" href="https://www.careyounews.org/news/articleView.html?idxno=10873" target="_blank">원문 보기 →</a>
+    </div>
+  </div>
+
+  <div class="tags">
+    <span>#4060여성</span><span>#액티브시니어</span><span>#시니어금융</span><span>#연금연계예적금</span><span>#초고령사회</span><span>#하나더넥스트</span><span>#시니어헬스케어</span>
+  </div>
+
+  <footer>
+    <p><b>출처 배지 안내</b> — <span class="badge primary">1차 데이터</span> 협회·리서치사·정부 발간물을 직접 확인한 출처 / <span class="badge press">언론 보도</span> 기사를 통해 간접 확인한 출처 (오늘 소스는 전부 언론 보도이며, 통계청 발표 수치는 보도를 통해 확인했습니다).</p>
+    <p><b>추정/실측 구분</b> — 도넛 차트(테마 비중)는 편집상 추정치, 막대 차트(SOL메이트 차수별 한도)는 원문 기사에서 확인한 실측 수치입니다.</p>
+    <p>전 연령 합산 일반 통계는 게재하지 않습니다. 모든 KPI·인사이트는 4060(50~70) 여성·시니어 특정 수치만 사용합니다.</p>
+    <p>ⓒ 4060 연구소 · 2026.08.04 발행 · 발행일 미확인 소스는 사용하지 않았습니다.</p>
+  </footer>
+</div>
+
+<script>
+const inkSub = "#6b7280";
+new Chart(document.getElementById("donut"), {
+  type: "doughnut",
+  data: {
+    labels: ["시니어 금융 (예적금·라운지)", "인구구조 (초고령사회)", "시니어 헬스케어 (치매약)"],
+    datasets: [{ data: [50, 25, 25], backgroundColor: ["#c2410c", "#0f766e", "#f59e0b"], borderWidth: 2, borderColor: "#ffffff" }]
+  },
+  options: { responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: "bottom", labels: { font: { size: 12 }, color: "#374151", padding: 14 } } } }
+});
+new Chart(document.getElementById("bar"), {
+  type: "bar",
+  data: {
+    labels: ["1차", "2차", "3차", "4차 (열흘 완판)"],
+    datasets: [{ label: "판매 한도 (억원)", data: [5000, 5000, 5000, 3000], backgroundColor: ["#0f766e", "#0f766e", "#0f766e", "#c2410c"], borderRadius: 6 }]
+  },
+  options: { responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false }, tooltip: { callbacks: { label: (c) => c.parsed.y.toLocaleString() + "억원 (완판)" } } },
+    scales: { y: { beginAtZero: true, ticks: { color: inkSub, callback: (v) => v.toLocaleString() }, grid: { color: "#eee9df" } }, x: { ticks: { color: "#374151" }, grid: { display: false } } } }
+});
+</script>
+</body>
+</html>
