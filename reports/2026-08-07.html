@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4060 연구소 데일리 리포트 — 2026년 8월 7일</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic',sans-serif; background:#f6f4ef; color:#1f2937; line-height:1.65; }
+  .wrap { max-width:1080px; margin:0 auto; padding:32px 20px 60px; }
+  header { text-align:center; padding:36px 0 28px; }
+  .badge-lab { display:inline-block; background:#c2410c; color:#fff; font-size:13px; font-weight:700; letter-spacing:2px; padding:5px 14px; border-radius:999px; margin-bottom:14px; }
+  header h1 { font-size:30px; font-weight:800; color:#111827; }
+  header p.date { margin-top:8px; color:#6b7280; font-size:15px; }
+  .notice { max-width:760px; margin:0 auto; background:#fffbeb; border:1px solid #fde68a; border-radius:10px; padding:10px 16px; font-size:13px; color:#92400e; }
+  h2.section { font-size:20px; font-weight:800; color:#111827; margin:38px 0 16px; padding-left:12px; border-left:5px solid #c2410c; }
+  .kpi-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; }
+  .card { background:#fff; border-radius:14px; padding:20px; box-shadow:0 1px 4px rgba(0,0,0,.06); }
+  .kpi .num { font-size:30px; font-weight:800; color:#c2410c; }
+  .kpi .label { font-size:14.5px; font-weight:700; color:#111827; margin-top:4px; }
+  .kpi .src { font-size:12px; color:#6b7280; margin-top:8px; }
+  .badge { display:inline-block; font-size:11px; font-weight:700; padding:2px 8px; border-radius:999px; margin-right:5px; }
+  .badge.primary { background:#ccfbf1; color:#0f766e; }
+  .badge.press { background:#ffedd5; color:#c2410c; }
+  .badge.date { background:#e5e7eb; color:#374151; }
+  .chart-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media (max-width:760px){ .chart-grid { grid-template-columns:1fr; } }
+  .chart-card h3 { font-size:15.5px; font-weight:700; margin-bottom:4px; }
+  .chart-card p.note { font-size:12px; color:#6b7280; margin-bottom:10px; }
+  .chart-box { position:relative; height:280px; }
+  .insight { margin-bottom:14px; }
+  .insight .head { font-size:16px; font-weight:800; color:#111827; }
+  .insight .body { font-size:14.5px; color:#374151; margin-top:6px; }
+  .insight .imp { display:block; margin-top:8px; font-size:14.5px; font-weight:700; color:#0f766e; }
+  .insight .src { font-size:12.5px; color:#6b7280; margin-top:8px; }
+  .insight .src a { color:#c2410c; text-decoration:none; font-weight:700; }
+  .news-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media (max-width:760px){ .news-grid { grid-template-columns:1fr; } }
+  .news h3 { font-size:15.5px; font-weight:700; margin:8px 0 6px; }
+  .news p { font-size:13.5px; color:#4b5563; }
+  .news a.link { display:inline-block; margin-top:10px; font-size:13.5px; font-weight:700; color:#c2410c; text-decoration:none; }
+  .tags { margin-top:34px; text-align:center; }
+  .tags span { display:inline-block; background:#fff; border:1px solid #e5e7eb; color:#0f766e; font-size:13px; font-weight:700; padding:6px 13px; border-radius:999px; margin:4px; }
+  footer { margin-top:40px; padding-top:20px; border-top:1px solid #e5e7eb; font-size:12.5px; color:#6b7280; }
+  footer b { color:#374151; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="badge-lab">4060 LAB</div>
+  <h1>4060 여성 트렌드 데일리 리포트</h1>
+  <p class="date">2026년 8월 7일 (금) · 4060 연구소 자동 발행</p>
+</header>
+
+<div class="notice">📌 오늘은 중복 배제 원칙에 따라 과거 리포트와 겹치는 소스(와이즈앱 연령별 앱 순위, 포스티 연간 실적, 시니어 유튜브 통계 등)를 제외하고, <b>신규 검증 소스 2건(목표 3건 미달)</b>으로 발행합니다. 2건 모두 최근 2주 내 발행 기사입니다.</div>
+
+<h2 class="section">핵심 KPI</h2>
+<div class="kpi-grid">
+  <div class="card kpi">
+    <div class="num">+21%</div>
+    <div class="label">퀸잇(4050 여성 플랫폼) 2026 상반기 거래액 증가율 — 반기 기준 역대 최고</div>
+    <div class="src"><span class="badge press">언론 보도</span><span class="badge date">2026.08.03</span>한국섬유신문 (라포랩스 발표)</div>
+  </div>
+  <div class="card kpi">
+    <div class="num">+143.1%</div>
+    <div class="label">퀸잇 리빙·라이프 카테고리 상반기 거래액 증가율 (명품 +92%, 뷰티 +35%)</div>
+    <div class="src"><span class="badge press">언론 보도</span><span class="badge date">2026.08.03</span>한국섬유신문 (라포랩스 발표)</div>
+  </div>
+  <div class="card kpi">
+    <div class="num">+38%</div>
+    <div class="label">퀸잇 상반기 월간 활성 이용자(MAU) 증가율 — 신규 구매자 +23%, 재구매자 +27%</div>
+    <div class="src"><span class="badge press">언론 보도</span><span class="badge date">2026.08.03</span>한국섬유신문 (라포랩스 발표)</div>
+  </div>
+  <div class="card kpi">
+    <div class="num">6개월</div>
+    <div class="label">라포랩스의 SK스토아(TV홈쇼핑) 인수 승인 신청(1.23)→자진 취하(7.22)까지 걸린 기간</div>
+    <div class="src"><span class="badge press">언론 보도</span><span class="badge date">2026.07.22</span>뉴스1 (방송미디어통신위 심의)</div>
+  </div>
+</div>
+
+<h2 class="section">차트</h2>
+<div class="chart-grid">
+  <div class="card chart-card">
+    <h3>오늘 수집 소식 테마 비중</h3>
+    <p class="note">※ 오늘 검증된 소스 기준 편집팀 추정치입니다 (실측 아님)</p>
+    <div class="chart-box"><canvas id="donut"></canvas></div>
+  </div>
+  <div class="card chart-card">
+    <h3>퀸잇 2026 상반기 카테고리별 거래액 증가율 (%, 전년 동기 대비)</h3>
+    <p class="note">실측: 라포랩스 2026.08.03 발표 (한국섬유신문 보도 기준)</p>
+    <div class="chart-box"><canvas id="bar"></canvas></div>
+  </div>
+</div>
+
+<h2 class="section">핵심 인사이트</h2>
+<div class="card insight">
+  <div class="head">4050 여성 플랫폼 퀸잇의 성장축이 패션에서 리빙·명품·뷰티로 이동</div>
+  <div class="body">라포랩스가 8월 3일 발표한 2026년 상반기 실적에서 퀸잇 전체 거래액은 전년 동기 대비 21% 늘었지만, 리빙·라이프는 143.1%, 명품은 92%, 뷰티는 35% 증가해 비패션 카테고리가 전체 성장률을 크게 웃돌았다. 패션으로 유입된 4050 고객의 구매 범위가 생활 전반으로 확대된 결과라는 게 회사 측 분석이다.</div>
+  <span class="imp">→ 시사점: 4060 여성 커머스는 패션을 유입 관문으로 쓰되, 리빙·뷰티·명품으로 이어지는 크로스셀 동선 설계가 실질적 성장 레버다.</span>
+  <div class="src">한국섬유신문 · 2026.08.03 · <a href="http://www.ktnews.com/news/articleView.html?idxno=147463" target="_blank">원문 보기 →</a></div>
+</div>
+<div class="card insight">
+  <div class="head">4050 여성 전용 커머스(퀸잇)의 성장은 신규 유입·재구매·공급 확대가 동시에 견인</div>
+  <div class="body">퀸잇의 2026년 상반기 MAU는 전년 동기 대비 38% 늘었고, 신규 구매자(+23%)와 재구매자(+27%)가 함께 증가했다(라포랩스 집계). 같은 기간 판매 실적이 발생한 브랜드 수는 31.2%, 판매 상품 수는 35.1% 늘어 공급 확대가 반복 구매를 뒷받침했다. 4월 '봄 럭퀸세일'은 방문자·거래액·판매량 모두 전년 행사 대비 두 자릿수 증가를 기록했다.</div>
+  <span class="imp">→ 시사점: 4060 여성은 정착 후 반복 구매로 이어지는 락인이 강하므로, 마케팅 예산은 '첫 구매 전환'과 시즌 행사(가을 럭퀸세일 등) 시점에 집중하는 것이 효율적이다.</span>
+  <div class="src">한국섬유신문 · 2026.08.03 · <a href="http://www.ktnews.com/news/articleView.html?idxno=147463" target="_blank">원문 보기 →</a></div>
+</div>
+<div class="card insight">
+  <div class="head">4050 모바일 플랫폼(라포랩스)의 TV홈쇼핑(SK스토아) 인수가 승인 문턱에서 '일시정지'</div>
+  <div class="body">방송미디어통신위원회는 7월 22일 SK스토아 최다액출자자 변경승인 심의를 종결했다. 라포랩스가 신청을 자진 취하했기 때문으로, 심사위원회는 라포랩스의 재정적 능력과 방송 지원 계획이 승인 기준에 못 미친다는 의견을 냈다. 라포랩스는 인수 철회가 아니라 거래 구조를 바꿔 SK텔레콤과 신규 주식매매계약(SPA)을 체결하겠다는 입장이다.</div>
+  <span class="imp">→ 시사점: '모바일 4050(퀸잇) + TV홈쇼핑 5060(SK스토아)' 세대 통합 커버리지 전략은 방향성이 확인된 만큼, 성사 여부에 따라 4060 여성 대상 홈쇼핑 입점·광고 지형이 바뀔 수 있어 계속 주시가 필요하다.</span>
+  <div class="src">뉴스1 · 2026.07.22 · <a href="https://v.daum.net/v/6AS9oupXH8" target="_blank">원문 보기 →</a></div>
+</div>
+<div class="card insight">
+  <div class="head">TV홈쇼핑(SK스토아) 매각 장기화로 5060 여성 핵심 채널의 운영 공백 리스크 지속</div>
+  <div class="body">인수 절차가 6개월 넘게 표류하면서 SK스토아는 올해 신규 사업을 진행하지 못했고 납품업체 대상 구매력도 경쟁사 대비 약화 중이라고 뉴스1은 전했다. 노조는 재무적으로 취약한 스타트업으로의 매각에 반발하고 있어, SK텔레콤의 매각 지속 여부가 결정될 때까지 혼란이 이어질 전망이다.</div>
+  <span class="imp">→ 시사점: 5060 여성 고객 도달 채널로 T커머스·홈쇼핑 입점을 검토 중이라면, 채널사의 지배구조·매각 리스크를 파트너 선정 기준에 포함해야 한다.</span>
+  <div class="src">뉴스1 · 2026.07.22 · <a href="https://v.daum.net/v/6AS9oupXH8" target="_blank">원문 보기 →</a></div>
+</div>
+
+<h2 class="section">주요 소식</h2>
+<div class="news-grid">
+  <div class="card news">
+    <span class="badge date">2026.08.03</span><span class="badge press">언론 보도</span>
+    <h3>퀸잇, 4050 라이프스타일 수요 넓히며 상반기 거래액 21% 증가</h3>
+    <p>라포랩스의 퀸잇이 2026년 상반기 반기 기준 역대 최대 거래액을 기록. MAU +38%, 리빙·라이프 +143.1%, 명품 +92%, 뷰티 +35%. 하반기에는 블랙프라이데이 '럭퀸세일'을 중심으로 기획전을 상반기 대비 2배 이상 늘리고 인플루언서 협업을 강화할 계획.</p>
+    <a class="link" href="http://www.ktnews.com/news/articleView.html?idxno=147463" target="_blank">한국섬유신문 원문 →</a>
+  </div>
+  <div class="card news">
+    <span class="badge date">2026.07.22</span><span class="badge press">언론 보도</span>
+    <h3>라포랩스, SK스토아 인수 승인 신청 취하 — 새 계약 추진에도 혼란 지속</h3>
+    <p>퀸잇 운영사 라포랩스가 방송미디어통신위 심사 도중 SK스토아 최다액출자자 변경 신청을 자진 취하. 심사위는 재정 능력·방송 지원 계획 기준 미충족 의견. 라포랩스는 거래 구조를 바꿔 SK텔레콤과 신규 SPA를 체결한다는 방침.</p>
+    <a class="link" href="https://v.daum.net/v/6AS9oupXH8" target="_blank">뉴스1 원문 →</a>
+  </div>
+</div>
+
+<div class="tags">
+  <span>#4050라이프스타일플랫폼</span><span>#퀸잇</span><span>#리빙크로스셀</span><span>#럭퀸세일</span><span>#SK스토아</span><span>#TV홈쇼핑M&A</span>
+</div>
+
+<footer>
+  <p><b>출처 배지 안내</b> — <span class="badge primary">1차 데이터</span> 협회·리서치사·정부 발간물을 직접 확인한 수치 / <span class="badge press">언론 보도</span> 기사를 통해 간접 확인한 수치. 오늘 KPI는 모두 기업 공식 발표·정부위원회 심의를 다룬 언론 보도에서 원문 확인했습니다.</p>
+  <p style="margin-top:8px"><b>추정/실측 구분</b> — 도넛 차트(테마 비중)는 편집팀 추정, 막대 차트와 모든 KPI 수치는 원문에서 직접 확인한 실측치입니다. 본 리포트는 4060(50~70) 여성·시니어에 특정된 수치·내용만 게재하며, 전 연령 일반 통계는 게재하지 않습니다.</p>
+  <p style="margin-top:8px"><b>발행 메모</b> — 중복 배제 원칙에 따라 과거 14일 내 사용 소스·동일 원천 발표를 제외한 결과, 오늘 신규 소스는 2건(목표 3건 미달)입니다. 2건 모두 최근 2주 내 발행.</p>
+  <p style="margin-top:8px">ⓒ 4060 연구소 · 매일 자동 발행 · 문의: seongjae.kim@ilevit.com</p>
+</footer>
+
+</div>
+<script>
+new Chart(document.getElementById('donut'), {
+  type: 'doughnut',
+  data: {
+    labels: ['4050 커머스 실적·카테고리 확장', 'TV홈쇼핑 채널 재편(M&A)', '시즌 프로모션 전략'],
+    datasets: [{ data: [50, 35, 15], backgroundColor: ['#c2410c', '#0f766e', '#f59e0b'], borderColor:'#f6f4ef', borderWidth:3 }]
+  },
+  options: { maintainAspectRatio:false, plugins:{ legend:{ position:'bottom', labels:{ font:{ size:12 } } } } }
+});
+new Chart(document.getElementById('bar'), {
+  type: 'bar',
+  data: {
+    labels: ['리빙·라이프', '명품', '뷰티', '전체 거래액'],
+    datasets: [{ label:'상반기 거래액 증가율(%)', data:[143.1, 92, 35, 21], backgroundColor:['#0f766e','#0f766e','#0f766e','#c2410c'], borderRadius:6 }]
+  },
+  options: {
+    maintainAspectRatio:false, indexAxis:'y',
+    scales:{ x:{ beginAtZero:true, grid:{ color:'#eee' } }, y:{ grid:{ display:false } } },
+    plugins:{ legend:{ display:false } }
+  }
+});
+</script>
+</body>
+</html>
