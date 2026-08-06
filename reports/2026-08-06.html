@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4060 연구소 데일리 리포트 — 2026년 8월 6일</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Apple SD Gothic Neo','Noto Sans KR','Malgun Gothic',sans-serif; background:#f6f4ef; color:#1f2937; line-height:1.65; }
+  .wrap { max-width:960px; margin:0 auto; padding:32px 20px 60px; }
+  header { text-align:center; margin-bottom:28px; }
+  .brand { display:inline-block; background:#c2410c; color:#fff; font-weight:700; font-size:13px; letter-spacing:2px; padding:4px 14px; border-radius:999px; margin-bottom:12px; }
+  h1 { font-size:26px; font-weight:800; color:#111827; }
+  .date { color:#6b7280; font-size:14px; margin-top:6px; }
+  .notice { background:#fff7ed; border:1px solid #fdba74; border-radius:12px; padding:14px 18px; font-size:13.5px; color:#9a3412; margin-bottom:24px; }
+  .kpi-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:14px; margin-bottom:28px; }
+  .kpi { background:#fff; border-radius:14px; padding:18px; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+  .kpi .label { font-size:12.5px; color:#6b7280; margin-bottom:6px; }
+  .kpi .value { font-size:26px; font-weight:800; color:#c2410c; }
+  .kpi .value.teal { color:#0f766e; }
+  .kpi .desc { font-size:12.5px; color:#374151; margin-top:6px; }
+  .kpi .src { font-size:11px; color:#9ca3af; margin-top:8px; }
+  .badge { display:inline-block; font-size:10px; font-weight:700; padding:1px 6px; border-radius:4px; vertical-align:middle; }
+  .badge.press { background:#e0e7ff; color:#3730a3; }
+  .badge.primary { background:#ccfbf1; color:#0f766e; }
+  .badge.date-badge { background:#f3f4f6; color:#4b5563; font-size:11px; padding:2px 8px; border-radius:999px; }
+  section h2 { font-size:19px; font-weight:800; color:#111827; margin:32px 0 14px; border-left:4px solid #c2410c; padding-left:10px; }
+  .charts { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .chart-card { background:#fff; border-radius:14px; padding:18px; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+  .chart-card h3 { font-size:14px; margin-bottom:4px; }
+  .chart-card .cap { font-size:11.5px; color:#9ca3af; margin-bottom:10px; }
+  .chart-box { position:relative; height:240px; }
+  .insight { background:#fff; border-radius:14px; padding:18px 20px; box-shadow:0 1px 3px rgba(0,0,0,.06); margin-bottom:12px; font-size:14px; }
+  .insight b.head { color:#111827; font-size:15px; }
+  .insight .impl { color:#0f766e; font-weight:700; margin-top:8px; display:block; }
+  .insight .src { font-size:12px; color:#9ca3af; margin-top:8px; display:block; }
+  .insight .src a { color:#c2410c; text-decoration:none; font-weight:600; }
+  .news-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .news { background:#fff; border-radius:14px; padding:18px; box-shadow:0 1px 3px rgba(0,0,0,.06); font-size:13.5px; }
+  .news .meta { margin-bottom:8px; }
+  .news .media { font-size:12px; color:#6b7280; font-weight:700; margin-left:6px; }
+  .news h3 { font-size:15px; margin-bottom:8px; }
+  .news h3 a { color:#111827; text-decoration:none; }
+  .news h3 a:hover { color:#c2410c; }
+  .news p { color:#4b5563; }
+  .tags { margin-top:28px; text-align:center; }
+  .tags span { display:inline-block; background:#fff; border:1px solid #e5e7eb; color:#0f766e; font-size:12.5px; font-weight:600; padding:4px 12px; border-radius:999px; margin:3px; }
+  footer { margin-top:36px; padding-top:18px; border-top:1px solid #e5e7eb; font-size:12px; color:#9ca3af; }
+  footer p { margin-bottom:6px; }
+  @media (max-width:680px){ .charts,.news-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">4060 LAB DAILY</div>
+    <h1>4060 여성 트렌드 데일리 리포트</h1>
+    <div class="date">2026년 8월 6일 (목) · 4060 연구소</div>
+  </header>
+
+  <div class="notice">
+    ⚠️ <b>오늘의 발행 메모:</b> 중복 배제 원칙에 따라 다수 후보(퀸잇 플리츠 기획전, KB국민카드 시니어 카드 분석, TV홈쇼핑협회 산업현황, 시니어 유튜버 국세청 통계 등)가 최근 14일 리포트에서 이미 사용되어 제외되었습니다. 오늘은 <b>신규 검증 소스 2건</b>(그중 1건은 최근 3일 내 발행)으로 발행하며, 통상 대비 소스 수가 부족함을 표기합니다.
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi">
+      <div class="label">60대 가계 평균소비성향 (10년 새) <span class="badge press">언론 보도</span></div>
+      <div class="value">-6.9%p</div>
+      <div class="desc">전 세대 중 가장 큰 하락폭 — 소득 대비 소비 비율 축소 (통계청 가계동향조사 기반 대한상의 분석)</div>
+      <div class="src">한국시니어신문 · 2026-08-03</div>
+    </div>
+    <div class="kpi">
+      <div class="label">퀸잇 '셀렉트잇' 테스트 성과 (4050 여성) <span class="badge press">언론 보도</span></div>
+      <div class="value">2배↑</div>
+      <div class="desc">해외 브랜드 편집샵 테스트 운영 시 상품 조회수·클릭률이 기존 대비 2배 이상 증가 (라포랩스 발표)</div>
+      <div class="src">핀포인트뉴스 · 2025-10-28</div>
+    </div>
+    <div class="kpi">
+      <div class="label">오늘의 신규 검증 소스</div>
+      <div class="value teal">2건</div>
+      <div class="desc">중복 배제 원칙 적용 결과. 최근 2주 내 발행 소스 1건(한국시니어신문 8/3) 포함</div>
+      <div class="src">4060 연구소 발행 기준</div>
+    </div>
+  </div>
+
+  <section>
+    <h2>오늘의 차트</h2>
+    <div class="charts">
+      <div class="chart-card">
+        <h3>오늘 수집 소식 테마 비중 <span class="badge date-badge">추정</span></h3>
+        <div class="cap">확보 소스·인사이트 기준 편집팀 추정 비중 (실측 아님)</div>
+        <div class="chart-box"><canvas id="donut"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <h3>퀸잇 '셀렉트잇' 테스트 성과 지수 <span class="badge date-badge">발표 수치 기반</span></h3>
+        <div class="cap">기존 상품 대비 상대지수(기존=100), 라포랩스 발표 "2배 이상" 기준 · 핀포인트뉴스 2025-10-28</div>
+        <div class="chart-box"><canvas id="bar"></canvas></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>핵심 인사이트</h2>
+
+    <div class="insight">
+      <b class="head">① 60대 가계의 평균소비성향이 10년 새 6.9%p 하락 — 전 세대 중 최대 낙폭</b><br>
+      통계청 가계동향조사를 분석한 대한상공회의소 보고서 기준, 60대는 소득에서 소비가 차지하는 비율을 지난 10년간 가장 크게 줄였다.
+      <span class="impl">→ 시사점: 60대 여성 대상 상품·콘텐츠는 '신중해진 소비자'를 전제로 필수성·가성비·실패 없는 선택을 앞세워 소구해야 한다.</span>
+      <span class="src">한국시니어신문 · 2026-08-03 · <a href="https://www.kseniornews.com/news/articleView.html?idxno=26941" target="_blank">원문 보기 →</a></span>
+    </div>
+
+    <div class="insight">
+      <b class="head">② 60대 소비성향 하락은 '지갑 닫기'가 아니다 — 소득 증가 속도가 소비 증가를 앞지른 결과</b><br>
+      같은 분석에서 60대의 명목 소비지출 자체는 늘고 있으나 소득이 더 빠르게 늘어 비율이 낮아진 구조로 해석된다. 소비성향(비율)과 실제 지출액은 다른 지표다.
+      <span class="impl">→ 시사점: 60대 여성 시장에서 '침체 신호'로 오독하지 말 것 — 절대 지출은 성장 중이므로 지출이 옮겨가는 카테고리를 추적해 선점하라.</span>
+      <span class="src">한국시니어신문 · 2026-08-03 · <a href="https://www.kseniornews.com/news/articleView.html?idxno=26941" target="_blank">원문 보기 →</a></span>
+    </div>
+
+    <div class="insight">
+      <b class="head">③ 60대·70대 가계에서 악기·사진·취미활동 지출이 늘어나는 흐름 확인</b><br>
+      대한상의 보고서는 60대와 70대 이상 가계에서 악기, 사진, 취미 활동 지출이 늘어난 흐름을 짚었다(항목별 비중 수치는 미제시).
+      <span class="impl">→ 시사점: 4060 여성 대상 커머스·클래스 사업은 취미(악기·사진·공예 등) 카테고리 확장 및 관련 콘텐츠 커머스 연계를 검토할 시점이다.</span>
+      <span class="src">한국시니어신문 · 2026-08-03 · <a href="https://www.kseniornews.com/news/articleView.html?idxno=26941" target="_blank">원문 보기 →</a></span>
+    </div>
+
+    <div class="insight">
+      <b class="head">④ 4050 여성 패션 플랫폼 퀸잇, 해외 브랜드 편집샵 '셀렉트잇'으로 '합리적 럭셔리' 수요 공략</b><br>
+      라포랩스 발표 기준, 일본 브랜드 중심 테스트 운영에서 셀렉트잇 상품의 조회수·클릭률이 기존 대비 2배 이상 증가했고, 독창적 색감·실루엣의 여성 의류·잡화가 특히 높은 호응을 얻었다. 유럽 브랜드로 라인업 확장 계획.
+      <span class="impl">→ 시사점: 4050 여성에게는 '국내에서 못 보던 브랜드의 합리적 가격 큐레이션'이 유효한 훅 — 희소성 있는 상품 소싱과 체형·핏 중심 설명이 전환의 관건이다.</span>
+      <span class="src">핀포인트뉴스 · 2025-10-28 · <a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=389029" target="_blank">원문 보기 →</a></span>
+    </div>
+
+  </section>
+
+  <section>
+    <h2>주요 소식</h2>
+    <div class="news-grid">
+      <div class="news">
+        <div class="meta"><span class="badge date-badge">2026-08-03</span><span class="badge press">언론 보도</span><span class="media">한국시니어신문</span></div>
+        <h3><a href="https://www.kseniornews.com/news/articleView.html?idxno=26941" target="_blank">60대 소비성향 6.9%p 하락···카드 이용액은 왜 늘었나</a></h3>
+        <p>60대 평균소비성향은 10년 새 가장 크게 떨어졌지만 시니어 카드 결제액은 증가 — 두 통계의 셈법 차이를 분리해서 봐야 하며, 60대 지출은 취미·여가 항목으로 이동하는 흐름.</p>
+      </div>
+      <div class="news">
+        <div class="meta"><span class="badge date-badge">2025-10-28</span><span class="badge press">언론 보도</span><span class="media">핀포인트뉴스</span></div>
+        <h3><a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=389029" target="_blank">퀸잇, 해외 브랜드 편집샵 '셀렉트잇' 공식 론칭</a></h3>
+        <p>4050 여성 취향의 일본 브랜드 큐레이션으로 시작, 테스트에서 조회수·클릭률 2배 확인. '합리적 럭셔리'를 키워드로 유럽 브랜드까지 확장 계획.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="tags">
+    <span>#60대소비성향</span><span>#시니어지출구조</span><span>#취미소비</span><span>#4050패션</span><span>#셀렉트잇</span><span>#합리적럭셔리</span><span>#고령자통계</span>
+  </div>
+
+  <footer>
+    <p><b>출처 배지 안내:</b> [1차 데이터] 협회·리서치사·정부 발간물을 직접 확인한 수치 / [언론 보도] 기사를 통해 간접 확인한 수치. 오늘 리포트의 수치는 모두 [언론 보도] 경유로 확인되었습니다.</p>
+    <p><b>추정/실측 구분:</b> 도넛 차트(테마 비중)는 편집팀 추정이며, 막대 차트는 라포랩스 발표 수치("2배 이상")를 상대지수로 표현한 것입니다. KPI는 모두 원문 본문에서 직접 확인한 실측·발표 수치입니다.</p>
+    <p>본 리포트는 4060(50~70) 여성·시니어에 특정된 수치만 게재하며, 전 연령 일반 통계는 게재하지 않습니다.</p>
+    <p>발행 메모: 중복 배제 원칙으로 신규 소스 2건 발행(통상 3건 이상 대비 부족). 최근 2주 내 발행 소스 1건 확보.</p>
+    <p>© 2026 4060 연구소 · 매일 자동 발행</p>
+  </footer>
+</div>
+
+<script>
+new Chart(document.getElementById('donut'), {
+  type: 'doughnut',
+  data: {
+    labels: ['시니어 소비구조 분석', '4050 패션·커머스'],
+    datasets: [{
+      data: [55, 45],
+      backgroundColor: ['#c2410c', '#0f766e'],
+      borderWidth: 2, borderColor: '#ffffff'
+    }]
+  },
+  options: { responsive:true, maintainAspectRatio:false, plugins:{ legend:{ position:'bottom', labels:{ font:{ size:12 } } } } }
+});
+new Chart(document.getElementById('bar'), {
+  type: 'bar',
+  data: {
+    labels: ['상품 조회수', '클릭률'],
+    datasets: [
+      { label: '기존 상품 (=100)', data: [100, 100], backgroundColor: '#e5e7eb', borderRadius: 6 },
+      { label: '셀렉트잇 테스트 (2배 이상)', data: [200, 200], backgroundColor: '#0f766e', borderRadius: 6 }
+    ]
+  },
+  options: {
+    responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{ position:'bottom', labels:{ font:{ size:11 } } } },
+    scales:{ y:{ beginAtZero:true, ticks:{ callback:v=>v } } }
+  }
+});
+</script>
+</body>
+</html>
